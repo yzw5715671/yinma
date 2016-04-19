@@ -1,0 +1,17 @@
+
+<!-- 底部================================================== -->
+<div class="footer text-center" style="margin:10px 0 0 0;padding:20px;font-size:16px;border-top:1px #eee solid">
+	<p>©一塔湖图众筹 鄂ICP备15010367号</p>
+	<p>联系电话：400-806 8787</p>
+</div>
+
+<include file="Public/var"/>
+
+<block name="script"></block> <!-- 用于加载js代码 -->
+<!-- 页面footer钩子，一般用于加载插件JS文件和JS代码 -->
+
+{:hook('pageFooter', 'widget')}
+<div class="hidden"><!-- 用于加载统计代码等隐藏元素 -->
+<script src="http://s6.cnzz.com/z_stat.php?id=1253481980&web_id=1253481980" language="JavaScript"></script>
+	<block name="hidden"></block>
+</div>

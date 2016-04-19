@@ -1,0 +1,49 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>查看信息</h2>
+    </div>
+    <form action="{:U()}" method="post" class="form-horizontal">
+    	<input type="hidden" name="id" value="{$info.id}">
+        <div class="form-item">
+            <label class="item-label">关键字</label>
+            <div class="controls">
+                <input type="text" disabled="disabled" class="text input-large" name="key_word" value="{$info.key_word}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">标题</label>
+            <div class="controls">
+                <input type="text" disabled="disabled" class="text input-large" name="title" value="{$info.title}">
+            </div>
+        </div>
+<link href="__PUBLIC__/umeditor1_2_2-utf8-php/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="__PUBLIC__/umeditor1_2_2-utf8-php/third-party/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/umeditor1_2_2-utf8-php/umeditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/umeditor1_2_2-utf8-php/umeditor.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/umeditor1_2_2-utf8-php/lang/zh-cn/zh-cn.js"></script>
+        <div class="form-item">
+            <label class="item-label">内容</label>
+            <div class="controls">
+                <textarea id="title_new_view" name="content" disabled="disabled">{$info.content}</textarea>
+                {:hook('adminArticleEdit', array('name'=>$field['name'],'value'=>$info.content))}
+            </div>
+        </div>
+ <script>
+        UM.getEditor('title_new_view',{
+            initialFrameWidth:"730px"        
+        });
+    </script>
+        <div class="form-item">
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        //导航高亮
+        highlight_subnav('{:U('Info/index')}');
+    </script>
+</block>

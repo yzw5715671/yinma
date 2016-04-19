@@ -1,0 +1,246 @@
+/**
+	* title: 一塔湖图 登录;
+	* time : 2016.1.27;
+	* author: yanfeng;
+*/
+/* chrome 下 解决保存密码后input输入框变黄色*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    box-shadow:0 0 0 60px #fff inset;
+    -webkit-text-fill-color: #333;
+}
+
+body{
+	position: relative;
+}
+
+.login-top{
+	border-bottom: 1px solid #efefef;
+    height: 35px;
+    background: #f8f8f8;
+}
+.login-title{
+	width: 1000px; margin:0 auto;
+	font-size: 14px; padding-top: 6px;
+}
+.login-title ul{
+	float: right;
+}
+.login-title ul li{
+	float: left; display: inline-block; margin-left:5px;
+}
+.login-title ul li span{
+	display: block;  cursor: pointer;
+	background: url(../images/index2.jpg) no-repeat;
+}
+.login-title ul li:nth-child(1) span{
+	background-position: 0 -100px;
+	padding-left:26px;
+	color:#f33;
+}
+.login-title ul li:nth-child(2){
+	position: relative;
+}
+.login-title ul li:nth-child(2) span{
+	background-position: 0 -25px;
+	width: 26px; height: 26px; 
+	margin-right: 20px; margin-left:5px;
+}
+.login-title ul li:nth-child(2) .wxbox{
+	position: absolute;  display: none;
+	top:26px; left:-40px;
+	width: 120px; height: 120px; z-index: 99;
+}
+
+.login-content{
+	width: 100%; 
+	background: url(../images/login_bg.jpg) top center no-repeat;
+	background-size: 100% 100%;
+}
+
+.login-menu{
+	width: 100%;
+	height: 80px;
+	background-color: rgba(0,0,0,.2);
+}
+.menubox{
+	width: 960px; margin: 0 auto; position: relative;
+}
+.menubox h1{
+	position: absolute; top:8px; left:0;
+	width: 243px; height: 55px; 
+}
+.menubox ul{
+	margin-left:430px;
+}
+.menubox ul li{
+	float:left; display: inline-block; padding: 0 20px; font-size: 16px;
+	line-height: 80px;
+}
+.menubox ul li a{
+	color: #fff;
+}
+.menubox ul li a:hover{
+	color:#f33;
+}
+
+.small-login{
+	width: 430px; margin:40px auto 0;
+	background-color: rgba(255,255,255,.6);
+	border-radius: 5px; position: relative;
+	padding: 32px 0;
+
+}
+.small-login h2{
+	position: relative; text-align: center; font-size:32px; color:#606060;
+	letter-spacing: 10px; font-family: 'Microsoft YaHei';font-weight: normal;
+
+}
+.small-login h2:before{
+	content: ""; position: absolute; top:13px; left:0; width: 152px;  height: 1px; 
+	background-color: #999;
+}
+.small-login h2:after{
+	content: ""; position: absolute; top:13px; right:0; width: 152px;  height: 1px; 
+	background-color: #999;
+}
+.small-login .login-tips{
+	position: absolute; top:72px; left:50%;
+	width: 100px;text-align: center; margin-left:-50px;
+	color:#f33; font-size: 14px;
+}
+.small-login ul{
+	margin:10px auto 0;
+	width: 340px;
+}
+.small-login ul li{
+	display: block; border-bottom:1px solid #999; margin-top:20px; 
+	line-height: 42px; color:#999; font-size: 18px;
+}
+.small-login ul li label{
+	display: inline-block; width: 72px;  text-align: left;
+}
+.small-login ul li label i{
+	margin-left:15px;
+}
+.small-login ul li input{
+	background-color: rgba(255,255,255,0);
+	border: none;  height: 43px;
+	font-size: 16px; color: #787878;
+    line-height: 43px; width: 257px;
+    padding-left: 5px; float:right;
+    font-family: 'Microsoft YaHei';
+}
+.small-login ul li:nth-child(3){
+	border:none; color:#f33; margin-top:20px; font-size: 16px;
+	    line-height: 24px;
+}
+.small-login ul li:nth-child(3) a{
+	color:#f33;    float: right;
+}
+.small-login ul li:nth-child(3) a:hover{
+	color:#F00;
+}
+.small-login ul li:nth-child(3) input{
+	width: 14px; float:left; margin-top: -9px;
+}
+.small-login ul li:nth-child(4){
+	border:none;
+} 
+.small-login ul li:nth-child(4) input{
+	width: 340px; line-height: 45px; background-color:#bf1a20;
+	color:#fff; font-size: 18px; border-radius: 5px;
+}
+.small-login h3{
+	font-size: 18px; color:#999; margin:20px auto 12px;
+	text-align: center; font-weight: normal;
+}
+.small-login h3 a{
+	color:#f33;
+}
+.small-login h3 a:hover{
+	color:#F00;
+}
+.small-login h4{
+	width: 340px; margin:0 auto;
+	position: relative; text-align: center; font-size:18px; color:#606060;
+	letter-spacing: 10px; font-family: 'Microsoft YaHei'; font-weight: normal;
+
+}
+.small-login h4:before{
+	content: ""; position: absolute; top:13px; left:0; width: 130px;  height: 1px; 
+	background-color: #999;
+}
+.small-login h4:after{
+	content: ""; position: absolute; top:13px; right:0; width: 142px;  height: 1px; 
+	background-color: #999;
+}
+.small-login p{
+	width: 340px;  margin: 20px auto 0;
+}
+.small-login p a{
+	display: block;
+	width: 340px;text-align: center; line-height: 45px; color:#fff;
+	background: #3399e0 url(../images/login_wx.png) 65px 12px no-repeat;
+	font-size: 18px; border-radius: 5px;
+}
+
+
+.login-copy{
+    margin: 34px auto 0;
+	text-align: center;
+    width: 560px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* tanceng */
+.tanc-bg{
+	width: 100%; height: 100%; position: absolute;
+	left:0; top:0; z-index: 40;
+	background: rgba(0,0,0,.5); display: none;
+}
+.wx-box{
+	width: 500px; height: 480px; position: absolute;
+	top:50%; margin-top:-140px; z-index: 43;
+	left:50%; margin-left:-250px; display: none;
+	background: #fff; border-radius: 5px;
+}
+.wx-title{
+	width: 100%; height: 44px;
+}
+.wx-box a{
+	display: block; width: 24px; height: 24px; float: right;
+	margin-right: 20px;margin-top:20px;
+}
+.wx-box h3{
+	color: #606060; font-size: 32px; text-align: center; font-weight: normal;
+	margin:10px auto; display: block;
+}
+.wx-box p,
+.wx-box .wx-text{
+	text-align: center; width: 320px; margin: 0 auto -10px; font-size: 16px;
+}
+.wx-box .wx-text span{
+	font-size: 18px;
+}
+
+.wx-box .wx-right{
+	width: 212px; margin: 0 auto -10px; font-size: 16px;
+    background: url(../images/login_right.png) 0 4px no-repeat;
+    background-size: 54px 54px;
+    padding-left: 66px;
+    padding-top: 4px;
+    height: 64px;
+}
+.wx-box .wx-right p:first-child{
+	text-align: left; font-size: 18px; margin-bottom: 12px;
+}
+.wx-box .wx-right p:last-child{
+	text-align: left; font-size: 16px;
+}
+
+
+
+

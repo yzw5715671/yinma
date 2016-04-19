@@ -1,0 +1,234 @@
+/*
+	* title: 合格投资人认证;
+	* time:2016.3.11;
+	* author:yanfeng;
+*/
+ 
+ /* 
+ 	* 网站样式重写
+ 
+ */
+html{  color:#666;  background:#fff;  -webkit-text-size-adjust: 100%;  -ms-text-size-adjust: 100%;}
+html *{outline:0;zoom:1;} 
+*{margin: 0;padding: 0;}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,menu,nav,section {
+    margin:0;padding:0;
+}
+
+/* 去掉各Table cell 的边距并让其边重合 */
+table {
+    border-collapse:collapse;border-spacing:0;
+}
+
+/* IE bug fixed: th 不继承 text-align*/
+th {
+    text-align:inherit;
+}
+.table-tr-color{
+    background:#f0f0f0;
+}
+
+/* 去除默认边框 */
+fieldset,img {
+    border:0;
+}
+
+/* 去掉列表前的标识, li 会继承 */
+ol,ul {
+    list-style:none;
+}
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:500;
+}
+
+q:before,q:after {
+    content:'';
+}
+
+/* 统一上标和下标 */
+sub, sup {
+    font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+/* 正常链接 未访问 */
+a:link,a:visited {
+   color:#2b2b2b;
+}
+
+/* 鼠标悬停 */
+a:hover {
+    color: #F35151;
+    text-decoration: none;
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+ins,a {  text-decoration:none;  }
+
+/* 清理浮动 */
+html button::-moz-focus-inner{
+border-color:transparent!important; /* CSS清除按钮和超链接点击时的虚线 */
+}
+.clearfix:after {
+	content:"."; display:block; height:0; 
+	clear:both; visibility:hidden; font-size: 0;
+}
+.clearfix {
+	display:block;
+}
+.clear{ 
+	clear:both;
+}/* 清除浮动*/
+.clear {
+    zoom:1; /* for IE6 IE7 */
+}
+
+/* chrome 下字体过小的问题 */
+.fn-webkit-adjust {  -webkit-text-size-adjust: none;  }
+
+/* chrome 下 解决保存密码后input输入框变黄色*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    box-shadow:0 0 0 60px #fff inset;
+    -webkit-text-fill-color: #333;
+}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+body {
+    font:12px/1.5 'Microsoft YaHei','YaHei',tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;
+    color:#454545;
+    background:#fff; /*解决电脑设置保护色，网页空白处默认淡绿色问题*/
+    min-width: 990px;
+    position:relative;z-index:1;width:100%;
+    overflow-x: hidden;
+}
+
+button,input,select,textarea{
+    font:14px 'Microsoft YaHei','YaHei',tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;
+    color:#454545;
+    background:#fff;
+}
+
+caption,th{text-align:left;} 
+
+
+/* 解决ie下连接加粗的鼠标样式问题*/
+a strong{ cursor:pointer;}
+
+
+.touzi-cont{
+	width: 958px; border:1px solid #ddd; border-radius: 5px;
+	margin:20px auto;
+}
+
+.touzi-cont h3{
+	text-align: center; margin:30px 68px;
+	position: relative; font-size: 22px;
+}
+.touzi-cont h3:before,
+.touzi-cont h3:after{
+	position: absolute;
+	content: '';
+	width: 306px; 
+	height: 1px; 
+	background: #ddd;
+	top:16px;
+}
+.touzi-cont h3:before{
+	left:0;
+}
+.touzi-cont h3:after{
+	right:0;
+}
+.touzi-body{
+	width:824px;
+	margin:30px auto;
+	font-size: 16px; 
+	color:#333;
+    height: auto;
+    overflow: hidden;
+}
+.touzi-body h4{
+	color:#c01921;
+	line-height: 42px;
+	position: relative;
+	padding-left:14px;
+	font-size: 16px;
+    margin: 20px 0;
+}
+.touzi-body h4:before{
+	position: absolute;
+	content: '';
+	width:4px;
+	height: 16px;
+	top:13px; left:0;
+	background: #c01921
+}
+.touzi-body p{
+	height: auto;
+    overflow: hidden;
+	padding-left:14px;
+}
+.touzi-body p.touzi-ming{
+	line-height: 42px;
+}
+.touzi-body p.touzi-inp{
+	line-height: 40px;
+	margin-bottom:10px;
+}
+.touzi-body p span{
+	margin-right:50px;
+
+}
+.touzi-body p span input[type="radio"]{
+	vertical-align: middle; margin-right:3px;
+	margin-bottom:4px;
+}
+.touzi-ul{
+	margin-left:14px;
+	margin-bottom: 12px;
+}
+.touzi-ul li{
+	float:left; display: inline-block;
+	width: 200px; line-height: 30px;
+}
+.touzi-ul li input[type="checkbox"]{
+	vertical-align: middle; margin-right:3px;
+	margin-bottom:2px;
+}
+.touzi-body  p.touzi-shop{
+	line-height: 32px;
+}
+.touzi-body  p.touzi-shop span{
+	display: inline-block; float: left;
+	width: 16px;    margin-right: 5px;
+
+}
+.touzi-body  p.touzi-shop i{
+	font-style: normal;
+	display: inline-block; float: left;
+	width: 788px;
+}
+.touzi-btn{
+	margin:50px auto 20px;
+	height: auto;
+    overflow: hidden;
+}
+.touzi-btn input{
+	width: 100px; display: block;
+	height: 40px; line-height: 40px;
+	margin:0 auto; text-align: center;
+	background:#c01921; border:none;
+	border-radius: 5px; cursor: pointer;
+	color:#fff;
+}
+.touzi-btn input:hover{
+	background:#ea1a24;
+}

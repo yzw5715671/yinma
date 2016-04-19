@@ -1,0 +1,2175 @@
+[ 2016-04-11T16:06:10+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000311s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.013254s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001588s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.030604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.034690s ]
+
+[ 2016-04-11T16:06:10+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000269s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007382s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001548s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.030489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.034556s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001231s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003650s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052024s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053636s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001299s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002889s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004920s ]
+
+[ 2016-04-11T16:06:11+08:00 ] 127.0.0.1 /admin.php?s=/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000510s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011161s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002852s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.038854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.045742s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004255s ]
+
+[ 2016-04-11T16:06:36+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000356s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007374s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001511s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.034633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.038449s ]
+NOTIC: [8] Undefined index: lite C:\wamp\www\yinma\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `jm_member` [ RunTime:0.0047s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`oid`,`realname`,`position`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `jm_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_action` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `jm_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `jm_member` SET `login`=`login`+1,`last_login_time`='1460361996',`last_login_ip`='2130706433' WHERE `uid` = 1 [ RunTime:0.0013s ]
+
+[ 2016-04-11T16:06:37+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000290s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011202s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015832s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002416s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.036380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042569s ]
+SQL: SHOW COLUMNS FROM `jm_menu` [ RunTime:0.0057s ]
+SQL: SELECT `id`,`title`,`url` FROM `jm_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `jm_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001856s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004683s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0063s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_member` [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_member` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jm_action_log` [ RunTime:0.0047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_action_log` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_document` [ RunTime:0.0048s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_document` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jm_category` [ RunTime:0.0049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_category` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jm_model` [ RunTime:0.0063s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_model` LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000987s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.258396s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039580s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004720s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.163630s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001009s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.518898s ]
+SQL: select version() as v; [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063490s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.199105s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.260222s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.261130s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001101s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.577498s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026906s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.282482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.307724s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.047092s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.477177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040318s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.282482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.321739s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003853s ]
+
+[ 2016-04-11T16:07:17+08:00 ] 127.0.0.1 /admin.php?s=/Project/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000306s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006135s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001437s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.028288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.032265s ]
+SQL: SHOW COLUMNS FROM `jm_menu` [ RunTime:0.0041s ]
+SQL: SELECT `id`,`title`,`url` FROM `jm_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0012s ]
+SQL: SELECT `pid` FROM `jm_menu` WHERE ( pid !=0 AND url like '%Project/index%' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `jm_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT DISTINCT  `group` FROM `jm_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`url` FROM `jm_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '项目管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0009s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '股票基金' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '实物项目管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `jm_users_detail` [ RunTime:0.0047s ]
+SQL: SELECT p.id AS id,p.industry AS industry,p.project_name AS project_name,p.uid AS uid,p.cover AS cover,p.province AS province,p.city AS city,p.create_time AS create_time,p.stage AS stage,p.is_appointed AS is_appointed,p.status AS status,p.oid AS oid,p.mid AS mid,u.username AS username,u.mobile AS mobile,d.name AS name FROM jm_project p LEFT JOIN jm_ucenter_member u ON u.id=p.uid LEFT JOIN jm_users_detail d ON u.id=d.id WHERE p.status > 0 AND p.oid = '0' ORDER BY p.status ASC,p.is_top desc  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001338s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004103s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 5 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0050s ]
+SQL: SELECT `nickname`,`photo_url` FROM `jm_users` WHERE `id` = 7029 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+SQL: SELECT `nickname`,`photo_url` FROM `jm_users` WHERE `id` = 7468 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.426386s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.428091s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001709s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003995s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006360s ]
+
+[ 2016-04-11T16:07:27+08:00 ] 127.0.0.1 /admin.php?s=/Project/preview/id/346/step/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000354s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006640s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010909s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002091s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.029655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.034365s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 346 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `jm_ucenter_member` WHERE `id` = 7468 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001245s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002972s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\cdf216919c50581286b3eb9f1bdd987d.php 第 5 行.
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5825 LIMIT 1   [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.425833s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.427424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002546s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003115s ]
+
+[ 2016-04-11T16:07:34+08:00 ] 127.0.0.1 /admin.php?s=/Project/preview/id/346/step/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000279s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008341s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002179s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.032378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037408s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 346 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_project_temp` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `jm_project_temp` WHERE `project_id` = 346  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005295s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\11b25fcd338d724f602e3d1c25e3e576.php 第 5 行.
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5827 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5827 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5825 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5825 LIMIT 1   [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.516273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.517928s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001422s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003965s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003262s ]
+
+[ 2016-04-11T16:07:36+08:00 ] 127.0.0.1 /admin.php?s=/Project/preview/id/346/step/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000277s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007571s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001720s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.036173s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040818s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 346 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `jm_project_team` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 346 ORDER BY sort  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001347s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004072s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\6ee7211677690bba790a38c3be4955dd.php 第 5 行.
+NOTIC: [8] Undefined variable: project_id C:\wamp\www\yinma\Runtime\Cache\Admin\6ee7211677690bba790a38c3be4955dd.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.337989s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.340189s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007644s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005550s ]
+
+[ 2016-04-11T16:07:37+08:00 ] 127.0.0.1 /admin.php?s=/Project/preview/id/346/step/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000499s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007207s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002414s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.034647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040215s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 346 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_project_team` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 346 ORDER BY sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001643s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004008s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\6ee7211677690bba790a38c3be4955dd.php 第 5 行.
+NOTIC: [8] Undefined variable: project_id C:\wamp\www\yinma\Runtime\Cache\Admin\6ee7211677690bba790a38c3be4955dd.php 第 129 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.335968s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.338043s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002187s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004064s ]
+
+[ 2016-04-11T16:07:38+08:00 ] 127.0.0.1 /admin.php?s=/Project/preview/id/346/step/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000409s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011436s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002003s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.053601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.060101s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 346 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `jm_project_info` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `jm_project_info` WHERE `project_id` = 346 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_project_event` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `jm_project_event` WHERE `project_id` = 346  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003328s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006674s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\a7e19ffcabdcf769502846fad84d8fc6.php 第 5 行.
+NOTIC: [8] Undefined variable: info C:\wamp\www\yinma\Runtime\Cache\Admin\a7e19ffcabdcf769502846fad84d8fc6.php 第 108 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.479071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.481614s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001365s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003296s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004434s ]
+
+[ 2016-04-11T16:07:44+08:00 ] 127.0.0.1 /admin.php?s=/Project/preview/id/346/step/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000468s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.009339s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001729s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.037077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042013s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 346 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `jm_project_fund` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE `project_id` = 346 LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001650s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004079s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\f5c3c4519da00cd5719316cd60945d3d.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.411922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.413887s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003923s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003046s ]
+
+[ 2016-04-11T16:08:26+08:00 ] 127.0.0.1 /admin.php?s=/Project/projectlog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000311s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007633s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001549s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.028369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.032319s ]
+SQL: SHOW COLUMNS FROM `jm_project_log` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `jm_project_log` WHERE `status` = '0'  [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 333 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 334 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 334 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 334 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 334 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 333 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 333 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 335 ) LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 333 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 336 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 336 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 337 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 337 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 336 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 336 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 338 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 338 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 338 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 338 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 339 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 339 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 343 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 339 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 339 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 343 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 338 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 344 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 337 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 337 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 345 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 345 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 344 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 344 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 344 ) LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001225s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002881s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\b38eb77dbbabeb2a37d35d129308e072.php 第 5 行.
+SQL: SHOW COLUMNS FROM `jm_member` [ RunTime:0.0045s ]
+SQL: SELECT `nickname` FROM `jm_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\b38eb77dbbabeb2a37d35d129308e072.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.374326s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.376037s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001354s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004051s ]
+
+[ 2016-04-11T16:08:29+08:00 ] 127.0.0.1 /admin.php?s=/Manage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000301s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008789s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012980s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002379s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.042040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.048097s ]
+SQL: SHOW COLUMNS FROM `jm_menu` [ RunTime:0.0041s ]
+SQL: SELECT `id`,`title`,`url` FROM `jm_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `jm_menu` WHERE ( pid !=0 AND url like '%Manage/index%' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT DISTINCT  `group` FROM `jm_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`url` FROM `jm_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '项目管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0009s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '股票基金' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '实物项目管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `jm_project` WHERE `status` > '2' AND `stage` >= 4 ORDER BY stage, create_time desc  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_project_fund` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 345 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 344 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 339 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 337 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 336 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 334 ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001311s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003199s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\55d4bcffddb3c014a297711cf9d39fe3.php 第 5 行.
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\55d4bcffddb3c014a297711cf9d39fe3.php 第 130 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.298072s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.299659s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003047s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005306s ]
+
+[ 2016-04-11T16:08:31+08:00 ] 127.0.0.1 /admin.php?s=/Project/projectlog.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001496s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.010219s ]
+INFO: [ app_init ] --END-- [ RunTime:0.018415s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001918s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.044108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.049499s ]
+SQL: SHOW COLUMNS FROM `jm_project_log` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `jm_project_log` WHERE `status` = '0'  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 333 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 334 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 334 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 334 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 334 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 333 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 333 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 335 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 333 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 336 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 336 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 337 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 337 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 336 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 336 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 338 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 338 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 338 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 338 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 339 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 339 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 343 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 339 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 339 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 343 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 338 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 344 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 337 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 337 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 345 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 345 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 344 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 344 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project` WHERE ( id = 344 ) LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001642s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003662s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\b38eb77dbbabeb2a37d35d129308e072.php 第 5 行.
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\b38eb77dbbabeb2a37d35d129308e072.php 第 125 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.277300s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.279281s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001542s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003739s ]
+
+[ 2016-04-11T16:08:35+08:00 ] 127.0.0.1 /admin.php?s=/Outinvestor/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000316s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006416s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001602s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.027109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031390s ]
+SQL: SHOW COLUMNS FROM `jm_menu` [ RunTime:0.0043s ]
+SQL: SELECT `id`,`title`,`url` FROM `jm_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `jm_menu` WHERE ( pid !=0 AND url like '%Outinvestor/index%' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `jm_menu` WHERE `id` = 124 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT DISTINCT  `group` FROM `jm_menu` WHERE `group` <> '' AND `pid` = 124  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`url` FROM `jm_menu` WHERE `pid` = 124 AND `hide` = 0  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '项目管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '股票基金' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0013s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '实物项目管理' AND `pid` = 124 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_out_investor` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `jm_out_investor` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0058s ]
+SQL: SELECT oi.id AS id,oi.uid AS uid,oi.pid AS pid,oi.fund AS fund,oi.real_name AS real_name,oi.phone AS phone,oi.out_state AS out_state,oi.pay_flag AS pay_flag,oi.state AS state,oi.from_way AS from_way,oi.create_time AS create_time,p.project_name AS project_name FROM jm_out_investor oi LEFT JOIN jm_project p ON oi.pid=p.id WHERE oi.out_state <> -1 AND oi.state <> -1 ORDER BY oi.state ASC,oi.create_time desc  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001263s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002950s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\1c3b89a909fef716254dddb4bda82126.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.285527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.287342s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001382s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004908s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001654s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003293s ]
+
+[ 2016-04-11T16:08:38+08:00 ] 127.0.0.1 /admin.php?s=/Manage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000609s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.012922s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002833s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.044027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.051198s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `jm_project` WHERE `status` > '2' AND `stage` >= 4 ORDER BY stage, create_time desc  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `jm_project_fund` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 345 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 344 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 339 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 337 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 336 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 334 ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002496s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004914s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\55d4bcffddb3c014a297711cf9d39fe3.php 第 5 行.
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\55d4bcffddb3c014a297711cf9d39fe3.php 第 130 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.458538s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.460891s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001815s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004086s ]
+
+[ 2016-04-11T16:08:44+08:00 ] 127.0.0.1 /admin.php?s=/manage/leadlist/id/345.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001457s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.012100s ]
+INFO: [ app_init ] --END-- [ RunTime:0.022857s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001578s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.036271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040387s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0048s ]
+SQL: SELECT `project_name` FROM `jm_project` WHERE `id` = 345 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_proj_leader` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `jm_users_detail` [ RunTime:0.0036s ]
+SQL: SELECT pl.id AS id,pl.pid AS pid,pl.uid AS uid,pl.fund AS fund,pl.message AS message,pl.status AS status,pl.create_time AS create_time,u.nickname AS nickname,d.name AS name,d.phone AS phone FROM jm_proj_leader pl LEFT JOIN jm_users u ON u.id=pl.uid  JOIN jm_users_detail d ON d.id=pl.uid WHERE `del_flag` = 0 AND pl.pid = '345'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001235s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003006s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\dfc789d26dc0c74e073ce9e0877a8638.php 第 5 行.
+NOTIC: [8] Undefined variable: pj_id C:\wamp\www\yinma\Runtime\Cache\Admin\dfc789d26dc0c74e073ce9e0877a8638.php 第 101 行.
+SQL: SELECT `nickname`,`photo_url` FROM `jm_users` WHERE `id` = 6945 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `nickname`,`photo_url` FROM `jm_users` WHERE `id` = 7349 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `nickname`,`photo_url` FROM `jm_users` WHERE `id` = 7351 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `nickname`,`photo_url` FROM `jm_users` WHERE `id` = 7343 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `nickname`,`photo_url` FROM `jm_users` WHERE `id` = 7116 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `nickname`,`photo_url` FROM `jm_users` WHERE `id` = 6932 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `nickname`,`photo_url` FROM `jm_users` WHERE `id` = 6908 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `nickname`,`photo_url` FROM `jm_users` WHERE `id` = 7366 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `nickname`,`photo_url` FROM `jm_users` WHERE `id` = 7359 LIMIT 1   [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.474629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.477051s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001312s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003237s ]
+
+[ 2016-04-11T16:09:03+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000350s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007392s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001613s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.029178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033404s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001304s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003701s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0045s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_member` [ RunTime:0.0038s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_member` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_action_log` [ RunTime:0.0037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_action_log` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jm_document` [ RunTime:0.0044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_document` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jm_category` [ RunTime:0.0041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_category` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jm_model` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_model` LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001087s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.183044s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026040s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029032s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001665s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004070s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.137897s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000973s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.377907s ]
+SQL: select version() as v; [ RunTime:0.0005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038317s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.160968s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.196487s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.197686s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000988s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.426378s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018927s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.218302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.234658s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.037347s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.376501s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026969s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.218302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.242777s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001586s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003392s ]
+
+[ 2016-04-11T16:09:06+08:00 ] 127.0.0.1 /admin.php?s=/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000607s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.010268s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002136s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.037008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042480s ]
+SQL: SHOW COLUMNS FROM `jm_menu` [ RunTime:0.0037s ]
+SQL: SELECT `id`,`title`,`url` FROM `jm_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `jm_menu` WHERE ( pid !=0 AND url like '%Article/index%' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT DISTINCT  `group` FROM `jm_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`url` FROM `jm_menu` WHERE `pid` = 2 AND `hide` = 0  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '内容' AND `pid` = 2 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_auth_group_access` [ RunTime:0.0047s ]
+SQL: SELECT `extend_id` FROM jm_auth_group_access g INNER JOIN jm_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `jm_category` [ RunTime:0.0045s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `jm_category` WHERE `status` = 1 ORDER BY pid,sort  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_model` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `jm_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_document` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_document` WHERE `status` IN ('0','1','2') AND `pid` = 0 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `id`,`category_id`,`title`,`type`,`update_time`,`status`,`view`,`model_id`,`pid` FROM `jm_document` WHERE `status` IN ('0','1','2') AND `pid` = 0 ORDER BY level DESC,id DESC LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SELECT `extend` FROM `jm_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_attribute` [ RunTime:0.0046s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `jm_attribute` WHERE `model_id` = 1  [ RunTime:0.0007s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Common\Common\function.php 第 869 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001580s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003248s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.699011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.701358s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001657s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004407s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005492s ]
+
+[ 2016-04-11T17:26:31+08:00 ] 127.0.0.1 /admin.php?s=/Project/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000294s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001609s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.031433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.035891s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `jm_users_detail` [ RunTime:0.0049s ]
+SQL: SELECT p.id AS id,p.industry AS industry,p.project_name AS project_name,p.uid AS uid,p.cover AS cover,p.province AS province,p.city AS city,p.create_time AS create_time,p.stage AS stage,p.is_appointed AS is_appointed,p.status AS status,p.oid AS oid,p.mid AS mid,u.username AS username,u.mobile AS mobile,d.name AS name FROM jm_project p LEFT JOIN jm_ucenter_member u ON u.id=p.uid LEFT JOIN jm_users_detail d ON u.id=d.id WHERE p.status > 0 AND p.oid = '0' ORDER BY p.status ASC,p.is_top desc  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001359s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003813s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 5 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.390300s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.392402s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001308s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002146s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004110s ]
+
+[ 2016-04-11T17:31:22+08:00 ] 127.0.0.1 /admin.php?s=/Project/setmanager/id/348.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000272s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006159s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009816s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001619s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.030437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.035087s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0044s ]
+SQL: SELECT `id`,`project_name` FROM `jm_project` WHERE `id` = 348 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_group` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `jm_group` WHERE `status` = 1  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001697s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003631s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001672s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003363s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001796s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003317s ]
+
+[ 2016-04-11T17:31:26+08:00 ] 127.0.0.1 /admin.php?s=/Project/getManagerList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000382s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007327s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001393s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.031037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.034819s ]
+SQL: SHOW COLUMNS FROM `jm_member` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `jm_member` WHERE `oid` = 1 AND `status` = 1  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: real_name C:\wamp\www\yinma\Application\Admin\Controller\ProjectController.class.php 第 126 行.
+NOTIC: [8] Undefined index: real_name C:\wamp\www\yinma\Application\Admin\Controller\ProjectController.class.php 第 126 行.
+
+[ 2016-04-11T17:31:40+08:00 ] 127.0.0.1 /admin.php?s=/Project/setmanager/id/348.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000313s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005896s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002229s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.030864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036388s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0053s ]
+SQL: SELECT `id`,`project_name` FROM `jm_project` WHERE `id` = 348 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_group` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `jm_group` WHERE `status` = 1  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002789s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059949s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061194s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002509s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001259s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002533s ]
+
+[ 2016-04-11T17:31:43+08:00 ] 127.0.0.1 /admin.php?s=/Project/index/status/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000272s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006136s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001538s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.030214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.034091s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `jm_users_detail` [ RunTime:0.0039s ]
+SQL: SELECT p.id AS id,p.industry AS industry,p.project_name AS project_name,p.uid AS uid,p.cover AS cover,p.province AS province,p.city AS city,p.create_time AS create_time,p.stage AS stage,p.is_appointed AS is_appointed,p.status AS status,p.oid AS oid,p.mid AS mid,u.username AS username,u.mobile AS mobile,d.name AS name FROM jm_project p LEFT JOIN jm_ucenter_member u ON u.id=p.uid LEFT JOIN jm_users_detail d ON u.id=d.id WHERE p.status = 1 AND p.oid = '0' ORDER BY p.status ASC,p.is_top desc  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001317s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003322s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 5 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.310027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.311903s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001281s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002886s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003060s ]
+
+[ 2016-04-11T17:31:50+08:00 ] 127.0.0.1 /admin.php?s=/Project/edit/step/1/id/348.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000336s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008434s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012189s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001513s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.037120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041230s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 348 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_code` [ RunTime:0.0055s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'industry' ORDER BY sort  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'project_phase' ORDER BY sort  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'step' ORDER BY sort  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004377s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 5 行.
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5851 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ J_China_City ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001651s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.217878s ]
+NOTIC: [8] Undefined index: district C:\wamp\www\yinma\Runtime\Cache\Admin\882eee30a33dcc6f34123c9cd9ad883e.php 第 11 行.
+NOTIC: [8] Undefined index: community C:\wamp\www\yinma\Runtime\Cache\Admin\882eee30a33dcc6f34123c9cd9ad883e.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083757s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.085580s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003220s ]
+INFO: Run Addons\ChinaCity\ChinaCityAddon [ RunTime:0.097300s ]
+INFO: [ J_China_City ] --END-- [ RunTime:0.099218s ]
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1299 行.
+SQL: SHOW COLUMNS FROM `jm_code` [ RunTime:0.0048s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `id` = null LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Array to string conversion C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 263 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.154581s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.085580s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.066784s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004670s ]
+
+[ 2016-04-11T17:31:52+08:00 ] 127.0.0.1 /admin.php?s=/Addons/execute/_addons/ChinaCity/_controller/ChinaCity/_action/getProvince.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000408s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007903s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002184s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.048407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.053705s ]
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0112s ]
+SQL: SELECT `title`,`name` FROM `jm_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_menu` [ RunTime:0.0062s ]
+SQL: SELECT `id`,`title`,`url` FROM `jm_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0011s ]
+SQL: SELECT `pid` FROM `jm_menu` WHERE ( pid !=0 AND url like '%Addons/execute%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_menu` WHERE `id` = 44 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_menu` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT DISTINCT  `group` FROM `jm_menu` WHERE `group` <> '' AND `pid` = 43  [ RunTime:0.0021s ]
+SQL: SELECT `id`,`url` FROM `jm_menu` WHERE `pid` = 43 AND `hide` = 0  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '扩展' AND `pid` = 43 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '短信服务' AND `pid` = 43 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '第三方平台' AND `pid` = 43 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_district` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `jm_district` WHERE `level` = 1 AND `upid` = 0 ORDER BY id ASC  [ RunTime:0.0010s ]
+
+[ 2016-04-11T17:31:52+08:00 ] 127.0.0.1 /admin.php?s=/Addons/execute/_addons/ChinaCity/_controller/ChinaCity/_action/getCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000415s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002568s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.048612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.055519s ]
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0054s ]
+SQL: SELECT `title`,`name` FROM `jm_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_district` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `jm_district` WHERE `level` = 2 AND `upid` = 1 ORDER BY id ASC  [ RunTime:0.0009s ]
+
+[ 2016-04-11T17:31:59+08:00 ] 127.0.0.1 /admin.php?s=/Project/edit/id/348/step/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000286s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011772s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001663s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.029341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033523s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 348 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_project_info` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `jm_project_info` WHERE `project_id` = 348 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_event` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `jm_project_event` WHERE `project_id` = 348  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001388s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003690s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\5338118fbe9ac5d69f256fa341fd3ff9.php 第 5 行.
+INFO: [ documentEditFormContent ] --START--
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0043s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'Editor' AND `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001310s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.361128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079599s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081567s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001434s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004212s ]
+INFO: Run Addons\Editor\EditorAddon [ RunTime:0.244876s ]
+INFO: [ documentEditFormContent ] --END-- [ RunTime:0.246777s ]
+NOTIC: [8] Undefined variable: value C:\wamp\www\yinma\Runtime\Cache\Admin\5338118fbe9ac5d69f256fa341fd3ff9.php 第 146 行.
+INFO: [ documentEditFormContent ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001408s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.449188s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068160s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.013219s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.078923s ]
+INFO: Run Addons\Editor\EditorAddon [ RunTime:0.079500s ]
+INFO: [ documentEditFormContent ] --END-- [ RunTime:-0.001537s ]
+NOTIC: [8] Undefined variable: value C:\wamp\www\yinma\Runtime\Cache\Admin\5338118fbe9ac5d69f256fa341fd3ff9.php 第 154 行.
+INFO: [ documentEditFormContent ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001091s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.533137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071226s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.095253s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.164198s ]
+INFO: Run Addons\Editor\EditorAddon [ RunTime:0.080248s ]
+INFO: [ documentEditFormContent ] --END-- [ RunTime:-0.084365s ]
+NOTIC: [8] Undefined variable: value C:\wamp\www\yinma\Runtime\Cache\Admin\5338118fbe9ac5d69f256fa341fd3ff9.php 第 161 行.
+INFO: [ documentEditFormContent ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001192s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.617918s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072231s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.180316s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.250173s ]
+INFO: Run Addons\Editor\EditorAddon [ RunTime:0.082856s ]
+INFO: [ documentEditFormContent ] --END-- [ RunTime:-0.168830s ]
+NOTIC: [8] Undefined variable: value C:\wamp\www\yinma\Runtime\Cache\Admin\5338118fbe9ac5d69f256fa341fd3ff9.php 第 168 行.
+INFO: [ documentEditFormContent ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001118s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.705133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073275s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.266650s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.337424s ]
+INFO: Run Addons\Editor\EditorAddon [ RunTime:0.082173s ]
+INFO: [ documentEditFormContent ] --END-- [ RunTime:-0.255570s ]
+NOTIC: [8] Undefined variable: value C:\wamp\www\yinma\Runtime\Cache\Admin\5338118fbe9ac5d69f256fa341fd3ff9.php 第 175 行.
+INFO: [ documentEditFormContent ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001269s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.797967s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078292s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.356496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.434003s ]
+INFO: Run Addons\Editor\EditorAddon [ RunTime:0.091188s ]
+INFO: [ documentEditFormContent ] --END-- [ RunTime:-0.342651s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.095025s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.356496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.450546s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004025s ]
+
+[ 2016-04-11T17:32:06+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000355s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.010142s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015014s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001890s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.029567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.034183s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001214s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004643s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0046s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_member` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_member` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jm_action_log` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_action_log` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jm_document` [ RunTime:0.0047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_document` LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_category` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_category` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jm_model` [ RunTime:0.0047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_model` LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001073s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.197588s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027156s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028956s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001882s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004322s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.146247s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001179s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.335479s ]
+SQL: select version() as v; [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041547s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.104288s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.143596s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.142771s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000991s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.385156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019284s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.165137s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.181280s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.036787s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.329850s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027372s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.165137s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.190171s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002092s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004172s ]
+
+[ 2016-04-11T17:32:09+08:00 ] 127.0.0.1 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001059s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.009119s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014824s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001720s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.034207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039674s ]
+SQL: SHOW COLUMNS FROM `jm_menu` [ RunTime:0.0038s ]
+SQL: SELECT `id`,`title`,`url` FROM `jm_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0009s ]
+SQL: SELECT `pid` FROM `jm_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT DISTINCT  `group` FROM `jm_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0009s ]
+SQL: SELECT `id`,`url` FROM `jm_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0011s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '会员管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_member` [ RunTime:0.0038s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_member` WHERE `status` >= 0 AND `position` = 3 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`oid`,`realname`,`position`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `jm_member` WHERE `status` >= 0 AND `position` = 3 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002715s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.323393s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.325298s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001230s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001376s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003550s ]
+
+[ 2016-04-11T17:32:12+08:00 ] 127.0.0.1 /admin.php?s=/Project/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000642s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015281s ]
+INFO: [ app_init ] --END-- [ RunTime:0.022106s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010282s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.050661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.069489s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `jm_users_detail` [ RunTime:0.0043s ]
+SQL: SELECT p.id AS id,p.industry AS industry,p.project_name AS project_name,p.uid AS uid,p.cover AS cover,p.province AS province,p.city AS city,p.create_time AS create_time,p.stage AS stage,p.is_appointed AS is_appointed,p.status AS status,p.oid AS oid,p.mid AS mid,u.username AS username,u.mobile AS mobile,d.name AS name FROM jm_project p LEFT JOIN jm_ucenter_member u ON u.id=p.uid LEFT JOIN jm_users_detail d ON u.id=d.id WHERE p.status > 0 AND p.oid = '0' ORDER BY p.status ASC,p.is_top desc  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.007565s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.012596s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 5 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.486122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.488035s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003630s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001900s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003795s ]
+
+[ 2016-04-11T17:32:17+08:00 ] 127.0.0.1 /admin.php?s=/Project/stage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000333s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006555s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001547s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.028154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.032314s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `jm_project` WHERE `status` = '9' ORDER BY update_time desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_project_fund` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 345 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_attach` [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_attach` WHERE `project_id` = 345 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant agreement - assumed 'agreement' C:\wamp\www\yinma\Application\Admin\Controller\ProjectController.class.php 第 345 行.
+SQL: SHOW COLUMNS FROM `jm_agreement` [ RunTime:0.0060s ]
+SQL: SELECT `key` FROM `jm_agreement` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 344 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_attach` WHERE `project_id` = 344 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant agreement - assumed 'agreement' C:\wamp\www\yinma\Application\Admin\Controller\ProjectController.class.php 第 345 行.
+SQL: SELECT `key` FROM `jm_agreement` WHERE `id` = null LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 343 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_attach` WHERE `project_id` = 343 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant agreement - assumed 'agreement' C:\wamp\www\yinma\Application\Admin\Controller\ProjectController.class.php 第 345 行.
+SQL: SELECT `key` FROM `jm_agreement` WHERE `id` = null LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 339 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_attach` WHERE `project_id` = 339 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant agreement - assumed 'agreement' C:\wamp\www\yinma\Application\Admin\Controller\ProjectController.class.php 第 345 行.
+SQL: SELECT `key` FROM `jm_agreement` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 338 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_attach` WHERE `project_id` = 338 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant agreement - assumed 'agreement' C:\wamp\www\yinma\Application\Admin\Controller\ProjectController.class.php 第 345 行.
+SQL: SELECT `key` FROM `jm_agreement` WHERE `id` = null LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 337 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_attach` WHERE `project_id` = 337 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant agreement - assumed 'agreement' C:\wamp\www\yinma\Application\Admin\Controller\ProjectController.class.php 第 345 行.
+SQL: SELECT `key` FROM `jm_agreement` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 336 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_attach` WHERE `project_id` = 336 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant agreement - assumed 'agreement' C:\wamp\www\yinma\Application\Admin\Controller\ProjectController.class.php 第 345 行.
+SQL: SELECT `key` FROM `jm_agreement` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE ( project_id = 334 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_attach` WHERE `project_id` = 334 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant agreement - assumed 'agreement' C:\wamp\www\yinma\Application\Admin\Controller\ProjectController.class.php 第 345 行.
+SQL: SELECT `key` FROM `jm_agreement` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001342s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003540s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\bd7f51a96c96856748cdcf0e0be45b34.php 第 5 行.
+NOTIC: [8] Undefined index: stage_text C:\wamp\www\yinma\Runtime\Cache\Admin\bd7f51a96c96856748cdcf0e0be45b34.php 第 123 行.
+NOTIC: [8] Undefined index: stage_text C:\wamp\www\yinma\Runtime\Cache\Admin\bd7f51a96c96856748cdcf0e0be45b34.php 第 123 行.
+NOTIC: [8] Undefined index: stage_text C:\wamp\www\yinma\Runtime\Cache\Admin\bd7f51a96c96856748cdcf0e0be45b34.php 第 123 行.
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\bd7f51a96c96856748cdcf0e0be45b34.php 第 162 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.564012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.566203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001422s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003276s ]
+
+[ 2016-04-11T17:32:25+08:00 ] 127.0.0.1 /admin.php?s=/Project/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000292s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002139s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.036393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041425s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `jm_users_detail` [ RunTime:0.0039s ]
+SQL: SELECT p.id AS id,p.industry AS industry,p.project_name AS project_name,p.uid AS uid,p.cover AS cover,p.province AS province,p.city AS city,p.create_time AS create_time,p.stage AS stage,p.is_appointed AS is_appointed,p.status AS status,p.oid AS oid,p.mid AS mid,u.username AS username,u.mobile AS mobile,d.name AS name FROM jm_project p LEFT JOIN jm_ucenter_member u ON u.id=p.uid LEFT JOIN jm_users_detail d ON u.id=d.id WHERE p.status > 0 AND p.oid = '0' ORDER BY p.status ASC,p.is_top desc  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001312s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003101s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 5 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.424121s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.426125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001635s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001823s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004078s ]
+
+[ 2016-04-11T17:32:28+08:00 ] 127.0.0.1 /admin.php?s=/Project/index/status/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000350s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.016900s ]
+INFO: [ app_init ] --END-- [ RunTime:0.021009s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003352s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.036528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043323s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0069s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `jm_users_detail` [ RunTime:0.0053s ]
+SQL: SELECT p.id AS id,p.industry AS industry,p.project_name AS project_name,p.uid AS uid,p.cover AS cover,p.province AS province,p.city AS city,p.create_time AS create_time,p.stage AS stage,p.is_appointed AS is_appointed,p.status AS status,p.oid AS oid,p.mid AS mid,u.username AS username,u.mobile AS mobile,d.name AS name FROM jm_project p LEFT JOIN jm_ucenter_member u ON u.id=p.uid LEFT JOIN jm_users_detail d ON u.id=d.id WHERE p.status = 1 AND p.oid = '0' ORDER BY p.status ASC,p.is_top desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001501s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003456s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 5 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.381456s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.384186s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001880s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003914s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002147s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004487s ]
+
+[ 2016-04-11T17:32:49+08:00 ] 127.0.0.1 /admin.php?s=/Project/edit/step/1/id/346.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000479s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.012229s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017959s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002618s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.035897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041598s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 346 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_code` [ RunTime:0.0061s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'industry' ORDER BY sort  [ RunTime:0.0014s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'project_phase' ORDER BY sort  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'step' ORDER BY sort  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001468s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003134s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 5 行.
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5825 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ J_China_City ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001053s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.211755s ]
+NOTIC: [8] Undefined index: district C:\wamp\www\yinma\Runtime\Cache\Admin\882eee30a33dcc6f34123c9cd9ad883e.php 第 11 行.
+NOTIC: [8] Undefined index: community C:\wamp\www\yinma\Runtime\Cache\Admin\882eee30a33dcc6f34123c9cd9ad883e.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079303s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001649s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003591s ]
+INFO: Run Addons\ChinaCity\ChinaCityAddon [ RunTime:0.089752s ]
+INFO: [ J_China_City ] --END-- [ RunTime:0.091466s ]
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1299 行.
+SQL: SHOW COLUMNS FROM `jm_code` [ RunTime:0.0038s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `id` = null LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Array to string conversion C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 263 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.139767s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079303s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.059274s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001851s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003463s ]
+
+[ 2016-04-11T17:32:50+08:00 ] 127.0.0.1 /admin.php?s=/Addons/execute/_addons/ChinaCity/_controller/ChinaCity/_action/getProvince.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000498s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.013834s ]
+INFO: [ app_init ] --END-- [ RunTime:0.021566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002752s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.049885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.056805s ]
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0048s ]
+SQL: SELECT `title`,`name` FROM `jm_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jm_district` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `jm_district` WHERE `level` = 1 AND `upid` = 0 ORDER BY id ASC  [ RunTime:0.0009s ]
+
+[ 2016-04-11T17:32:50+08:00 ] 127.0.0.1 /admin.php?s=/Addons/execute/_addons/ChinaCity/_controller/ChinaCity/_action/getCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000638s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001983s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.046336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.051315s ]
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0058s ]
+SQL: SELECT `title`,`name` FROM `jm_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_district` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `jm_district` WHERE `level` = 2 AND `upid` = 25 ORDER BY id ASC  [ RunTime:0.0011s ]
+
+[ 2016-04-11T17:33:08+08:00 ] 127.0.0.1 /admin.php?s=/Project/edit/id/346/step/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000287s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006274s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001670s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.033887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.038811s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 346 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_project_team` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 346 AND `status` >= 0 ORDER BY sort asc,create_time  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001695s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004585s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c8bf95d3a56d33e6263a0d368223727a.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.281166s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.282822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001382s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003607s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003154s ]
+
+[ 2016-04-11T17:33:14+08:00 ] 127.0.0.1 /admin.php?s=/Project/edit/step/1/id/348.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002924s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007664s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001588s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.041151s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.045308s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 348 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_code` [ RunTime:0.0039s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'industry' ORDER BY sort  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'project_phase' ORDER BY sort  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'step' ORDER BY sort  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001376s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002952s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 5 行.
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5851 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ J_China_City ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001115s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.220217s ]
+NOTIC: [8] Undefined index: district C:\wamp\www\yinma\Runtime\Cache\Admin\882eee30a33dcc6f34123c9cd9ad883e.php 第 11 行.
+NOTIC: [8] Undefined index: community C:\wamp\www\yinma\Runtime\Cache\Admin\882eee30a33dcc6f34123c9cd9ad883e.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078050s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079972s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001667s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003692s ]
+INFO: Run Addons\ChinaCity\ChinaCityAddon [ RunTime:0.090321s ]
+INFO: [ J_China_City ] --END-- [ RunTime:0.091911s ]
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1299 行.
+SQL: SHOW COLUMNS FROM `jm_code` [ RunTime:0.0038s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `id` = null LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Array to string conversion C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 263 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.141057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079972s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.059180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002253s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003869s ]
+
+[ 2016-04-11T17:33:15+08:00 ] 127.0.0.1 /admin.php?s=/Addons/execute/_addons/ChinaCity/_controller/ChinaCity/_action/getProvince.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000735s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011609s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003435s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.060347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.072017s ]
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0055s ]
+SQL: SELECT `title`,`name` FROM `jm_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_district` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `jm_district` WHERE `level` = 1 AND `upid` = 0 ORDER BY id ASC  [ RunTime:0.0009s ]
+
+[ 2016-04-11T17:33:15+08:00 ] 127.0.0.1 /admin.php?s=/Addons/execute/_addons/ChinaCity/_controller/ChinaCity/_action/getCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000557s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.009848s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015963s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002007s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.065160s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.070776s ]
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0044s ]
+SQL: SELECT `title`,`name` FROM `jm_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_district` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `jm_district` WHERE `level` = 2 AND `upid` = 1 ORDER BY id ASC  [ RunTime:0.0010s ]
+
+[ 2016-04-11T17:33:19+08:00 ] 127.0.0.1 /admin.php?s=/Project/edit/id/348/step/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000343s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008299s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001937s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.035304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042146s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 348 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_project_team` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 348 AND `status` >= 0 ORDER BY sort asc,create_time  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004532s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c8bf95d3a56d33e6263a0d368223727a.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.334838s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.337612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001366s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006667s ]
+
+[ 2016-04-11T17:33:23+08:00 ] 127.0.0.1 /admin.php?s=/Project/edit/id/348/step/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000349s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005606s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001610s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.033201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037329s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 348 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_info` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `jm_project_info` WHERE `project_id` = 348 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_event` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `jm_project_event` WHERE `project_id` = 348  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002446s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004848s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\5338118fbe9ac5d69f256fa341fd3ff9.php 第 5 行.
+INFO: [ documentEditFormContent ] --START--
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0038s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'Editor' AND `status` = 1 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001372s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.205302s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066066s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002740s ]
+INFO: Run Addons\Editor\EditorAddon [ RunTime:0.094230s ]
+INFO: [ documentEditFormContent ] --END-- [ RunTime:0.096051s ]
+NOTIC: [8] Undefined variable: value C:\wamp\www\yinma\Runtime\Cache\Admin\5338118fbe9ac5d69f256fa341fd3ff9.php 第 146 行.
+INFO: [ documentEditFormContent ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001317s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.282182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065626s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.011331s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.076122s ]
+INFO: Run Addons\Editor\EditorAddon [ RunTime:0.075123s ]
+INFO: [ documentEditFormContent ] --END-- [ RunTime:-0.001567s ]
+NOTIC: [8] Undefined variable: value C:\wamp\www\yinma\Runtime\Cache\Admin\5338118fbe9ac5d69f256fa341fd3ff9.php 第 154 行.
+INFO: [ documentEditFormContent ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001571s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.363514s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068421s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.090145s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.157419s ]
+INFO: Run Addons\Editor\EditorAddon [ RunTime:0.076524s ]
+INFO: [ documentEditFormContent ] --END-- [ RunTime:-0.080315s ]
+NOTIC: [8] Undefined variable: value C:\wamp\www\yinma\Runtime\Cache\Admin\5338118fbe9ac5d69f256fa341fd3ff9.php 第 161 行.
+INFO: [ documentEditFormContent ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001155s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.443926s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064861s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.170921s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.234735s ]
+INFO: Run Addons\Editor\EditorAddon [ RunTime:0.073622s ]
+INFO: [ documentEditFormContent ] --END-- [ RunTime:-0.161072s ]
+NOTIC: [8] Undefined variable: value C:\wamp\www\yinma\Runtime\Cache\Admin\5338118fbe9ac5d69f256fa341fd3ff9.php 第 168 行.
+INFO: [ documentEditFormContent ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001579s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.520919s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071563s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.248939s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.319921s ]
+INFO: Run Addons\Editor\EditorAddon [ RunTime:0.082182s ]
+INFO: [ documentEditFormContent ] --END-- [ RunTime:-0.238900s ]
+NOTIC: [8] Undefined variable: value C:\wamp\www\yinma\Runtime\Cache\Admin\5338118fbe9ac5d69f256fa341fd3ff9.php 第 175 行.
+INFO: [ documentEditFormContent ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001068s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.611283s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068722s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.336783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.404941s ]
+INFO: Run Addons\Editor\EditorAddon [ RunTime:0.080325s ]
+INFO: [ documentEditFormContent ] --END-- [ RunTime:-0.324268s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080038s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.336783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.416355s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003039s ]
+
+[ 2016-04-11T17:33:51+08:00 ] 127.0.0.1 /admin.php?s=/Project/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000372s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008605s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001662s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.028844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033151s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `jm_users_detail` [ RunTime:0.0046s ]
+SQL: SELECT p.id AS id,p.industry AS industry,p.project_name AS project_name,p.uid AS uid,p.cover AS cover,p.province AS province,p.city AS city,p.create_time AS create_time,p.stage AS stage,p.is_appointed AS is_appointed,p.status AS status,p.oid AS oid,p.mid AS mid,u.username AS username,u.mobile AS mobile,d.name AS name FROM jm_project p LEFT JOIN jm_ucenter_member u ON u.id=p.uid LEFT JOIN jm_users_detail d ON u.id=d.id WHERE p.status > 0 AND p.oid = '0' ORDER BY p.status ASC,p.is_top desc  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001389s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003370s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 5 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.388140s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.389990s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004645s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001570s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003298s ]
+
+[ 2016-04-11T17:33:53+08:00 ] 127.0.0.1 /admin.php?s=/Project/index/status/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000320s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.010563s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002142s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.036213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043436s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `jm_users_detail` [ RunTime:0.0046s ]
+SQL: SELECT p.id AS id,p.industry AS industry,p.project_name AS project_name,p.uid AS uid,p.cover AS cover,p.province AS province,p.city AS city,p.create_time AS create_time,p.stage AS stage,p.is_appointed AS is_appointed,p.status AS status,p.oid AS oid,p.mid AS mid,u.username AS username,u.mobile AS mobile,d.name AS name FROM jm_project p LEFT JOIN jm_ucenter_member u ON u.id=p.uid LEFT JOIN jm_users_detail d ON u.id=d.id WHERE p.status = 1 AND p.oid = '0' ORDER BY p.status ASC,p.is_top desc  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001296s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003713s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 5 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.422000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.424246s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001651s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003538s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002401s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004310s ]
+
+[ 2016-04-11T17:34:31+08:00 ] 127.0.0.1 /admin.php?s=/Project/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000316s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006467s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001653s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.030476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036862s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `jm_users_detail` [ RunTime:0.0060s ]
+SQL: SELECT p.id AS id,p.industry AS industry,p.project_name AS project_name,p.uid AS uid,p.cover AS cover,p.province AS province,p.city AS city,p.create_time AS create_time,p.stage AS stage,p.is_appointed AS is_appointed,p.status AS status,p.oid AS oid,p.mid AS mid,u.username AS username,u.mobile AS mobile,d.name AS name FROM jm_project p LEFT JOIN jm_ucenter_member u ON u.id=p.uid LEFT JOIN jm_users_detail d ON u.id=d.id WHERE p.status > 0 AND p.oid = '0' ORDER BY p.status ASC,p.is_top desc  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001414s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003811s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 5 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Use of undefined constant city - assumed 'city' C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 115 行.
+NOTIC: [8] Undefined variable: _page C:\wamp\www\yinma\Runtime\Cache\Admin\c9b29f46aaf66743c1e179410e6dbdf8.php 第 143 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.423704s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.425467s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001669s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003228s ]
+
+[ 2016-04-11T17:34:34+08:00 ] 127.0.0.1 /admin.php?s=/Project/edit/step/1/id/348.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000348s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007833s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001487s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.038554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042505s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 348 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_code` [ RunTime:0.0037s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'industry' ORDER BY sort  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'project_phase' ORDER BY sort  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'step' ORDER BY sort  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001679s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003475s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 5 行.
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5851 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ J_China_City ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001033s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.208740s ]
+NOTIC: [8] Undefined index: district C:\wamp\www\yinma\Runtime\Cache\Admin\882eee30a33dcc6f34123c9cd9ad883e.php 第 11 行.
+NOTIC: [8] Undefined index: community C:\wamp\www\yinma\Runtime\Cache\Admin\882eee30a33dcc6f34123c9cd9ad883e.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081307s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002899s ]
+INFO: Run Addons\ChinaCity\ChinaCityAddon [ RunTime:0.090840s ]
+INFO: [ J_China_City ] --END-- [ RunTime:0.093062s ]
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1299 行.
+SQL: SHOW COLUMNS FROM `jm_code` [ RunTime:0.0045s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `id` = null LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Array to string conversion C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 263 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.142604s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081307s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.060344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004314s ]
+
+[ 2016-04-11T17:34:35+08:00 ] 127.0.0.1 /admin.php?s=/Addons/execute/_addons/ChinaCity/_controller/ChinaCity/_action/getProvince.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000452s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.014188s ]
+INFO: [ app_init ] --END-- [ RunTime:0.021751s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003556s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.060192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.067628s ]
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0063s ]
+SQL: SELECT `title`,`name` FROM `jm_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_district` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `jm_district` WHERE `level` = 1 AND `upid` = 0 ORDER BY id ASC  [ RunTime:0.0022s ]
+
+[ 2016-04-11T17:34:36+08:00 ] 127.0.0.1 /admin.php?s=/Addons/execute/_addons/ChinaCity/_controller/ChinaCity/_action/getCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000716s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.015782s ]
+INFO: [ app_init ] --END-- [ RunTime:0.025902s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003127s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.058039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.067291s ]
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0051s ]
+SQL: SELECT `title`,`name` FROM `jm_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_district` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `jm_district` WHERE `level` = 2 AND `upid` = 1 ORDER BY id ASC  [ RunTime:0.0013s ]
+
+[ 2016-04-11T17:34:44+08:00 ] 127.0.0.1 /admin.php?s=/Project/edit/step/1/id/336.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000337s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.009864s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013739s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001415s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.036685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041673s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 336 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_code` [ RunTime:0.0057s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'industry' ORDER BY sort  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'project_phase' ORDER BY sort  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `type` = 'step' ORDER BY sort  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001457s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003119s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 5 行.
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5622 LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ J_China_City ] --START--
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001015s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.215420s ]
+NOTIC: [8] Undefined index: district C:\wamp\www\yinma\Runtime\Cache\Admin\882eee30a33dcc6f34123c9cd9ad883e.php 第 11 行.
+NOTIC: [8] Undefined index: community C:\wamp\www\yinma\Runtime\Cache\Admin\882eee30a33dcc6f34123c9cd9ad883e.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077729s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002951s ]
+INFO: Run Addons\ChinaCity\ChinaCityAddon [ RunTime:0.088812s ]
+INFO: [ J_China_City ] --END-- [ RunTime:0.090977s ]
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1299 行.
+SQL: SHOW COLUMNS FROM `jm_code` [ RunTime:0.0043s ]
+SQL: SELECT `id`,`name` FROM `jm_code` WHERE `id` = null LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Use of undefined constant step - assumed 'step' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 252 行.
+NOTIC: [8] Array to string conversion C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 263 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Use of undefined constant industry - assumed 'industry' C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 264 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+NOTIC: [8] Undefined variable: project C:\wamp\www\yinma\Runtime\Cache\Admin\c2bb8fe5857c0a50d44aa5ec4510b68c.php 第 276 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.148514s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.068492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004046s ]
+
+[ 2016-04-11T17:34:45+08:00 ] 127.0.0.1 /admin.php?s=/Addons/execute/_addons/ChinaCity/_controller/ChinaCity/_action/getProvince.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000555s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.029398s ]
+INFO: [ app_init ] --END-- [ RunTime:0.035660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001896s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.055815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.062015s ]
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0050s ]
+SQL: SELECT `title`,`name` FROM `jm_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_district` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `jm_district` WHERE `level` = 1 AND `upid` = 0 ORDER BY id ASC  [ RunTime:0.0017s ]
+
+[ 2016-04-11T17:34:45+08:00 ] 127.0.0.1 /admin.php?s=/Addons/execute/_addons/ChinaCity/_controller/ChinaCity/_action/getCity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001763s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.014117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.025855s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002439s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.053316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.061276s ]
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0061s ]
+SQL: SELECT `title`,`name` FROM `jm_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_district` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `jm_district` WHERE `level` = 2 AND `upid` = 1 ORDER BY id ASC  [ RunTime:0.0011s ]
+

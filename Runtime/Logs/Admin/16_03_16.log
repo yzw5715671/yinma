@@ -1,0 +1,782 @@
+[ 2016-03-16T15:13:45+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003544s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001319s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.017343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018844s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000231s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000358s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `jm_addons` [ RunTime:0.0061s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `jm_member` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_member` LIMIT 1   [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `jm_action_log` [ RunTime:0.0084s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_action_log` LIMIT 1   [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `jm_document` [ RunTime:0.0077s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_document` LIMIT 1   [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `jm_category` [ RunTime:0.0067s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_category` LIMIT 1   [ RunTime:0.0088s ]
+SQL: SHOW COLUMNS FROM `jm_model` [ RunTime:0.0086s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_model` LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.133238s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000621s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.131266s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0077s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.287995s ]
+SQL: select version() as v; [ RunTime:0.0122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023124s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.148587s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.171335s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.171575s ]
+SQL: SELECT `config` FROM `jm_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0082s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.326195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007057s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.187668s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.194410s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.023008s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.326134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008028s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.187668s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000077s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.195415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002921s ]
+
+[ 2016-03-16T15:13:50+08:00 ] 127.0.0.1 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005674s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.016241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017421s ]
+SQL: SHOW COLUMNS FROM `jm_member` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_member` WHERE `status` >= 0 AND `position` = 3 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0065s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`oid`,`realname`,`position`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `jm_member` WHERE `status` >= 0 AND `position` = 3 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,10   [ RunTime:0.0065s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM `jm_group` [ RunTime:0.0093s ]
+SQL: SELECT `id`,`name` FROM `jm_group` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048439s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000936s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001044s ]
+
+[ 2016-03-16T15:13:55+08:00 ] 127.0.0.1 /admin.php?s=/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003889s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.016887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017931s ]
+SQL: SHOW COLUMNS FROM `jm_menu` [ RunTime:0.0109s ]
+SQL: SELECT `id`,`title`,`url` FROM `jm_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0082s ]
+SQL: SELECT `pid` FROM `jm_menu` WHERE ( pid !=0 AND url like '%Member/index%' ) LIMIT 1   [ RunTime:0.0075s ]
+SQL: SELECT * FROM `jm_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0076s ]
+SQL: SELECT DISTINCT  `group` FROM `jm_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0096s ]
+SQL: SELECT `id`,`url` FROM `jm_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0069s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0079s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0062s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `jm_menu` WHERE `group` = '会员管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `jm_userstatus` [ RunTime:0.0104s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_userstatus` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0163s ]
+SQL: SELECT `id`,`nickname`,`photo`,`photo_url`,`score`,`login`,`status`,`is_investor`,`investor_content`,`is_founder`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`investor_type`,`investor_status`,`capacity_content`,`create_time`,`create_id`,`update_time`,`update_id`,`account_status`,`status1`,`status2`,`status3`,`status4` FROM `jm_userstatus` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0198s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000266s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 5 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039076s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039179s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001165s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001252s ]
+
+[ 2016-03-16T15:14:28+08:00 ] 127.0.0.1 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.016532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017585s ]
+SQL: SHOW COLUMNS FROM `jm_member` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_member` WHERE `status` >= 0 AND `position` = 3 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0052s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`oid`,`realname`,`position`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `jm_member` WHERE `status` >= 0 AND `position` = 3 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,10   [ RunTime:0.0082s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000398s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028982s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029126s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000986s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001059s ]
+
+[ 2016-03-16T15:14:30+08:00 ] 127.0.0.1 /admin.php?s=/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003370s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003913s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000960s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.016979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018085s ]
+SQL: SHOW COLUMNS FROM `jm_userstatus` [ RunTime:0.0067s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_userstatus` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `id`,`nickname`,`photo`,`photo_url`,`score`,`login`,`status`,`is_investor`,`investor_content`,`is_founder`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`investor_type`,`investor_status`,`capacity_content`,`create_time`,`create_id`,`update_time`,`update_id`,`account_status`,`status1`,`status2`,`status3`,`status4` FROM `jm_userstatus` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0151s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000301s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000409s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 5 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033906s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000989s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001102s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001373s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001487s ]
+
+[ 2016-03-16T15:37:37+08:00 ] 127.0.0.1 /admin.php?s=/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002939s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.012130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013111s ]
+SQL: SHOW COLUMNS FROM `jm_userstatus` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_userstatus` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0135s ]
+SQL: SELECT `id`,`nickname`,`photo`,`photo_url`,`score`,`login`,`status`,`is_investor`,`investor_content`,`is_founder`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`investor_type`,`investor_status`,`capacity_content`,`create_time`,`create_id`,`update_time`,`update_id`,`account_status`,`status1`,`status2`,`status3`,`status4` FROM `jm_userstatus` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0165s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000357s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000528s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 5 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043325s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043465s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001196s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001294s ]
+
+[ 2016-03-16T15:37:42+08:00 ] 127.0.0.1 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001636s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.021126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023020s ]
+SQL: SHOW COLUMNS FROM `jm_member` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_member` WHERE `status` >= 0 AND `position` = 3 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0043s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`oid`,`realname`,`position`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `jm_member` WHERE `status` >= 0 AND `position` = 3 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,10   [ RunTime:0.0069s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033179s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001008s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001094s ]
+
+[ 2016-03-16T15:37:47+08:00 ] 127.0.0.1 /admin.php?s=/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005205s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.013130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014298s ]
+SQL: SHOW COLUMNS FROM `jm_userstatus` [ RunTime:0.0068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_userstatus` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0119s ]
+SQL: SELECT `id`,`nickname`,`photo`,`photo_url`,`score`,`login`,`status`,`is_investor`,`investor_content`,`is_founder`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`investor_type`,`investor_status`,`capacity_content`,`create_time`,`create_id`,`update_time`,`update_id`,`account_status`,`status1`,`status2`,`status3`,`status4` FROM `jm_userstatus` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0151s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000224s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 5 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027865s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027947s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000943s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001019s ]
+
+[ 2016-03-16T15:38:22+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003649s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001665s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.018861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020735s ]
+NOTIC: [8] Undefined variable: map C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 38 行.
+SQL: SHOW COLUMNS FROM `jm_userstatus` [ RunTime:0.0074s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_userstatus` WHERE `status` >= 0 LIMIT 1   [ RunTime:0.0119s ]
+SQL: SELECT `id`,`nickname`,`photo`,`photo_url`,`score`,`login`,`status`,`is_investor`,`investor_content`,`is_founder`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`investor_type`,`investor_status`,`capacity_content`,`create_time`,`create_id`,`update_time`,`update_id`,`account_status`,`status1`,`status2`,`status3`,`status4` FROM `jm_userstatus` WHERE `status` >= 0 ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001778s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001908s ]
+
+[ 2016-03-16T15:38:48+08:00 ] 127.0.0.1 /admin.php?s=/Member/index/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003530s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000822s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.014463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015435s ]
+SQL: SHOW COLUMNS FROM `jm_userstatus` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_userstatus` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0117s ]
+SQL: SELECT `id`,`nickname`,`photo`,`photo_url`,`score`,`login`,`status`,`is_investor`,`investor_content`,`is_founder`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`investor_type`,`investor_status`,`capacity_content`,`create_time`,`create_id`,`update_time`,`update_id`,`account_status`,`status1`,`status2`,`status3`,`status4` FROM `jm_userstatus` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY create_time desc LIMIT 10,10   [ RunTime:0.0152s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+NOTIC: [8] Undefined variable: meta_title C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 5 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+NOTIC: [8] Undefined index: status2_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 131 行.
+NOTIC: [8] Undefined index: status4_text C:\wamp\www\yinma\Runtime\Cache\Admin\cd4483014f2e11fff8848d4b0b1995b7.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032551s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000924s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000906s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000985s ]
+
+[ 2016-03-16T15:45:48+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003505s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004130s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001294s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.013491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014972s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0072s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yita.jm_user_detail' doesn't exist
+
+[ 2016-03-16T15:45:58+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003456s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001065s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.012628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013880s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0072s ]
+SQL: SELECT u.id FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  LIMIT 1   [ RunTime:0.0051s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002252s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002444s ]
+
+[ 2016-03-16T15:50:36+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003217s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003777s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.015699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016843s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0060s ]
+SQL: SELECT u.id FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  LIMIT 1   [ RunTime:0.0057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001297s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001404s ]
+
+[ 2016-03-16T15:56:44+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.012666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013789s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0085s ]
+SQL: SELECT u.id FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  ORDER BY id desc LIMIT 1   [ RunTime:0.0095s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001150s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001277s ]
+
+[ 2016-03-16T15:56:51+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005418s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006779s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.014945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015953s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0139s ]
+SQL: SELECT u.id FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  ORDER BY id desc LIMIT 1,10   [ RunTime:0.0088s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001270s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001385s ]
+
+[ 2016-03-16T15:58:53+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003860s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000991s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.014650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015812s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0059s ]
+SQL: SELECT u.id FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0046s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001173s ]
+
+[ 2016-03-16T16:17:25+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003581s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.014413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015544s ]
+
+[ 2016-03-16T16:18:09+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003298s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003894s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.020935s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022102s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0070s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0060s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+ERR: Invalid cell coordinate A
+
+[ 2016-03-16T16:18:47+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004119s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004683s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001082s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.020068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021305s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0060s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0061s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+ERR: Invalid cell coordinate A
+
+[ 2016-03-16T16:20:17+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008303s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001047s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.015761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016970s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0083s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0057s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+ERR: Invalid cell coordinate A
+
+[ 2016-03-16T16:22:31+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004233s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004986s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001266s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.016873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018402s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0064s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0059s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+ERR: Invalid cell coordinate A
+
+[ 2016-03-16T16:35:53+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004162s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004826s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001031s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.016858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018028s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0067s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0056s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+ERR: Invalid cell coordinate A
+
+[ 2016-03-16T16:36:05+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003392s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003918s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.015220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016457s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0097s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0066s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 83 行.
+ERR: Invalid cell coordinate B
+
+[ 2016-03-16T16:36:14+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005159s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005779s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001033s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.020163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021371s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0080s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0048s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+ERR: Invalid cell coordinate A
+
+[ 2016-03-16T16:37:07+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003399s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003947s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001442s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.016055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017672s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0066s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0056s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+ERR: Invalid cell coordinate A
+
+[ 2016-03-16T16:37:41+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005594s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001223s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.015985s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017377s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0056s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0064s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+ERR: Invalid cell coordinate A
+
+[ 2016-03-16T16:38:48+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003377s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003949s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001918s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.014109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016344s ]
+
+[ 2016-03-16T16:38:59+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006992s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.014938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016128s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0064s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0054s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001595s ]
+
+[ 2016-03-16T16:39:27+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004715s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001138s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.016143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017445s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0113s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0102s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+ERR: Invalid cell coordinate A
+
+[ 2016-03-16T16:39:44+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005438s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001104s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.013930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015211s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0056s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0049s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 84 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 84 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 84 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 84 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 84 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 84 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 84 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 84 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 84 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 82 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 83 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 84 行.
+NOTIC: [8] Undefined variable: num C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 85 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001267s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001361s ]
+
+[ 2016-03-16T16:40:49+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004537s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005460s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001296s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.016174s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017631s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0057s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0047s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+NOTIC: [8] Undefined variable: k C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 79 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001108s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001196s ]
+
+[ 2016-03-16T16:41:32+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003320s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003928s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001397s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.014255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015826s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0063s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc LIMIT 1,10   [ RunTime:0.0056s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001184s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001315s ]
+
+[ 2016-03-16T16:44:43+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003453s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001219s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.014458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015816s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0151s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc  [ RunTime:0.0345s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 51 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001671s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001782s ]
+
+[ 2016-03-16T16:46:00+08:00 ] 127.0.0.1 /admin.php?s=/Member/exploadUsersList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.005735s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001655s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.017296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019221s ]
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0119s ]
+SQL: SELECT u.id,u.nickname,d.name,d.phone FROM jm_users as u INNER JOIN jm_users_detail as d on u.id = d.id  WHERE `status` = 1 ORDER BY id desc  [ RunTime:0.0162s ]
+NOTIC: [2] Illegal string offset 'project_name' C:\wamp\www\yinma\Application\Admin\Controller\MemberController.class.php 第 49 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001362s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001462s ]
+

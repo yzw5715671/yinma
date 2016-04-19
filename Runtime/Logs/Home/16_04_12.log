@@ -1,0 +1,1905 @@
+[ 2016-04-12T10:37:22+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000299s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.036508s ]
+INFO: [ app_init ] --END-- [ RunTime:0.040836s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010223s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.040456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.053334s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0062s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_notice` [ RunTime:0.0046s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_notice` WHERE ( status = 0 ) ORDER BY is_top desc,create_time desc LIMIT 6   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `jm_infomation` [ RunTime:0.0048s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_infomation` WHERE ( status = 1 ) ORDER BY level desc,create_time desc LIMIT 6   [ RunTime:0.0021s ]
+NOTIC: [8] Undefined variable: noticearray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [8] Undefined variable: newsarray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 4 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0031s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 2 ORDER BY is_top desc, create_time desc  [ RunTime:0.0029s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 1 ORDER BY is_top desc, create_time desc  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 9 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `jm_banner` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `jm_banner` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` > 1 AND `stage` < 9 AND `stage` <> 8  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` = 9  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY stage desc,is_top desc,create_time desc LIMIT 6   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project` WHERE `status` >= 9 AND `stage` IN ('1','4','9') LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0042s ]
+SQL: SELECT SUM(fund) AS tp_sum FROM `jm_project_investor` WHERE `status` >= 4 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_product` WHERE `status` >= 9 AND `stage` IN ('2','9') LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_custom` [ RunTime:0.0050s ]
+SQL: SELECT SUM(amount*count) AS tp_sum FROM `jm_custom` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0046s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_ucenter_member` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_link` [ RunTime:0.0053s ]
+SQL: SELECT `name`,`logo`,`url` FROM `jm_link` WHERE `status` = 1 ORDER BY sort desc LIMIT 15   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003519s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006004s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: city C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 364 行.
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1243 行.
+NOTIC: [8] Undefined variable: finish_amount C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 365 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5733 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5672 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5622 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5597 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5708 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5572 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5577 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5580 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5571 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5579 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5576 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5574 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5832 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5650 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5654 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5828 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5829 LIMIT 1   [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.073587s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.075328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015881s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003582s ]
+
+[ 2016-04-12T10:37:23+08:00 ] 127.0.0.1 /List/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000508s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008473s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014842s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001795s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.069812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.074430s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0039s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` = 4 ORDER BY create_time desc  [ RunTime:0.0025s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` = 1 ORDER BY create_time desc  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` IN ('8','9') ORDER BY create_time desc  [ RunTime:0.0034s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` = 8 ORDER BY create_time desc  [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND `stage` = 2 ORDER BY create_time desc  [ RunTime:0.0007s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\yinma\Application\Home\Model\ProductModel.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `jm_product_price` [ RunTime:0.0056s ]
+SQL: SELECT SUM(sell_count) AS tp_sum FROM `jm_product_price` WHERE `pid` = 145 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND `stage` = 9 ORDER BY create_time desc  [ RunTime:0.0006s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\yinma\Application\Home\Model\ProductModel.class.php 第 21 行.
+SQL: SELECT SUM(sell_count) AS tp_sum FROM `jm_product_price` WHERE `pid` = 141 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001481s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003271s ]
+NOTIC: [8] Undefined index: status C:\wamp\www\yinma\Runtime\Cache\Home\17aa3eae73c20220667e35dc2db3fa96.php 第 183 行.
+NOTIC: [8] Undefined index: status C:\wamp\www\yinma\Runtime\Cache\Home\17aa3eae73c20220667e35dc2db3fa96.php 第 186 行.
+NOTIC: [8] Undefined index: status C:\wamp\www\yinma\Runtime\Cache\Home\17aa3eae73c20220667e35dc2db3fa96.php 第 189 行.
+NOTIC: [8] Undefined index: type C:\wamp\www\yinma\Runtime\Cache\Home\17aa3eae73c20220667e35dc2db3fa96.php 第 202 行.
+NOTIC: [8] Undefined index: type C:\wamp\www\yinma\Runtime\Cache\Home\17aa3eae73c20220667e35dc2db3fa96.php 第 205 行.
+NOTIC: [8] Undefined index: type C:\wamp\www\yinma\Runtime\Cache\Home\17aa3eae73c20220667e35dc2db3fa96.php 第 208 行.
+NOTIC: [8] Undefined index: type C:\wamp\www\yinma\Runtime\Cache\Home\17aa3eae73c20220667e35dc2db3fa96.php 第 211 行.
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5771 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5733 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5672 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5622 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5597 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5771 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5708 LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: listOfStocks C:\wamp\www\yinma\Runtime\Cache\Home\17aa3eae73c20220667e35dc2db3fa96.php 第 292 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.669804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.673622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001942s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001849s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003826s ]
+
+[ 2016-04-12T10:37:24+08:00 ] 127.0.0.1 /Public/static/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000700s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008351s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002072s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.041083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.046640s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0055s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0011s ]
+
+[ 2016-04-12T10:37:26+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000793s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.023776s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004284s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.078039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.087854s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0065s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `jm_notice` [ RunTime:0.0052s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_notice` WHERE ( status = 0 ) ORDER BY is_top desc,create_time desc LIMIT 6   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_infomation` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_infomation` WHERE ( status = 1 ) ORDER BY level desc,create_time desc LIMIT 6   [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: noticearray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [8] Undefined variable: newsarray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 4 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0047s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 2 ORDER BY is_top desc, create_time desc  [ RunTime:0.0039s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 1 ORDER BY is_top desc, create_time desc  [ RunTime:0.0056s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 9 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `jm_banner` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `jm_banner` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` > 1 AND `stage` < 9 AND `stage` <> 8  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` = 9  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY stage desc,is_top desc,create_time desc LIMIT 6   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project` WHERE `status` >= 9 AND `stage` IN ('1','4','9') LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0058s ]
+SQL: SELECT SUM(fund) AS tp_sum FROM `jm_project_investor` WHERE `status` >= 4 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_product` WHERE `status` >= 9 AND `stage` IN ('2','9') LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_custom` [ RunTime:0.0043s ]
+SQL: SELECT SUM(amount*count) AS tp_sum FROM `jm_custom` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_ucenter_member` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_link` [ RunTime:0.0054s ]
+SQL: SELECT `name`,`logo`,`url` FROM `jm_link` WHERE `status` = 1 ORDER BY sort desc LIMIT 15   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004514s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010583s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: city C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 364 行.
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1243 行.
+NOTIC: [8] Undefined variable: finish_amount C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 365 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5733 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5672 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5622 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5597 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5708 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5572 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5577 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5580 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5571 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5579 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5576 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5574 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5832 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5650 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5654 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5828 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5829 LIMIT 1   [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.454012s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.457485s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001580s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004399s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004576s ]
+
+[ 2016-04-12T10:37:28+08:00 ] 127.0.0.1 /project/follow/id/345.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000685s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.013072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.020613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002087s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.038912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044163s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0042s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `jm_project_fund` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0062s ]
+SQL: SELECT p.id AS id,p.project_name AS project_name,p.cover AS cover,p.stage AS stage,p.company_name AS company_name,p.uid AS uid,p.type AS type,p.vote_leader AS vote_leader,p.agreement AS agreement,fund.need_fund AS need_fund,fund.has_fund AS has_fund,fund.extra AS extra,fund.leader_id AS leader_id,fund.agree_fund AS agree_fund,fund.project_valuation AS project_valuation,fund.final_valuation AS final_valuation,fund.follow_fund AS follow_fund,fund.status AS acc_status,picture.path AS path FROM jm_project p LEFT JOIN jm_project_fund fund ON p.id=fund.project_id LEFT JOIN jm_picture picture ON picture.id=p.cover WHERE p.id = '345' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `jm_project_investor` WHERE `project_id` = 345 AND `investor_id` = 7212  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002568s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004615s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.392979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.395267s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001874s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004648s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001813s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003766s ]
+
+[ 2016-04-12T10:37:29+08:00 ] 127.0.0.1 /Public/static/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000365s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.012297s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002153s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.033718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039274s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0046s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+
+[ 2016-04-12T10:37:30+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000525s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006951s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002013s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.037014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042371s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0049s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jm_notice` [ RunTime:0.0075s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_notice` WHERE ( status = 0 ) ORDER BY is_top desc,create_time desc LIMIT 6   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_infomation` [ RunTime:0.0064s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_infomation` WHERE ( status = 1 ) ORDER BY level desc,create_time desc LIMIT 6   [ RunTime:0.0014s ]
+NOTIC: [8] Undefined variable: noticearray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [8] Undefined variable: newsarray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 4 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0049s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 2 ORDER BY is_top desc, create_time desc  [ RunTime:0.0046s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 1 ORDER BY is_top desc, create_time desc  [ RunTime:0.0046s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 9 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `jm_banner` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `jm_banner` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0087s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` > 1 AND `stage` < 9 AND `stage` <> 8  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` = 9  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY stage desc,is_top desc,create_time desc LIMIT 6   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project` WHERE `status` >= 9 AND `stage` IN ('1','4','9') LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0046s ]
+SQL: SELECT SUM(fund) AS tp_sum FROM `jm_project_investor` WHERE `status` >= 4 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_product` WHERE `status` >= 9 AND `stage` IN ('2','9') LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_custom` [ RunTime:0.0051s ]
+SQL: SELECT SUM(amount*count) AS tp_sum FROM `jm_custom` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_ucenter_member` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_link` [ RunTime:0.0050s ]
+SQL: SELECT `name`,`logo`,`url` FROM `jm_link` WHERE `status` = 1 ORDER BY sort desc LIMIT 15   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002806s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005144s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0034s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: city C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 364 行.
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1243 行.
+NOTIC: [8] Undefined variable: finish_amount C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 365 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5733 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5672 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5622 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5597 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5708 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5572 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5577 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5580 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5571 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5579 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5576 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5574 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5832 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5650 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5654 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5828 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5829 LIMIT 1   [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.207299s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.209812s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001507s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003743s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004275s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007582s ]
+
+[ 2016-04-12T10:37:35+08:00 ] 127.0.0.1 /Public/static/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000476s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.013141s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016963s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003558s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.043755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.050586s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0068s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+
+[ 2016-04-12T10:37:37+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000504s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006911s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010837s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002532s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.030999s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036985s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0041s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_notice` [ RunTime:0.0036s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_notice` WHERE ( status = 0 ) ORDER BY is_top desc,create_time desc LIMIT 6   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_infomation` [ RunTime:0.0041s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_infomation` WHERE ( status = 1 ) ORDER BY level desc,create_time desc LIMIT 6   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: noticearray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [8] Undefined variable: newsarray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 4 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0031s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 2 ORDER BY is_top desc, create_time desc  [ RunTime:0.0043s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 1 ORDER BY is_top desc, create_time desc  [ RunTime:0.0038s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 9 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `jm_banner` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `jm_banner` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` > 1 AND `stage` < 9 AND `stage` <> 8  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` = 9  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY stage desc,is_top desc,create_time desc LIMIT 6   [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project` WHERE `status` >= 9 AND `stage` IN ('1','4','9') LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0043s ]
+SQL: SELECT SUM(fund) AS tp_sum FROM `jm_project_investor` WHERE `status` >= 4 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_product` WHERE `status` >= 9 AND `stage` IN ('2','9') LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_custom` [ RunTime:0.0054s ]
+SQL: SELECT SUM(amount*count) AS tp_sum FROM `jm_custom` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0042s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_ucenter_member` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_link` [ RunTime:0.0045s ]
+SQL: SELECT `name`,`logo`,`url` FROM `jm_link` WHERE `status` = 1 ORDER BY sort desc LIMIT 15   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001890s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004245s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: city C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 364 行.
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1243 行.
+NOTIC: [8] Undefined variable: finish_amount C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 365 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5733 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5672 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5622 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5597 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5708 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5572 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5577 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5580 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5571 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5579 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5576 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5574 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5832 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5650 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5654 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5828 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5829 LIMIT 1   [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.955935s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.957847s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003459s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004380s ]
+
+[ 2016-04-12T10:37:38+08:00 ] 127.0.0.1 /project/detail/id/345.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000367s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008920s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013879s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002012s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.036515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043079s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0059s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `jm_projects_score` [ RunTime:0.0052s ]
+SQL: SELECT `group`,`market`,`creative`,`profitablity`,`evaluation` FROM `jm_projects_score` WHERE `project_id` = 345 AND `user_id` = 7212 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 345 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_project_temp` [ RunTime:0.0056s ]
+SQL: SELECT `info_key`,`temp_type` FROM `jm_project_temp` WHERE `project_id` = 345 ORDER BY temp_type, sort  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_project_info` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `jm_project_info` WHERE `project_id` = 345 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_project_event` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `jm_project_event` WHERE `project_id` = 345 ORDER BY `when` desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_project_team` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 345 ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_project_fund` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE `project_id` = 345 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_projects_score` WHERE `project_id` = 345  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: group C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 132 行.
+NOTIC: [8] Undefined index: market C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 133 行.
+NOTIC: [8] Undefined index: creative C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 134 行.
+NOTIC: [8] Undefined index: profitablity C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 135 行.
+NOTIC: [8] Undefined index: evaluation C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 136 行.
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `jm_project_investor` WHERE `project_id` = 345 AND `status` >= 2 ORDER BY lead_type desc, create_time  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `jm_project_attach` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `jm_project_attach` WHERE `project_id` = 345 AND `investor_id` = 7212 AND `status` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_attach` WHERE `project_id` = 345 AND `status` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project_attach` WHERE `project_id` = 345 AND `status` = 1 ORDER BY attach_time desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `jm_project_dynamic` WHERE `project_id` = 345 AND `status` = 0 ORDER BY create_time desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_project_leader` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `jm_project_leader` WHERE `project_id` = 345 ORDER BY lead_type desc, create_time  [ RunTime:0.0007s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 198 行.
+SQL: SHOW COLUMNS FROM `jm_comment_reply` [ RunTime:0.0079s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_comment_reply` WHERE `project_id` = 345 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_comment_reply` WHERE `project_id` = 345 ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 345 AND `status` = 0 ORDER BY member_type,sort  [ RunTime:0.0009s ]
+SQL: UPDATE `jm_project` SET `read_record`=read_record+1 WHERE `id` = 345 [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY create_time desc,stage desc LIMIT 6   [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic_info` [ RunTime:0.0042s ]
+NOTIC: [8] Use of undefined constant users - assumed 'users' C:\wamp\www\yinma\Application\Home\Model\ProjectDynamicInfoModel.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0050s ]
+SQL: SELECT `is_investor` FROM `jm_users` WHERE ( id=7212 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic_info` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `jm_project_dynamic_info` WHERE `project_id` = 345 AND `status` = 1 ORDER BY update_time desc  [ RunTime:0.0011s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectDynamicInfoModel.class.php 第 45 行.
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY stage desc,create_time desc LIMIT 6   [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND `stage` = 2 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_product_comment` [ RunTime:0.0051s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_product_comment` WHERE `project_id` = 145 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_project_temp` WHERE `project_id` = 345 ORDER BY temp_type, sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004021s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006830s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 211 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 211 行.
+NOTIC: [8] Use of undefined constant fund - assumed 'fund' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 224 行.
+NOTIC: [8] Use of undefined constant scale - assumed 'scale' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 224 行.
+NOTIC: [8] Use of undefined constant fund - assumed 'fund' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 230 行.
+NOTIC: [8] Use of undefined constant scale - assumed 'scale' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 230 行.
+NOTIC: [8] Use of undefined constant fund - assumed 'fund' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 230 行.
+NOTIC: [8] Use of undefined constant scale - assumed 'scale' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 230 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 240 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 240 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 288 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 288 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5770 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5770 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5796 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5798 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5799 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5800 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5803 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5804 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5805 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0009s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.887243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.889898s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002573s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008671s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002135s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005373s ]
+
+[ 2016-04-12T10:37:41+08:00 ] 127.0.0.1 /Pages/investor/pid/345.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000741s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.043771s ]
+INFO: [ app_init ] --END-- [ RunTime:0.052252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.025306s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.139262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.168938s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0051s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0065s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_investor` WHERE `project_id` = 345 AND `status` >= 2 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `jm_project_investor` WHERE `project_id` = 345 AND `status` >= 2 ORDER BY id desc LIMIT 0,15   [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004984s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.410887s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.414100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003016s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004646s ]
+
+[ 2016-04-12T10:37:41+08:00 ] 127.0.0.1 /Pages/comments/id/345.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000612s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.029666s ]
+INFO: [ app_init ] --END-- [ RunTime:0.038713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004385s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.180146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.213116s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0051s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jm_project_comment` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_comment` WHERE `project_id` = 345 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project_comment` WHERE `project_id` = 345 ORDER BY create_time desc LIMIT 0,2   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001212s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002701s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.228230s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.230913s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003964s ]
+
+[ 2016-04-12T10:37:42+08:00 ] 127.0.0.1 /attitude/getNumberOfAttitudes?pid=345
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000688s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.017817s ]
+INFO: [ app_init ] --END-- [ RunTime:0.045216s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003670s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.127366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.136034s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0069s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_project_attitude` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `jm_project_statistics` [ RunTime:0.0064s ]
+SQL: SELECT `udislike` FROM `jm_project_statistics` WHERE ( pid=345 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `ulike` FROM `jm_project_statistics` WHERE ( pid=345 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: $positive C:\wamp\www\yinma\Application\Home\Controller\AttitudeController.class.php 第 72 行.
+
+[ 2016-04-12T10:37:43+08:00 ] 127.0.0.1 /Public/static/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000740s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007397s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013184s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002122s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.037925s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043432s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0043s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+
+[ 2016-04-12T10:37:45+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000665s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008157s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003912s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.041722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.048858s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0049s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_notice` [ RunTime:0.0054s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_notice` WHERE ( status = 0 ) ORDER BY is_top desc,create_time desc LIMIT 6   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `jm_infomation` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_infomation` WHERE ( status = 1 ) ORDER BY level desc,create_time desc LIMIT 6   [ RunTime:0.0026s ]
+NOTIC: [8] Undefined variable: noticearray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [8] Undefined variable: newsarray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 4 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0028s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 2 ORDER BY is_top desc, create_time desc  [ RunTime:0.0028s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 1 ORDER BY is_top desc, create_time desc  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 9 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `jm_banner` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `jm_banner` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` > 1 AND `stage` < 9 AND `stage` <> 8  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` = 9  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY stage desc,is_top desc,create_time desc LIMIT 6   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project` WHERE `status` >= 9 AND `stage` IN ('1','4','9') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0043s ]
+SQL: SELECT SUM(fund) AS tp_sum FROM `jm_project_investor` WHERE `status` >= 4 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_product` WHERE `status` >= 9 AND `stage` IN ('2','9') LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_custom` [ RunTime:0.0067s ]
+SQL: SELECT SUM(amount*count) AS tp_sum FROM `jm_custom` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_ucenter_member` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_link` [ RunTime:0.0052s ]
+SQL: SELECT `name`,`logo`,`url` FROM `jm_link` WHERE `status` = 1 ORDER BY sort desc LIMIT 15   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.009365s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: city C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 364 行.
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1243 行.
+NOTIC: [8] Undefined variable: finish_amount C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 365 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5733 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5672 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5622 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5597 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5708 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5572 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5577 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5580 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5571 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5579 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5576 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5574 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5832 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5650 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5654 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5828 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5829 LIMIT 1   [ RunTime:0.0009s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.272012s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.275243s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001941s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004299s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004544s ]
+
+[ 2016-04-12T11:10:34+08:00 ] 127.0.0.1 /project/detail/id/345.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000329s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.037911s ]
+INFO: [ app_init ] --END-- [ RunTime:0.041812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013646s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.045085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.062043s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0080s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `jm_projects_score` [ RunTime:0.0041s ]
+SQL: SELECT `group`,`market`,`creative`,`profitablity`,`evaluation` FROM `jm_projects_score` WHERE `project_id` = 345 AND `user_id` = 7212 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 345 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_temp` [ RunTime:0.0040s ]
+SQL: SELECT `info_key`,`temp_type` FROM `jm_project_temp` WHERE `project_id` = 345 ORDER BY temp_type, sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_info` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `jm_project_info` WHERE `project_id` = 345 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_event` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `jm_project_event` WHERE `project_id` = 345 ORDER BY `when` desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_project_team` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 345 ORDER BY sort  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_project_fund` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE `project_id` = 345 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_projects_score` WHERE `project_id` = 345  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: group C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 132 行.
+NOTIC: [8] Undefined index: market C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 133 行.
+NOTIC: [8] Undefined index: creative C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 134 行.
+NOTIC: [8] Undefined index: profitablity C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 135 行.
+NOTIC: [8] Undefined index: evaluation C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 136 行.
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `jm_project_investor` WHERE `project_id` = 345 AND `status` >= 2 ORDER BY lead_type desc, create_time  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jm_project_attach` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `jm_project_attach` WHERE `project_id` = 345 AND `investor_id` = 7212 AND `status` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_attach` WHERE `project_id` = 345 AND `status` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_project_attach` WHERE `project_id` = 345 AND `status` = 1 ORDER BY attach_time desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `jm_project_dynamic` WHERE `project_id` = 345 AND `status` = 0 ORDER BY create_time desc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_leader` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `jm_project_leader` WHERE `project_id` = 345 ORDER BY lead_type desc, create_time  [ RunTime:0.0006s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 198 行.
+SQL: SHOW COLUMNS FROM `jm_comment_reply` [ RunTime:0.0085s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_comment_reply` WHERE `project_id` = 345 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `jm_comment_reply` WHERE `project_id` = 345 ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0023s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 345 AND `status` = 0 ORDER BY member_type,sort  [ RunTime:0.0010s ]
+SQL: UPDATE `jm_project` SET `read_record`=read_record+1 WHERE `id` = 345 [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY create_time desc,stage desc LIMIT 6   [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic_info` [ RunTime:0.0043s ]
+NOTIC: [8] Use of undefined constant users - assumed 'users' C:\wamp\www\yinma\Application\Home\Model\ProjectDynamicInfoModel.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0045s ]
+SQL: SELECT `is_investor` FROM `jm_users` WHERE ( id=7212 ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic_info` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `jm_project_dynamic_info` WHERE `project_id` = 345 AND `status` = 1 ORDER BY update_time desc  [ RunTime:0.0007s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectDynamicInfoModel.class.php 第 45 行.
+SQL: SELECT * FROM `jm_project_temp` WHERE `project_id` = 345 ORDER BY temp_type, sort  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002511s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004328s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0009s ]
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 211 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 211 行.
+NOTIC: [8] Use of undefined constant fund - assumed 'fund' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 224 行.
+NOTIC: [8] Use of undefined constant scale - assumed 'scale' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 224 行.
+NOTIC: [8] Use of undefined constant fund - assumed 'fund' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 230 行.
+NOTIC: [8] Use of undefined constant scale - assumed 'scale' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 230 行.
+NOTIC: [8] Use of undefined constant fund - assumed 'fund' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 230 行.
+NOTIC: [8] Use of undefined constant scale - assumed 'scale' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 230 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 240 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 240 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 288 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 288 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5770 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5770 LIMIT 1   [ RunTime:0.0022s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5796 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5798 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5799 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5800 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5803 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5804 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5805 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.195616s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.197798s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006402s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008753s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016699s ]
+
+[ 2016-04-12T11:10:36+08:00 ] 127.0.0.1 /Pages/comments/id/345.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000868s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.031417s ]
+INFO: [ app_init ] --END-- [ RunTime:0.046923s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003680s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.079592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.087955s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0068s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jm_project_comment` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_comment` WHERE `project_id` = 345 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_project_comment` WHERE `project_id` = 345 ORDER BY create_time desc LIMIT 0,2   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002022s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005248s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.258517s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.262037s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007352s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008959s ]
+
+[ 2016-04-12T11:10:37+08:00 ] 127.0.0.1 /Pages/investor/pid/345.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000710s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.032081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.047419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003434s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.104876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.113512s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0056s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_investor` WHERE `project_id` = 345 AND `status` >= 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_project_investor` WHERE `project_id` = 345 AND `status` >= 2 ORDER BY id desc LIMIT 0,15   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002882s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.293688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.296188s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006976s ]
+
+[ 2016-04-12T11:10:37+08:00 ] 127.0.0.1 /attitude/getNumberOfAttitudes?pid=345
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000704s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.029603s ]
+INFO: [ app_init ] --END-- [ RunTime:0.046939s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005424s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.108654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.119590s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0056s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `jm_project_attitude` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `jm_project_statistics` [ RunTime:0.0046s ]
+SQL: SELECT `udislike` FROM `jm_project_statistics` WHERE ( pid=345 ) LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `ulike` FROM `jm_project_statistics` WHERE ( pid=345 ) LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: $positive C:\wamp\www\yinma\Application\Home\Controller\AttitudeController.class.php 第 72 行.
+
+[ 2016-04-12T11:10:40+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000579s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.021219s ]
+INFO: [ app_init ] --END-- [ RunTime:0.026856s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012600s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.060609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.077284s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0047s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_notice` [ RunTime:0.0045s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_notice` WHERE ( status = 0 ) ORDER BY is_top desc,create_time desc LIMIT 6   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_infomation` [ RunTime:0.0175s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_infomation` WHERE ( status = 1 ) ORDER BY level desc,create_time desc LIMIT 6   [ RunTime:0.0015s ]
+NOTIC: [8] Undefined variable: noticearray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [8] Undefined variable: newsarray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0209s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 4 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0029s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 2 ORDER BY is_top desc, create_time desc  [ RunTime:0.0029s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 1 ORDER BY is_top desc, create_time desc  [ RunTime:0.0043s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 9 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `jm_banner` [ RunTime:0.0154s ]
+SQL: SELECT * FROM `jm_banner` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0155s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` > 1 AND `stage` < 9 AND `stage` <> 8  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` = 9  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY stage desc,is_top desc,create_time desc LIMIT 6   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project` WHERE `status` >= 9 AND `stage` IN ('1','4','9') LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0049s ]
+SQL: SELECT SUM(fund) AS tp_sum FROM `jm_project_investor` WHERE `status` >= 4 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_product` WHERE `status` >= 9 AND `stage` IN ('2','9') LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_custom` [ RunTime:0.0049s ]
+SQL: SELECT SUM(amount*count) AS tp_sum FROM `jm_custom` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_ucenter_member` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_link` [ RunTime:0.0132s ]
+SQL: SELECT `name`,`logo`,`url` FROM `jm_link` WHERE `status` = 1 ORDER BY sort desc LIMIT 15   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003702s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006822s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: city C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 364 行.
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1243 行.
+NOTIC: [8] Undefined variable: finish_amount C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 365 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5733 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5672 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5622 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5597 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5708 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5572 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5577 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5580 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5571 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5579 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5576 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5574 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5832 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5650 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5654 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5828 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5829 LIMIT 1   [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.390961s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.392988s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.111621s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.113738s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006490s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009344s ]
+
+[ 2016-04-12T11:10:42+08:00 ] 127.0.0.1 /Index/getinfo.html?type=1&id=174
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000359s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.014166s ]
+INFO: [ app_init ] --END-- [ RunTime:0.018256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.033408s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.139553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.176981s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0057s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `jm_infomation` [ RunTime:0.0067s ]
+SQL: SELECT `description`,`title` FROM `jm_infomation` WHERE `id` = 174 LIMIT 1   [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: id C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 152 行.
+
+[ 2016-04-12T11:10:42+08:00 ] 127.0.0.1 /Public/static/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000408s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.022701s ]
+INFO: [ app_init ] --END-- [ RunTime:0.037577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017881s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.189744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.212730s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0063s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0021s ]
+
+[ 2016-04-12T11:10:45+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000423s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.033820s ]
+INFO: [ app_init ] --END-- [ RunTime:0.040004s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003070s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.076853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.084266s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0050s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_notice` [ RunTime:0.0074s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_notice` WHERE ( status = 0 ) ORDER BY is_top desc,create_time desc LIMIT 6   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_infomation` [ RunTime:0.0071s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_infomation` WHERE ( status = 1 ) ORDER BY level desc,create_time desc LIMIT 6   [ RunTime:0.0247s ]
+NOTIC: [8] Undefined variable: noticearray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [8] Undefined variable: newsarray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0159s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 4 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0031s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 2 ORDER BY is_top desc, create_time desc  [ RunTime:0.0047s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 1 ORDER BY is_top desc, create_time desc  [ RunTime:0.0078s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 9 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `jm_banner` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `jm_banner` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` > 1 AND `stage` < 9 AND `stage` <> 8  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` = 9  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY stage desc,is_top desc,create_time desc LIMIT 6   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project` WHERE `status` >= 9 AND `stage` IN ('1','4','9') LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0061s ]
+SQL: SELECT SUM(fund) AS tp_sum FROM `jm_project_investor` WHERE `status` >= 4 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_product` WHERE `status` >= 9 AND `stage` IN ('2','9') LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_custom` [ RunTime:0.0044s ]
+SQL: SELECT SUM(amount*count) AS tp_sum FROM `jm_custom` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_ucenter_member` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `jm_link` [ RunTime:0.0065s ]
+SQL: SELECT `name`,`logo`,`url` FROM `jm_link` WHERE `status` = 1 ORDER BY sort desc LIMIT 15   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002906s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005711s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: city C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 364 行.
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1243 行.
+NOTIC: [8] Undefined variable: finish_amount C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 365 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5733 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5672 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5622 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5597 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5708 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5572 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5577 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5580 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5571 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5579 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5576 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5574 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5832 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5650 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5654 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5828 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5829 LIMIT 1   [ RunTime:0.0011s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.590865s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.593474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.038843s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.041880s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.021534s ]
+
+[ 2016-04-12T11:10:52+08:00 ] 127.0.0.1 /project/detail/id/347.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000641s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.032176s ]
+INFO: [ app_init ] --END-- [ RunTime:0.046717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019262s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.048062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.070887s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0049s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `jm_projects_score` [ RunTime:0.0048s ]
+SQL: SELECT `group`,`market`,`creative`,`profitablity`,`evaluation` FROM `jm_projects_score` WHERE `project_id` = 347 AND `user_id` = 7212 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 347 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_project_temp` [ RunTime:0.0036s ]
+SQL: SELECT `info_key`,`temp_type` FROM `jm_project_temp` WHERE `project_id` = 347 ORDER BY temp_type, sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_info` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `jm_project_info` WHERE `project_id` = 347 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_project_event` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `jm_project_event` WHERE `project_id` = 347 ORDER BY `when` desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jm_project_team` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 347 ORDER BY sort  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_project_fund` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE `project_id` = 347 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_projects_score` WHERE `project_id` = 347  [ RunTime:0.0009s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 131 行.
+NOTIC: [8] Undefined index: group C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 138 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: market C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 139 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 139 行.
+NOTIC: [8] Undefined index: creative C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 140 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 140 行.
+NOTIC: [8] Undefined index: profitablity C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 141 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 141 行.
+NOTIC: [8] Undefined index: evaluation C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 142 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `jm_project_investor` WHERE `project_id` = 347 AND `status` >= 2 ORDER BY lead_type desc, create_time  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_project_attach` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `jm_project_attach` WHERE `project_id` = 347 AND `investor_id` = 7212 AND `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_attach` WHERE `project_id` = 347 AND `status` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_project_attach` WHERE `project_id` = 347 AND `status` = 1 ORDER BY attach_time desc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `jm_project_dynamic` WHERE `project_id` = 347 AND `status` = 0 ORDER BY create_time desc  [ RunTime:0.0007s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 175 行.
+SQL: SHOW COLUMNS FROM `jm_project_leader` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `jm_project_leader` WHERE `project_id` = 347 ORDER BY lead_type desc, create_time  [ RunTime:0.0007s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 198 行.
+SQL: SHOW COLUMNS FROM `jm_comment_reply` [ RunTime:0.0239s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_comment_reply` WHERE `project_id` = 347 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_comment_reply` WHERE `project_id` = 347 ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 347 AND `status` = 0 ORDER BY member_type,sort  [ RunTime:0.0009s ]
+SQL: UPDATE `jm_project` SET `read_record`=read_record+1 WHERE `id` = 347 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0175s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY create_time desc,stage desc LIMIT 6   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic_info` [ RunTime:0.0037s ]
+NOTIC: [8] Use of undefined constant users - assumed 'users' C:\wamp\www\yinma\Application\Home\Model\ProjectDynamicInfoModel.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0051s ]
+SQL: SELECT `is_investor` FROM `jm_users` WHERE ( id=7212 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic_info` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `jm_project_dynamic_info` WHERE `project_id` = 347 AND `status` = 1 ORDER BY update_time desc  [ RunTime:0.0006s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectDynamicInfoModel.class.php 第 45 行.
+SQL: SELECT * FROM `jm_project_temp` WHERE `project_id` = 347 ORDER BY temp_type, sort  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003441s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.007754s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 211 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 211 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 240 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 240 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant vote_leader - assumed 'vote_leader' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 288 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 288 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5857 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5858 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5859 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5860 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5861 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5862 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5864 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5863 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.995087s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.997381s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001315s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004885s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008286s ]
+
+[ 2016-04-12T11:10:52+08:00 ] 127.0.0.1 /project/leader_info/id/347.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000673s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.032157s ]
+INFO: [ app_init ] --END-- [ RunTime:0.046750s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019187s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.048359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.071173s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0047s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: isread C:\wamp\www\yinma\Application\Home\Controller\ProjectController.class.php 第 1390 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006957s ]
+NOTIC: [8] Undefined variable: isread C:\wamp\www\yinma\Runtime\Cache\Home\e11b02ac48a0ac1fe6180c273d07bcbf.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.156656s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.163323s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007146s ]
+
+[ 2016-04-12T11:10:54+08:00 ] 127.0.0.1 /project/detail/id/347.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001896s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.017568s ]
+INFO: [ app_init ] --END-- [ RunTime:0.027029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003588s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.070752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.087434s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0064s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `jm_projects_score` [ RunTime:0.0060s ]
+SQL: SELECT `group`,`market`,`creative`,`profitablity`,`evaluation` FROM `jm_projects_score` WHERE `project_id` = 347 AND `user_id` = 7212 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 347 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `jm_project_temp` [ RunTime:0.0049s ]
+SQL: SELECT `info_key`,`temp_type` FROM `jm_project_temp` WHERE `project_id` = 347 ORDER BY temp_type, sort  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_info` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `jm_project_info` WHERE `project_id` = 347 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_project_event` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `jm_project_event` WHERE `project_id` = 347 ORDER BY `when` desc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_project_team` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 347 ORDER BY sort  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `jm_project_fund` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE `project_id` = 347 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_projects_score` WHERE `project_id` = 347  [ RunTime:0.0006s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 131 行.
+NOTIC: [8] Undefined index: group C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 138 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: market C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 139 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 139 行.
+NOTIC: [8] Undefined index: creative C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 140 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 140 行.
+NOTIC: [8] Undefined index: profitablity C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 141 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 141 行.
+NOTIC: [8] Undefined index: evaluation C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 142 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `jm_project_investor` WHERE `project_id` = 347 AND `status` >= 2 ORDER BY lead_type desc, create_time  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `jm_project_attach` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `jm_project_attach` WHERE `project_id` = 347 AND `investor_id` = 7212 AND `status` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_attach` WHERE `project_id` = 347 AND `status` = 1 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_project_attach` WHERE `project_id` = 347 AND `status` = 1 ORDER BY attach_time desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `jm_project_dynamic` WHERE `project_id` = 347 AND `status` = 0 ORDER BY create_time desc  [ RunTime:0.0009s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 175 行.
+SQL: SHOW COLUMNS FROM `jm_project_leader` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `jm_project_leader` WHERE `project_id` = 347 ORDER BY lead_type desc, create_time  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 198 行.
+SQL: SHOW COLUMNS FROM `jm_comment_reply` [ RunTime:0.0085s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_comment_reply` WHERE `project_id` = 347 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `jm_comment_reply` WHERE `project_id` = 347 ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 347 AND `status` = 0 ORDER BY member_type,sort  [ RunTime:0.0010s ]
+SQL: UPDATE `jm_project` SET `read_record`=read_record+1 WHERE `id` = 347 [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY create_time desc,stage desc LIMIT 6   [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic_info` [ RunTime:0.0056s ]
+NOTIC: [8] Use of undefined constant users - assumed 'users' C:\wamp\www\yinma\Application\Home\Model\ProjectDynamicInfoModel.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0075s ]
+SQL: SELECT `is_investor` FROM `jm_users` WHERE ( id=7212 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic_info` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `jm_project_dynamic_info` WHERE `project_id` = 347 AND `status` = 1 ORDER BY update_time desc  [ RunTime:0.0006s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectDynamicInfoModel.class.php 第 45 行.
+SQL: SELECT * FROM `jm_project_temp` WHERE `project_id` = 347 ORDER BY temp_type, sort  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002631s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004806s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 211 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 211 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 240 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 240 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant vote_leader - assumed 'vote_leader' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 288 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 288 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5857 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5858 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5859 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5860 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5861 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5862 LIMIT 1   [ RunTime:0.0023s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5864 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5863 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.193266s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.195485s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001542s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007269s ]
+
+[ 2016-04-12T11:10:54+08:00 ] 127.0.0.1 /project/leader_info/id/347.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000849s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.028379s ]
+INFO: [ app_init ] --END-- [ RunTime:0.038147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003555s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.068743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.079608s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0062s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: isread C:\wamp\www\yinma\Application\Home\Controller\ProjectController.class.php 第 1390 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001287s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003272s ]
+NOTIC: [8] Undefined variable: isread C:\wamp\www\yinma\Runtime\Cache\Home\e11b02ac48a0ac1fe6180c273d07bcbf.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078190s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080702s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004334s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006891s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002741s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005493s ]
+
+[ 2016-04-12T11:10:56+08:00 ] 127.0.0.1 /Public/static/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000353s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007492s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003718s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.037102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044089s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0058s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+
+[ 2016-04-12T11:10:57+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000476s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008408s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002062s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.037703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042944s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0042s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_notice` [ RunTime:0.0041s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_notice` WHERE ( status = 0 ) ORDER BY is_top desc,create_time desc LIMIT 6   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_infomation` [ RunTime:0.0044s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_infomation` WHERE ( status = 1 ) ORDER BY level desc,create_time desc LIMIT 6   [ RunTime:0.0014s ]
+NOTIC: [8] Undefined variable: noticearray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [8] Undefined variable: newsarray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 4 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0039s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 2 ORDER BY is_top desc, create_time desc  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 1 ORDER BY is_top desc, create_time desc  [ RunTime:0.0032s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 9 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `jm_banner` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `jm_banner` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` > 1 AND `stage` < 9 AND `stage` <> 8  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` = 9  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY stage desc,is_top desc,create_time desc LIMIT 6   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0064s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project` WHERE `status` >= 9 AND `stage` IN ('1','4','9') LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0046s ]
+SQL: SELECT SUM(fund) AS tp_sum FROM `jm_project_investor` WHERE `status` >= 4 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_product` WHERE `status` >= 9 AND `stage` IN ('2','9') LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_custom` [ RunTime:0.0045s ]
+SQL: SELECT SUM(amount*count) AS tp_sum FROM `jm_custom` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_ucenter_member` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_link` [ RunTime:0.0049s ]
+SQL: SELECT `name`,`logo`,`url` FROM `jm_link` WHERE `status` = 1 ORDER BY sort desc LIMIT 15   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.005217s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.007667s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: city C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 364 行.
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1243 行.
+NOTIC: [8] Undefined variable: finish_amount C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 365 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5733 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5672 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5622 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5597 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5708 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5572 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5577 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5580 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5571 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5579 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5576 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5574 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5832 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5650 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5654 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5828 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5829 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.191115s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.193465s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001409s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003605s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001866s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003988s ]
+
+[ 2016-04-12T11:13:37+08:00 ] 127.0.0.1 /Index/getinfo.html?type=1&id=174
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000549s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.010513s ]
+INFO: [ app_init ] --END-- [ RunTime:0.018330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.102490s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.075209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.180774s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0064s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_infomation` [ RunTime:0.0053s ]
+SQL: SELECT `description`,`title` FROM `jm_infomation` WHERE `id` = 174 LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: id C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 152 行.
+
+[ 2016-04-12T11:13:38+08:00 ] 127.0.0.1 /Public/static/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002489s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.008132s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001888s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.063114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.068757s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0060s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+
+[ 2016-04-12T11:13:40+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000795s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.011963s ]
+INFO: [ app_init ] --END-- [ RunTime:0.018894s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003519s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.048746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.057094s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0084s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_notice` [ RunTime:0.0058s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_notice` WHERE ( status = 0 ) ORDER BY is_top desc,create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `jm_infomation` [ RunTime:0.0056s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_infomation` WHERE ( status = 1 ) ORDER BY level desc,create_time desc LIMIT 6   [ RunTime:0.0018s ]
+NOTIC: [8] Undefined variable: noticearray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [8] Undefined variable: newsarray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0173s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 4 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0064s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 2 ORDER BY is_top desc, create_time desc  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 1 ORDER BY is_top desc, create_time desc  [ RunTime:0.0053s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 9 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `jm_banner` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `jm_banner` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` > 1 AND `stage` < 9 AND `stage` <> 8  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` = 9  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY stage desc,is_top desc,create_time desc LIMIT 6   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0071s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project` WHERE `status` >= 9 AND `stage` IN ('1','4','9') LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0080s ]
+SQL: SELECT SUM(fund) AS tp_sum FROM `jm_project_investor` WHERE `status` >= 4 LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_product` WHERE `status` >= 9 AND `stage` IN ('2','9') LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jm_custom` [ RunTime:0.0073s ]
+SQL: SELECT SUM(amount*count) AS tp_sum FROM `jm_custom` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0064s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_ucenter_member` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `jm_link` [ RunTime:0.0073s ]
+SQL: SELECT `name`,`logo`,`url` FROM `jm_link` WHERE `status` = 1 ORDER BY sort desc LIMIT 15   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002260s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004319s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: city C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 364 行.
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1243 行.
+NOTIC: [8] Undefined variable: finish_amount C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 365 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5733 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5672 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5622 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5597 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5708 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5572 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5577 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5580 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5571 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5579 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5576 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5574 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5832 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5650 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5654 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5828 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5829 LIMIT 1   [ RunTime:0.0014s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.326100s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.328740s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.102155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.104962s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017980s ]
+
+[ 2016-04-12T11:13:42+08:00 ] 127.0.0.1 /project/detail/id/347.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001178s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.031857s ]
+INFO: [ app_init ] --END-- [ RunTime:0.043845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013735s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.117126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.139874s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0063s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `jm_projects_score` [ RunTime:0.0074s ]
+SQL: SELECT `group`,`market`,`creative`,`profitablity`,`evaluation` FROM `jm_projects_score` WHERE `project_id` = 347 AND `user_id` = 7212 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `jm_project` WHERE `id` = 347 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `jm_project_temp` [ RunTime:0.0064s ]
+SQL: SELECT `info_key`,`temp_type` FROM `jm_project_temp` WHERE `project_id` = 347 ORDER BY temp_type, sort  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_project_info` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `jm_project_info` WHERE `project_id` = 347 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_project_event` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `jm_project_event` WHERE `project_id` = 347 ORDER BY `when` desc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_team` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 347 ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_project_fund` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `jm_project_fund` WHERE `project_id` = 347 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `jm_projects_score` WHERE `project_id` = 347  [ RunTime:0.0007s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 131 行.
+NOTIC: [8] Undefined index: group C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 138 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 138 行.
+NOTIC: [8] Undefined index: market C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 139 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 139 行.
+NOTIC: [8] Undefined index: creative C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 140 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 140 行.
+NOTIC: [8] Undefined index: profitablity C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 141 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 141 行.
+NOTIC: [8] Undefined index: evaluation C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 142 行.
+NOTIC: [2] Division by zero C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `jm_project_investor` WHERE `project_id` = 347 AND `status` >= 2 ORDER BY lead_type desc, create_time  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `jm_project_attach` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `jm_project_attach` WHERE `project_id` = 347 AND `investor_id` = 7212 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project_attach` WHERE `project_id` = 347 AND `status` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_project_attach` WHERE `project_id` = 347 AND `status` = 1 ORDER BY attach_time desc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `jm_project_dynamic` WHERE `project_id` = 347 AND `status` = 0 ORDER BY create_time desc  [ RunTime:0.0008s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 175 行.
+SQL: SHOW COLUMNS FROM `jm_project_leader` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `jm_project_leader` WHERE `project_id` = 347 ORDER BY lead_type desc, create_time  [ RunTime:0.0011s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectModel.class.php 第 198 行.
+SQL: SHOW COLUMNS FROM `jm_comment_reply` [ RunTime:0.0411s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_comment_reply` WHERE `project_id` = 347 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_comment_reply` WHERE `project_id` = 347 ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_project_team` WHERE `project_id` = 347 AND `status` = 0 ORDER BY member_type,sort  [ RunTime:0.0012s ]
+SQL: UPDATE `jm_project` SET `read_record`=read_record+1 WHERE `id` = 347 [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY create_time desc,stage desc LIMIT 6   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic_info` [ RunTime:0.0067s ]
+NOTIC: [8] Use of undefined constant users - assumed 'users' C:\wamp\www\yinma\Application\Home\Model\ProjectDynamicInfoModel.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `jm_users` [ RunTime:0.0073s ]
+SQL: SELECT `is_investor` FROM `jm_users` WHERE ( id=7212 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_project_dynamic_info` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `jm_project_dynamic_info` WHERE `project_id` = 347 AND `status` = 1 ORDER BY update_time desc  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\yinma\Application\Home\Model\ProjectDynamicInfoModel.class.php 第 45 行.
+SQL: SELECT * FROM `jm_project_temp` WHERE `project_id` = 347 ORDER BY temp_type, sort  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003004s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005859s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 211 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 211 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 240 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 240 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant vote_leader - assumed 'vote_leader' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 244 行.
+NOTIC: [8] Use of undefined constant project - assumed 'project' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 288 行.
+NOTIC: [8] Use of undefined constant stage - assumed 'stage' C:\wamp\www\yinma\Runtime\Cache\Home\ff57e010836e1f67afe83b8730415f96.php 第 288 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5857 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5858 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5859 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5860 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5861 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5862 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5864 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5863 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0011s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.206476s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.209021s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004611s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003229s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006493s ]
+
+[ 2016-04-12T11:13:42+08:00 ] 127.0.0.1 /project/leader_info/id/347.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000677s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.023849s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008350s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.097296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.115146s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0042s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: isread C:\wamp\www\yinma\Application\Home\Controller\ProjectController.class.php 第 1390 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001785s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.007182s ]
+NOTIC: [8] Undefined variable: isread C:\wamp\www\yinma\Runtime\Cache\Home\e11b02ac48a0ac1fe6180c273d07bcbf.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109594s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.112102s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002194s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004237s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006989s ]
+
+[ 2016-04-12T11:13:43+08:00 ] 127.0.0.1 /Public/static/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000602s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005118s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.046298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.056478s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0054s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+
+[ 2016-04-12T11:13:45+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000347s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.009711s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003464s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.033146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.041445s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0045s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_notice` [ RunTime:0.0041s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_notice` WHERE ( status = 0 ) ORDER BY is_top desc,create_time desc LIMIT 6   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `jm_infomation` [ RunTime:0.0051s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_infomation` WHERE ( status = 1 ) ORDER BY level desc,create_time desc LIMIT 6   [ RunTime:0.0015s ]
+NOTIC: [8] Undefined variable: noticearray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [8] Undefined variable: newsarray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 4 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0039s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 2 ORDER BY is_top desc, create_time desc  [ RunTime:0.0039s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 1 ORDER BY is_top desc, create_time desc  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 9 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `jm_banner` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `jm_banner` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` > 1 AND `stage` < 9 AND `stage` <> 8  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` = 9  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY stage desc,is_top desc,create_time desc LIMIT 6   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project` WHERE `status` >= 9 AND `stage` IN ('1','4','9') LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0049s ]
+SQL: SELECT SUM(fund) AS tp_sum FROM `jm_project_investor` WHERE `status` >= 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_product` WHERE `status` >= 9 AND `stage` IN ('2','9') LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_custom` [ RunTime:0.0050s ]
+SQL: SELECT SUM(amount*count) AS tp_sum FROM `jm_custom` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0061s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_ucenter_member` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_link` [ RunTime:0.0043s ]
+SQL: SELECT `name`,`logo`,`url` FROM `jm_link` WHERE `status` = 1 ORDER BY sort desc LIMIT 15   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.005172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.009994s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: city C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 364 行.
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1243 行.
+NOTIC: [8] Undefined variable: finish_amount C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 365 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5733 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5672 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5622 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5597 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5708 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5572 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5577 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5580 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5571 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5579 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5576 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5574 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5832 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5650 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5654 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5828 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5829 LIMIT 1   [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.167400s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.169461s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003435s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001871s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003867s ]
+
+[ 2016-04-12T11:13:46+08:00 ] 127.0.0.1 /Project/leader/id/347.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000408s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.013313s ]
+INFO: [ app_init ] --END-- [ RunTime:0.017860s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003722s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.042847s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.050965s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0053s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `jm_user_auth` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_user_auth` WHERE `uid` = 7212 AND `status` = 9 AND `auth_id` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `jm_ucenter_member` WHERE `id` = 7212 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `jm_project_fund` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0045s ]
+SQL: SELECT p.id AS id,p.project_name AS project_name,p.cover AS cover,p.stage AS stage,p.company_name AS company_name,p.uid AS uid,p.type AS type,p.vote_leader AS vote_leader,p.agreement AS agreement,fund.need_fund AS need_fund,fund.has_fund AS has_fund,fund.extra AS extra,fund.leader_id AS leader_id,fund.agree_fund AS agree_fund,fund.project_valuation AS project_valuation,fund.final_valuation AS final_valuation,fund.follow_fund AS follow_fund,fund.status AS acc_status,picture.path AS path FROM jm_project p LEFT JOIN jm_project_fund fund ON p.id=fund.project_id LEFT JOIN jm_picture picture ON picture.id=p.cover WHERE p.id = '347' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_proj_leader` [ RunTime:0.0044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_proj_leader` WHERE `pid` = 347 AND `uid` = 7212 AND `status` >= 0 AND `del_flag` = 0 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001641s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003670s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.353454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.357814s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001987s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001992s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003996s ]
+
+[ 2016-04-12T11:13:47+08:00 ] 127.0.0.1 /Public/static/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000875s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.007608s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001970s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.035414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040793s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0048s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0008s ]
+
+[ 2016-04-12T11:13:49+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000347s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.010086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002010s ]
+INFO: Run Addons\Iswaf\IswafAddon [ RunTime:0.038373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044339s ]
+SQL: SHOW COLUMNS FROM `jm_config` [ RunTime:0.0047s ]
+SQL: SELECT `type`,`name`,`value` FROM `jm_config` WHERE `status` = 1  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `jm_notice` [ RunTime:0.0056s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_notice` WHERE ( status = 0 ) ORDER BY is_top desc,create_time desc LIMIT 6   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_infomation` [ RunTime:0.0073s ]
+SQL: SELECT `id`,`create_time`,`title` FROM `jm_infomation` WHERE ( status = 1 ) ORDER BY level desc,create_time desc LIMIT 6   [ RunTime:0.0014s ]
+NOTIC: [8] Undefined variable: noticearray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [8] Undefined variable: newsarray C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+NOTIC: [2] implode(): Invalid arguments passed C:\wamp\www\yinma\Application\Home\Controller\IndexController.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `jm_proj_index` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 4 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0052s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 2 ORDER BY is_top desc, create_time desc  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 1 ORDER BY is_top desc, create_time desc  [ RunTime:0.0033s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `stage` = 9 ORDER BY is_top desc, create_time desc LIMIT 6   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `jm_banner` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `jm_banner` WHERE `status` = 0 ORDER BY sort asc,id desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jm_product` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` > 1 AND `stage` < 9 AND `stage` <> 8  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `jm_product` WHERE `status` = 9 AND ( `stage` = 9  ) ORDER BY is_sort desc,start_time desc LIMIT 4   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_proj_index` WHERE `status` = 9 AND `stage` BETWEEN '1' AND '4' ORDER BY stage desc,is_top desc,create_time desc LIMIT 6   [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `jm_project` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_project` WHERE `status` >= 9 AND `stage` IN ('1','4','9') LIMIT 1   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `jm_project_investor` [ RunTime:0.0063s ]
+SQL: SELECT SUM(fund) AS tp_sum FROM `jm_project_investor` WHERE `status` >= 4 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_product` WHERE `status` >= 9 AND `stage` IN ('2','9') LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_custom` [ RunTime:0.0046s ]
+SQL: SELECT SUM(amount*count) AS tp_sum FROM `jm_custom` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `jm_ucenter_member` [ RunTime:0.0048s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jm_ucenter_member` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `jm_link` [ RunTime:0.0042s ]
+SQL: SELECT `name`,`logo`,`url` FROM `jm_link` WHERE `status` = 1 ORDER BY sort desc LIMIT 15   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003565s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006214s ]
+SQL: SHOW COLUMNS FROM `jm_picture` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5838 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5817 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5769 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5794 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5789 LIMIT 1   [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: city C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 364 行.
+NOTIC: [8] Undefined index: d C:\wamp\www\yinma\Application\Common\Common\function.php 第 1243 行.
+NOTIC: [8] Undefined variable: finish_amount C:\wamp\www\yinma\Runtime\Cache\Home\769e70f2e46f34ceb60619bbda5e4691.php 第 365 行.
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5836 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5733 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5672 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5622 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5597 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5708 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5572 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5577 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5580 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5571 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5579 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5576 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5574 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5832 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5650 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5654 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5828 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jm_picture` WHERE `status` = 1 AND `id` = 5829 LIMIT 1   [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.206855s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.208890s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001928s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004318s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002147s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004386s ]
+
