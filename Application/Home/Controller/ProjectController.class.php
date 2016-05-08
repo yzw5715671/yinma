@@ -474,7 +474,6 @@ class ProjectController extends HomeController {
         $temps = M('ProjectTemp')->where(array('project_id'=>$id))->order('temp_type, sort')->select();
         $viw=$temps[0]['info_key'];
         $this->assign('viw',$viw);
-        //var_dump($viw);
         $this->display('detail');
 	}
 
@@ -776,10 +775,10 @@ class ProjectController extends HomeController {
 			}
 			if ($v['status'] == -1) {
 				$count++;
-				// if ($count >= 5) {
-				// 	$message = '您不能对该项目进行投资(该项目您有五次撤消投资记录)。';
-				// 	break;
-				// }
+				if ($count >= 5) {
+					$message = '您不能对该项目进行投资(该项目您有五次撤消投资记录)。';
+					break;
+				}
 			}
 		}
 
@@ -1246,6 +1245,10 @@ class ProjectController extends HomeController {
 		}
 	}
     function postcomment() {
+    	$uid = is_login();
+		if (!$uid) {
+			$this->redirect('User/login');
+		}
         $this->display('postcomment');
     }
 	/**

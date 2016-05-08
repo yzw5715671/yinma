@@ -647,6 +647,10 @@ class ProductController extends HomeController {
 	
 	//手机上的评论
 	function postcomment() {
+		$uid = is_login();
+		if (!$uid) {
+			$this->redirect('User/login');
+		}
 		$this->display('postcomment');
 	}
 	

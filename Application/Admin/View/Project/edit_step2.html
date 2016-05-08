@@ -42,15 +42,18 @@
 				<input type="hidden" name="id" value="{$projectid}">
 				<div class="under-line">
 					<div class="com-info">
-						<div class="sub-title">项目描述</div>
+						<div class="sub-title">商业计划书</div>
 						<div class="edit-info">
-							<textarea name="description" class="span6" rows="5">{$description}</textarea>
+							<!-- <textarea name="description" class="span6" rows="5">{$description}</textarea> -->
+							<!-- 加载编辑器的容器 -->
+							<txtarear id="description" name="description">{$description}</txtarear>
 							{:hook('documentEditFormContent', array('name'=>'description', 'value'=>'$info["description"]'))}
 						</div>
 					</div>
 					<div class="com-info">
-						<div class="sub-title">公司未来规划</div>
-							<textarea name="plan" class="span6" rows="5">{$plan}</textarea>
+						<div class="sub-title">研究报告</div>
+							<!-- 加载编辑器的容器 -->
+						    <txtarear id="plan" name="plan">{$plan}</txtarear>
 							{:hook('documentEditFormContent', array('name'=>'plan', $value=>'$info["plan"]'))}
 						<div class="edit-info">
 						</div>
@@ -58,28 +61,32 @@
 					<div class="com-info">
 						<div class="sub-title">目标客户</div>
 						<div class="edit-info">
-						<textarea name="custom" class="span6" rows="5">{$custom}</textarea>
+						<!-- 加载编辑器的容器 -->
+					    <txtarear id="custom" name="custom">{$info.custom}</txtarear>
 						{:hook('documentEditFormContent', array('name'=>'custom', $value=>'$info["custom"]'))}
 						</div>
 					</div>
 					<div class="com-info">
 						<div class="sub-title">盈利模式</div>
 						<div class="edit-info">
-						<textarea name="yingli_mode" class="span6" rows="5">{$yingli_mode}</textarea>
+						<!-- 加载编辑器的容器 -->
+					    <txtarear id="yingli_mode" name="yingli_mode">{$info.yingli_mode}</txtarear>
 						{:hook('documentEditFormContent', array('name'=>'yingli_mode', $value=>'$info["yingli_mode"]'))}
 						</div>
 					</div>
 					<div class="com-info">
 						<div class="sub-title">同业竞争</div>
 						<div class="edit-info">
-						<textarea name="jingzheng" class="span6" rows="5">{$jingzheng}</textarea>
+						<!-- 加载编辑器的容器 -->
+					   	<txtarear id="jingzheng" name="jingzheng">{$info.jingzheng}</txtarear>
 						{:hook('documentEditFormContent', array('name'=>'jingzheng', $value=>'$info["jingzheng"]'))}
 						</div>
 					</div>
 					<div class="com-info">
 						<div class="sub-title">竞争优势</div>
 						<div class="edit-info">
-						<textarea name="avantages" class="span6" rows="5">{$avantages}</textarea>
+						<!-- 加载编辑器的容器 -->
+					    <txtarear id="avantages" name="avantages">{$info.avantages}</txtarear>
 						{:hook('documentEditFormContent', array('name'=>'avantages', $value=>'$info["avantages"]'))}
 						</div>
 					</div>
@@ -159,6 +166,59 @@
 
 
 <block name="script">
+
+	<link href="__ROOT__/Public/Home/css/validform.css" rel="stylesheet">
+	<script type="text/javascript" src="__STATIC__/Validform_v5.3.2.js"></script>
+	<link href="__STATIC__/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+	<!-- 配置文件 -->
+	<script type="text/javascript" src="__STATIC__/umeditor/umeditor.config.js"></script>
+	<!-- 编辑器源码文件 -->
+	<script type="text/javascript" src="__STATIC__/umeditor/umeditor.min.js"></script>
+	<script type="text/javascript">
+		var um = UM.getEditor('description', {
+			initialFrameWidth :660,
+			initialFrameHeight :250,
+		});
+		
+		var um = UM.getEditor('plan', {
+			initialFrameWidth :660,
+			initialFrameHeight :250,
+		});
+		var um = UM.getEditor('custom', {
+			initialFrameWidth :660,
+			initialFrameHeight :250,
+		});
+		var um = UM.getEditor('yingli_mode', {
+			initialFrameWidth :660,
+			initialFrameHeight :250,
+		});
+		var um = UM.getEditor('jingzheng', {
+			initialFrameWidth :660,
+			initialFrameHeight :250,
+		});
+		var um = UM.getEditor('avantages', {
+			initialFrameWidth :660,
+			initialFrameHeight :250,
+		});
+		
+		$("#project_add").Validform({
+			tiptype:3,
+			btnSubmit:"#confirm",
+			ajaxPost:true,
+			callback:function(data){
+				if (data.status == 1) {
+					//alert('添加成功');
+					//window.location.href = data.url;
+					layer.alert(data.info, 1, function() {window.location.href = data.url;});
+				}else{
+					//alert(data.info);
+					layer.alert(data.info, 5);
+				}
+			}
+		});
+	</script>
+
+
   <script type="text/javascript" src="__STATIC__/jquery.upload.js"></script>
 
   <script type="text/javascript" src="__STATIC__/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
