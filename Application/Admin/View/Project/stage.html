@@ -53,9 +53,11 @@
 					| <a class="ajax-get confirm" href="{:U('Project/stagechange?status=1&id=' . $vo['id'])}" data-info="您确定要把该项目的众筹阶段修改为预热吗?">预热</a>
 				<elseif condition="$vo.stage eq 1"/>
 				 	| <a class="ajax-get confirm" href="{:U('Project/stagechange?status=4&id=' . $vo['id'])}" data-info="您确定要把该项目的众筹阶段修改为快速合投吗?">合投</a>
+				 	| <a class="ajax-get confirm" href="{:U('Project/stagechange?status=10&id=' . $vo['id'])}" data-info="您确定要把该项目的众筹阶段修改为认购吗?">认购</a>
 					<!-- | <a class="ajax-get confirm" href="{:U('Project/stagechange?status=2&id=' . $vo['id'])}" data-info="您确定要把该项目的众筹阶段修改为询价认投吗?">认投</a> -->
 				<elseif condition="$vo.stage eq 2 "/>
 					| <a class="ajax-get confirm" href="{:U('Project/stagechange?status=4&id=' . $vo['id'])}" data-info="您确定要把该项目的众筹阶段修改为快速合投吗?">合投</a>
+					| <a class="ajax-get confirm" href="{:U('Project/stagechange?status=10&id=' . $vo['id'])}" data-info="您确定要把该项目的众筹阶段修改为快速认购吗?">认购</a>
 				<elseif condition="$vo.stage eq 4 "/>
 					| <a class="ajax-get confirm" href="{:U('Project/stagechange?status=5&id=' . $vo['id'])}" data-info="您确定要把该项目的众筹阶段修改为等待付款吗?">等待付款</a>
 					| <a href="{:U('manage/seeInvestor?pj_id=' . $vo['id'])}" target="_blank" class="see-investor">查看投资人</a>

@@ -318,6 +318,11 @@ class ProjectController extends AdminController {
 			$where = array('status' => array('eq', '9'),'stage'=>array('eq',9));
 			$order = array('update_time desc');
 			$p_stage ='众筹成功的项目';
+		}elseif($stage==10){
+			//众筹成功的项目
+			$where = array('status' => array('eq', '9'),'stage'=>array('eq',10));
+			$order = array('update_time desc');
+			$p_stage ='认购的项目';
 		}
 		
 		//职位
@@ -331,7 +336,7 @@ class ProjectController extends AdminController {
 		
 		$list = M('Project')->where($where)->order($order)->select();
 		int_to_string($list,
-		array('stage'=>array(0=>'审核已通过',1=>'预热阶段',2=>'认投阶段',3=>'推选领投人阶段',4=>'合投阶段', 5=>'等待付款', 9=>'完成')));
+		array('stage'=>array(0=>'审核已通过',1=>'预热阶段',2=>'认投阶段',3=>'推选领投人阶段',4=>'合投阶段', 5=>'等待付款', 9=>'完成', 10=>'认购阶段')));
 		
 
 		foreach ($list as $key=>$info)
@@ -431,6 +436,9 @@ class ProjectController extends AdminController {
 			}elseif($status==9) { 
 				$message='【' . $project['project_name'] . '】项目阶段调整为募资成功';
 				$url = U('stage', array('stage'=>9));
+			}elseif($status==10) { 
+				$message='【' . $project['project_name'] . '】项目阶段调整为认购';
+				$url = U('stage', array('stage'=>10));
 			}
 			// $data = M('ProjectFund')->where(array('project_id'=>$id))->find();
 		
