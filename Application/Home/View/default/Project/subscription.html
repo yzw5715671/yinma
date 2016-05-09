@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://www.1tht.cn/User/login.html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="创业,投资,理财,众筹,融资">  
+    <meta name="description" content="一塔湖图众筹,
+        专注于“互联网金融+”精品项目的股权投融资平台！
+        依托北大校友、一塔湖图商学院、中国互联网金融青年会及中国互联网普惠金融研究院等资源，
+        提供最优质的互联网金融产业配套服务，筹钱、筹智、筹资源，加速企业成长，
+        为创业者与投资人提供快速对接的桥梁！">   
+  
+    <meta name="renderer" content="webkit">
+    <link href="http://www.1tht.cn/Public/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link href="__PUBLIC__/Home/fsr/css/common.css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/fsr/css/rengou.css" rel="stylesheet">
+    <script type="text/javascript" src="__PUBLIC__/Home/fsr/js/jquery-2.0.3.min.js"></script>
+    <title>认购费—“互联网金融+”精品项目的股权投融资平台</title>
+
+</head>
+<body>
+     <!--top start-->
+    <div class="login-top">
+        <div class="login-title">
+            <ul class="clearfix">
+            <li><span>400-806-8787</span></li>
+            <li class="login_wx">
+                <span></span>
+                <div class="wxbox"><img src="__PUBLIC__/Home/fsr/images/weixin.jpg"></di>
+            </li>
+            <if condition="is_login()">
+            <li>欢迎：<a href="{:U('MCenter/index')}">{:get_username()}</a></li>
+            <else/>
+            <li><a href="__APP__/User/login.html">您好，请登录</a></li>
+            <li>|<a href="__APP__/User/register.html">免费注册</a></li>
+            </if>
+        </ul>
+        </div>
+    </div>
+    <!--top end-->
+    <div class="thc-content">
+        <!-- menu start -->
+        <div class="login-menu">
+            <div class="menubox">
+                <h1><a href="/index/index.html"><img src="__PUBLIC__/Home/fsr/images/logo1.png" style="width:188px"></a></h1>
+                <ul class="clearfix">
+                    <li><a href="/index/index.html">首页</a></li>
+                    <li><a href="/list/index.html">浏览梦想</a></li>
+                    <li><a href="/porject/create.html">发起项目</a></li>
+                    <li><a href="/list/index/type/2/status/0/p/1.html">实物项目</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- menu end -->
+
+        <!-- body start -->
+        <div class="ren-body"> 
+            <h3>{$project.project_name}</h3>
+            <table class="ren-tab" cellpadding="1" cellspacing="1">
+                <tbody>
+                    <tr>
+                        <td class="font26" width="220">融资信息</td>
+                        <td>
+                            <p class="redfont"><span>{$project.need_fund|change_fund}</span>元</p>
+                            <p>融资目标额</p>
+                        </td>
+                        <td>
+                            <p class="redfont"><span>{$project.follow_fund|change_fund}</span>元</p>
+                            <p>起头额</p>
+                        </td>
+                        <td>
+                            <p class="redfont"><span>{$project.final_valuation|change_fund}</span>元</p>
+                            <p>最终估值</p>
+                        </td>
+                        <td>
+                            <p class="redfont"><span>{$project.rate_fund|number_format=4}</span>%</p>
+                            <p>出让比例</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="ren-p">特殊回报：{$project.extra}</p>
+            <div class="ren-box">
+                <h4>您的认购金额</h4>
+                <form action="{:U('project/subscription')}" method="post">
+                	<input type="hidden" name="id" value="{$project.id}">
+                    <div class="ren-money">
+                       <a href="javascript:void(0)" onclick="opera('#myfund', false);"><img src="__PUBLIC__/Home/fsr/images/ren_jian.png"></a>
+                        <input id='myfund' type='text' name='fund' class="text" class="ren-inp" value="25000">
+                        <img src="__PUBLIC__/Home/fsr/images/ren_money.png" class="ren-img">
+                        <a href="javascript:void(0)" onclick="opera('#myfund', true);"><img src="__PUBLIC__/Home/fsr/images/ren_jia.png"></a>
+                        <b>×2%（认购费）=</b>
+                        <span id='subscription_1'>500元</span>
+                    </div>
+                    <div class="ren-sao">
+                        <p>扫一扫付款（元）</p>
+                        <p id='subscription_2'>500元</p>
+                        <p><img src="__PUBLIC__/Home/fsr/images/ren_ma.png"></p>
+                    </div>
+                    <p class="ren-checkbox"><input type="checkbox" name='agreement' checked>我同意条款协议<a href="javascript:void(0)">《风险提示书》</a><a href="javascript:void(0)">《用户服务协议》</a></p>
+                    <span id='agreement_msg' style='color: red;font-size: 15px;display:none;'>请同意协议</span>
+                    <p><input id='submit' type="submit" class="ren-btn" value="确认并支付认购费"></p>
+                </form>
+                <div class="ren-tiao">
+                    <h5>详细规则</h5>
+                    <ul>
+                        <li>越早支付认购费，越先锁定投资名额</li>
+                        <li>支付完认购费后，3天冷静期内可以申请退款</li>
+                        <li>如放弃支付剩余款，保证金恕不退还，将由项目方收取</li>
+                        <li>联系电话：400-806-8787</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- body end -->
+
+        <!-- footer start -->
+            <div class="fl w100 foot">
+                <div class="foot_warp">
+                    <div class="foot_top"><img src="__PUBLIC__/Home/fsr/images/foot_smile.png"></div>
+                    <!--<h1>假如人生不曾相遇，你不会了解世界还有这样一个我</h1>-->
+                    <h1>商学院 &nbsp;·&nbsp; 实业 &nbsp;·&nbsp; 金融 &nbsp;·&nbsp; 社群</h1>
+                    <!--<ul class="foot_text">
+                        <li><a target="_blank" href="/Info/show/key/about.html">关于我们</a> 丨</li>
+                        <li><a target="_blank" href="/Info/show/key/xinshouzhiyin.html">新手指引</a> 丨</li>
+                        <li><a target="_blank" href="/Info/show/key/agreement.html">用户协议</a> 丨</li>
+                        <li><a target="_blank" href="/Info/show/key/shenmingshu.html">风险提示</a> 丨</li>
+                        <li><a target="_blank" href="/Info/show/key/fenpei.html">一塔湖图众筹规则</a> 丨</li>
+                        <li><a target="_blank" href="/Info/show/key/crowd.html">了解众筹</a></li>
+                    </ul>-->
+                    <ul class="foot_text">
+                        <li><a target="_blank" href="/Info/show/key/about.html">认识一塔湖图</a> 丨</li>
+                        <li><a target="_blank" href="/Info/show/key/joinus.html">加入我们</a> 丨</li>
+                        <li><a target="_blank" href="/Info/show/key/fenpei.html">利益分配</a> 丨</li>
+                        <li><a target="_blank" href="/Info/show/key/shenmingshu.html">风险提示</a> 丨</li>
+                        <li><a target="_blank" href="/Info/show/key/invest.html">认投规则</a> 丨</li>
+                        <li><a target="_blank" href="/Info/show/key/crowd.html">了解众筹</a></li>
+                    </ul>
+                    <div style="clear:both;"></div>
+                    <div class="foot_bottom">
+                        <ul class="foot_tg">
+                            <li class="wx" id="weixin_id">
+                                <a target="_blank" class="footer-weixin">微信</a>
+                                <span class="weixin-qrcode"><img width="240" height="240" src="/Public/Home/images/weixin.jpg" alt=""></span>
+                            </li>
+                           <li class="wb"><a href="http://weibo.com/5724180766" target="_blank">新浪微博</a></li>
+                            <li class="dh">400-806-8787</li>
+                        <!--  <li class="yx"><a target="_blank" href="mailto:zamazc@zamazc.com">bp@1tht.cn</a></li>-->
+                            <li class="yx">bp@1tht.cn</li>
+                        </ul>
+                    </div>
+                    <div class="foot_tag">Copyright © 2015 北京一塔湖图众筹科技有限公司 京ICP备15053117号-2</div>
+                </div>
+            </div>
+        <!-- footer end -->
+
+ <script>
+$(function(){
+    /*鼠标放上 移开时的效果*/
+
+    $(".login_wx").mouseover(function(){
+        $(".wxbox").css("display","block");
+    });
+    $(".login_wx").mouseout(function(){
+        $(".wxbox").css("display","none");
+    });
+
+    $('.wx-login').click(function(){
+        $('.tanc-bg').show();
+        $('.wx-box').show();
+    });
+    $('.wx-close').click(function(){
+        $('.tanc-bg').hide();
+        $('.wx-box').hide();
+    });
+
+});
+
+$('#myfund').blur(function () {
+    var rs = new Number($("#myfund").val());
+    if (isNaN(rs)) {
+        rs = 0;
+    }
+    $("#myfund").val(checkFund(rs));
+    $('#subscription_1').html((checkFund(rs) * 0.02)+'元');
+    $('#subscription_2').html((checkFund(rs) * 0.02)+'元');
+});
+$('input[name=agreement]').click(function(){
+	var checkag = $("input[name=agreement]").is(':checked');
+	if(checkag){
+		$('#agreement_msg').hide();
+	}else{
+		$('#agreement_msg').show();
+	}
+});
+$('#submit').click(function(){
+	var checkag = $("input[name=agreement]").is(':checked');
+	if(!checkag){
+		$('#agreement_msg').show();
+		return false;
+	}
+});
+
+function opera(x, y) {
+    var rs = new Number($(x).val());
+    if (isNaN(rs)) {
+        rs = 0;
+    }
+    if (y) {
+        rs = rs + 1000;
+    } else {
+        rs = rs - 1000;
+    }
+    $(x).val(checkFund(rs));
+    $('#subscription_1').html((checkFund(rs) * 0.02)+'元');
+    $('#subscription_2').html((checkFund(rs) * 0.02)+'元');
+}
+
+function checkFund(v) {
+    var min_follow = new Number($('#follow_fund').val());
+    var max_follow = new Number($('#need_fund').val());
+    var valuation = new Number($('#valuation').val());
+
+    // 投资金额处理为1000的倍数
+    v = Math.ceil(v / 1000) * 1000;
+    if (v > max_follow) {
+        v = max_follow;
+    } else if (v < min_follow) {
+        v = min_follow;
+    }
+    // 计算股份占比
+    var rate = (Math.round(v * 1000000 / valuation) / 10000);
+    $("#hasrate").html(rate);
+    return v;
+}
+
+</script>       
+        
+</body>
+
+
+</html>

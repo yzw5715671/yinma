@@ -267,9 +267,9 @@ Class ProjectModel extends Model{
     }
 
     //获取所有股权众筹项目列表
-    public function getAllProvedProjectsInfo($stage=array('between',array('1','9')),$order='stage desc,create_time desc',$limit=null) {
+    public function getAllProvedProjectsInfo($stage=array('between',array('1','10')),$order='stage desc,create_time desc',$limit=null) {
         $where=array('status' => 9, 'stage'=> $stage );
-        return array_merge($this->getAllFundingProjectsInfo(),$this->getAllWarmupProjectsInfo(),$this->getAllSuccessedProjectsInfo(),$this->getAllUnsucessedProjectsInfo());
+        return array_merge($this->getAllFundingProjectsInfo(),$this->getAllSubscriptionProjectsInfo(),$this->getAllWarmupProjectsInfo(),$this->getAllSuccessedProjectsInfo(),$this->getAllUnsucessedProjectsInfo());
         //return M('ProjIndex')->where($where)->order($order)->limit($limit)->select();
     }
 
@@ -298,6 +298,14 @@ Class ProjectModel extends Model{
 
     //获取所有众筹成功的股权众筹项目列表
     public function getAllSuccessedProjectsInfo($stage=array('IN','8,9'),$order='create_time desc',$limit=null) {
+        $where=array('status' => 9, 'stage'=> $stage );
+        $data = M('ProjIndex')->where($where)->order($order)->limit($limit)->select();
+        if (!$data) {$data = array();}
+        return $data;
+    }
+
+    //获取所有认购的股权众筹项目列表
+    public function getAllSubscriptionProjectsInfo($stage=array('IN','10'),$order='create_time desc',$limit=null) {
         $where=array('status' => 9, 'stage'=> $stage );
         $data = M('ProjIndex')->where($where)->order($order)->limit($limit)->select();
         if (!$data) {$data = array();}

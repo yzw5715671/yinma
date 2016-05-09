@@ -734,6 +734,104 @@ class ProjectController extends HomeController {
 		$validateUser = $thisProject->checkUserInfo();
 		$this->ajaxReturn($validateUser);
 	}
+
+	// 认购处理
+	public function subscription(){
+		$id = I('id');
+		if ($id == 2) {
+			$this->display('Tea/invest');
+			return;
+		}
+		$uid = is_login();
+		if (!$uid) {
+			$this->redirect('User/login');
+		}
+
+		$project = D('ProjectFundView')->where(array('p.id'=>$id))->find();
+		if (!$project) {
+			$this->error('项目不存在！');
+		} else if ($project['stage'] != 10) { //非认购期
+			$this->error('该项目不处于认购期间，不能进行该操作。');
+		} else if ($project['uid'] == $uid) {
+			$this->error('不允许项目发起人，对自己的项目进行投资。');
+		}
+		$inve = M('ProjectInvestor')->where(array('project_id'=>$id, 'investor_id'=>$uid))->select();
+
+		$count = 0;
+		foreach ($inve as $k => $v) {
+			if ($v['status'] >= 2) {
+				$message = "您的投资已经被项目方接受，不能重复投资。如需更改投资金额，请先前往用户中心撤消投资。";
+				$this->error($message,U('./MCenter'));
+				break;
+			}
+			if ($v['status'] == -1) {
+				$count++;
+				if ($count >= 5) {
+					$message = '您不能对该项目进行投资(该项目您有五次撤消投资记录)。';
+					break;
+				}
+			}
+		}
+
+		if (isset($message)) {
+			$this->error($message);
+		}
+
+		if (IS_POST) {
+			
+			$thisProject = D('Project');
+			$validateUser = $thisProject->checkAuth();
+			if(!$validateUser['success']){
+				$this->error('没有实名认证');
+			};
+
+			$investor =  array('project_id'=>$id, 'fund'=>$_POST['fund'],
+				'others' => $_POST['others'], 'lead_type'=>3);
+			if ($project['type'] == 0 && ($investor['fund'] % 1000) > 0) {
+				$this->error('投资金额必须是1000的倍数。');
+			}
+
+			$investor['step'] = $project['stage'];
+			$investor['project_valuation'] = $project['final_valuation'];
+			$investor['project_id'] = $id;
+			$investor['investor_id'] = $uid;
+			$investor['create_time'] = NOW_TIME;
+			$investor['create_id'] = $uid;
+			$investor['update_time'] = NOW_TIME;
+			$investor['update_id'] = $uid;
+			$investor['status'] = 10;
+			$investor['subscription_money'] = $investor['fund'] * 0.02;
+
+			M('ProjectInvestor')->add($investor);
+			M('ProjectFund')->where('project_id='.$id)->setInc('has_fund',$investor['fund']);
+			M('ProjectFund')->where('project_id='.$id)->setInc('agree_fund',$investor['fund']);
+			// 发送系统消息(通知项目方有人跟投)
+			$ulink = '<a href="'.U('MCenter/profile?id='.$uid).'">'.
+				get_membername($uid).'</a>';
+			$plink = '<a href="'.U('Manage/foundfollow').'">《'.
+				$project['project_name'].'》</a>';
+
+			$content = $ulink . '认购了您的'. $plink . '项目';
+			D('Message')->send(0,$project['uid'],'', $content, 3);
+
+			//增加一个待办事件
+			update_pj_dolist($uid,0);
+			
+			$this->success('恭喜您，认购申请成功！现在，去看一下您的认购情况吧！'.showface('hand'), U('MCenter/pj_support'));
+
+		} else {
+			if ($project['type'] == 1) {
+				$project['final_valuation'] = $project['need_fund'];
+			}
+			$project['rate_fund'] = $project['need_fund'] * 100 / $project['final_valuation'];
+			$project['rate'] = $project['follow_fund'] * 100 / $project['final_valuation'];
+			$this->project = $project;
+
+			//返回跳转
+			$this->assign("backurl",U('Project/detail?id='.$id));
+			$this->display();
+		}
+	}
 	
 	// 跟投处理
 	public function follow() {

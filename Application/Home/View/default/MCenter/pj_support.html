@@ -58,6 +58,8 @@
                             协议确认
                             <elseif condition="$vo.status eq 9"/>
                             已支付
+                            <elseif condition="$vo.status eq 10"/>
+                            认购待确认
                             <else/>
                             被拒绝
                         </if>
@@ -80,7 +82,7 @@
                                 </if>
                             </if>
                         </if>
-                        <if condition="($vo.status gt 0) AND ($vo.status lt 9)">
+                        <if condition="($vo.status gt 0) AND ($vo.status lt 11)">
                             <neq name="vo.lead_type" value="9">
                                 <a href="{:U('Manage/cancel?id='.$vo['id'])}" class="invest_cancel">撤消</a>
                             </neq>
