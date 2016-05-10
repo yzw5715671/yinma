@@ -47,7 +47,10 @@
 										<else/><span style="color:red">线下支付</span></eq>
 		              <else />{$vo.status_text}</if></td>
 		              <td>
-		              	<if condition="$vo.status eq 8">
+		              	<if condition="$vo.status eq 10">
+		              		<a href="{:U('subscription?id='.$vo['id'])}" class="subscription">认购</a>
+		              	</if>
+		              	<if condition="$vo.status eq 8 or $vo.status eq 10  or $vo.status eq 11">
 		              		<a href="{:U('payinfo?id='.$vo['id'])}" class="payinfo">到账</a>
 		              	</if>
 		              	<if condition="$vo[status] gt 4">
@@ -68,6 +71,7 @@
 <script src="__JS__/jquery.colorbox-min.js"></script>
 <link rel="stylesheet" href="__CSS__/colorbox.css">
 <script type="text/javascript">
+	$(".subscription").colorbox();
 	$(".payinfo").colorbox();
 	$(".cancel_pay").colorbox();
 </script>

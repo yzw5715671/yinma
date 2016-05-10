@@ -34,7 +34,7 @@ class AgreementController extends HomeController {
 
 		$user = M('UsersDetail')->where(array('id'=>$uid))->find();
 		$invest = M('ProjectInvestor')->
-			where(array('project_id'=>$id, 'investor_id'=>$uid, 'status'=>4))->find();
+			where(array('project_id'=>$id, 'investor_id'=>$uid, 'status'=>array('in',array(4,11))))->find();
 		if (!$invest) {$this->error('没有找到和您相关的投资信息');}
 
 		$leader = M('ProjectLeader')->where(array('project_id' => $id, 'lead_type'=>9))->find();
@@ -128,7 +128,7 @@ class AgreementController extends HomeController {
 		$iid = $_POST['iid'];
 
 		$data = M('ProjectInvestor')->where(
-			array('id'=>$iid, 'status'=>4))->find();
+			array('id'=>$iid, 'status'=>array('in',array(4,11))))->find();
 
 		M('AgreementInvest')->where(
 			array('pid'=>$data['project_id'], 'uid'=>$data['investor_id']))

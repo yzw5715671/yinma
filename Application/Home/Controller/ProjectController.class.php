@@ -755,29 +755,30 @@ class ProjectController extends HomeController {
 		} else if ($project['uid'] == $uid) {
 			$this->error('不允许项目发起人，对自己的项目进行投资。');
 		}
-		$inve = M('ProjectInvestor')->where(array('project_id'=>$id, 'investor_id'=>$uid))->select();
-
-		$count = 0;
-		foreach ($inve as $k => $v) {
-			if ($v['status'] >= 2) {
-				$message = "您的投资已经被项目方接受，不能重复投资。如需更改投资金额，请先前往用户中心撤消投资。";
-				$this->error($message,U('./MCenter'));
-				break;
-			}
-			if ($v['status'] == -1) {
-				$count++;
-				if ($count >= 5) {
-					$message = '您不能对该项目进行投资(该项目您有五次撤消投资记录)。';
-					break;
-				}
-			}
-		}
-
-		if (isset($message)) {
-			$this->error($message);
-		}
 
 		if (IS_POST) {
+			
+			$inve = M('ProjectInvestor')->where(array('project_id'=>$id, 'investor_id'=>$uid))->select();
+
+			$count = 0;
+			foreach ($inve as $k => $v) {
+				if ($v['status'] >= 2) {
+					$message = "您的投资已经被项目方接受，不能重复投资。如需更改投资金额，请先前往用户中心撤消投资。";
+					$this->error($message,U('./MCenter'));
+					break;
+				}
+				if ($v['status'] == -1) {
+					$count++;
+					if ($count >= 5) {
+						$message = '您不能对该项目进行投资(该项目您有五次撤消投资记录)。';
+						break;
+					}
+				}
+			}
+
+			if (isset($message)) {
+				$this->error($message);
+			}
 			
 			$thisProject = D('Project');
 			$validateUser = $thisProject->checkAuth();

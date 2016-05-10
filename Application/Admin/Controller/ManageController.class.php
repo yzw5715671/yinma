@@ -5,7 +5,7 @@ class ManageController extends AdminController {
 	public function index() {
 		$list = M('Project')->where(array('status' => array('gt', '2'), 'stage'=>array('egt', 4)))->order('stage, create_time desc')->select();
 		int_to_string($list,
-		array('stage'=>array(0=>'审核已通过',1=>'预热阶段',2=>'认投阶段',3=>'推选领投人阶段',4=>'合投阶段', 5=>'等待付款', '8'=>'众筹失败', 9=>'众筹成功')));
+		array('stage'=>array(0=>'审核已通过',1=>'预热阶段',2=>'认投阶段',3=>'推选领投人阶段',4=>'合投阶段', 5=>'等待付款', '8'=>'众筹失败', 9=>'众筹成功', 10=>'认购阶段')));
 		
 		foreach ($list as $key=>$info)
 		{
@@ -17,6 +17,25 @@ class ManageController extends AdminController {
 		
 		$this->_list = $list;
 		$this->display();
+	}
+
+	//认购
+	public function subscription() {
+		if (IS_GET) {
+			$id = $_GET['id'];
+			$investor = M('ProjectInvestor')->where(array('id'=>$id))->find();
+
+			$user = M('UsersDetail')->where(array('id'=>$investor['investor_id']))->find();
+			$data = array('id'=> $investor['id'], 'fund'=>$investor['fund'], 
+				'name'=>$user['name'], 'amount'=>$investor['fund'], 'subscription_money'=>$investor['subscription_money']);
+			$this->data = $data;
+			$this->display('subscription');
+		} else {
+			$data = array('id'=>$_POST['id'], 'status'=>11, 'update_time'=>NOW_TIME);
+			M('ProjectInvestor')->save($data);
+
+			$this->success('认购成功。');
+		}
 	}
 
 	public function payinfo() {
@@ -65,6 +84,12 @@ class ManageController extends AdminController {
 					break;
 				case 9:
 					$list[$key]['status_text'] = '已支付';
+					break;
+				case 10:
+					$list[$key]['status_text'] = '认购中';
+					break;
+				case 11:
+					$list[$key]['status_text'] = '已认购';
 					break;
 			}
                         
