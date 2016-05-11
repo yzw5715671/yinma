@@ -66,7 +66,6 @@ class ManageController extends AdminController {
 		$list = M('ProjectInvestor')->field(array('id', 'investor_id','fund','status', 'pay_way'))->where(array('project_id'=>$pj_id,'status' => array('gt', '2')))->order('status, create_time desc')->select();
 		$pro_fund=M('projectFund')->where(array('project_id'=>$pj_id))->field('has_fund')->find();
                 $count_9=0;$count_8=0;$count_4=0;
-                
 		foreach ($list as $key => $value) {
 			$userneme = M('UsersDetail')->where(array('id'=>$value['investor_id']))->field(array('id'=>'uid','name','phone','card_id'))->find();
 			$list[$key] = array_merge($userneme,$list[$key]);
