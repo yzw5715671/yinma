@@ -788,6 +788,13 @@ class ProjectController extends HomeController {
 
 			$investor =  array('project_id'=>$id, 'fund'=>$_POST['fund'],
 				'others' => $_POST['others'], 'lead_type'=>3);
+
+			if ($project['need_fund'] < $investor['fund']) {
+				$this->error('投资金额必须小于' . round($project['need_fund'],2) . '元。');
+			} else if ($project['follow_fund'] > $investor['fund']) {
+				$this->error('投资金额必须大于或者等于' . round($project['follow_fund'],2) . '元。');
+			}
+			
 			if ($project['type'] == 0 && ($investor['fund'] % 1000) > 0) {
 				$this->error('投资金额必须是1000的倍数。');
 			}

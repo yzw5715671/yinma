@@ -87,15 +87,15 @@
                 	<input type="hidden" name="id" value="{$project.id}">
                     <div class="ren-money">
                        <a href="javascript:void(0)" onclick="opera('#myfund', false);"><img src="__PUBLIC__/Home/fsr/images/ren_jian.png"></a>
-                        <input id='myfund' type='text' name='fund' class="text" class="ren-inp" value="25000">
+                        <input id='myfund' type='text' name='fund' class="text" class="ren-inp" value="{$project.follow_fund|round=0}">
                         <img src="__PUBLIC__/Home/fsr/images/ren_money.png" class="ren-img">
                         <a href="javascript:void(0)" onclick="opera('#myfund', true);"><img src="__PUBLIC__/Home/fsr/images/ren_jia.png"></a>
                         <b>×2%（认购费）=</b>
-                        <span id='subscription_1'>500元</span>
+                        <span id='subscription_1'>{$project['follow_fund'] * 2 / 100}元</span>
                     </div>
                     <div class="ren-sao">
                         <p>扫一扫付款（元）</p>
-                        <p id='subscription_2'>500元</p>
+                        <p id='subscription_2'>{$project['follow_fund'] * 2 / 100}元</p>
                         <p><img src="__PUBLIC__/Home/fsr/images/ren_ma.png"></p>
                     </div>
                     <p class="ren-checkbox"><input type="checkbox" name='agreement' checked>我同意条款协议<a href="{:U('Info/show?key=shenmingshu')}">《风险提示书》</a><a href="{:U('Info/show?key=agreement')}">《用户服务协议》</a></p>
