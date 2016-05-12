@@ -229,7 +229,7 @@ Class ProjectModel extends Model{
     }
 	// 查询首页显示的，项目信息
 	public function getProjectIndex() {
-		$where = array('stage'=> 4);
+		$where = array('stage'=>array('in',array('4','10')));
 		$project['rapid'] = M('ProjIndex')->where($where)->order('is_top desc, create_time desc')->limit(6)->select();
 				
 		$where['stage'] = self::STAGE_FUND;

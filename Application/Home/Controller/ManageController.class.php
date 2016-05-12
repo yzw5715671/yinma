@@ -77,7 +77,7 @@ class ManageController extends HomeController {
 				$proj = M('Project')->where(array('id'=>$ivest['project_id']))->
 					field('project_name, uid, stage')->find();
 
-				if ($ivest['status'] >= 2 && $proj['stage'] < 8) {
+				if ($ivest['status'] >= 2 && ($proj['stage'] < 8 or $proj['stage']=10)) {
 					M('ProjectFund')->where('project_id='.$ivest['project_id'])->
 						setDec('has_fund', $ivest['fund']);
 						if ($ivest['status'] >= 3) {
