@@ -750,7 +750,7 @@ class ProjectController extends HomeController {
 		$project = D('ProjectFundView')->where(array('p.id'=>$id))->find();
 		if (!$project) {
 			$this->error('项目不存在！');
-		} else if ($project['stage'] != 10) { //非认购期
+		} else if ($project['stage'] != 10 && $project['stage'] != 4) { //非认购期
 			$this->error('该项目不处于认购期间，不能进行该操作。');
 		} else if ($project['uid'] == $uid) {
 			$this->error('不允许项目发起人，对自己的项目进行投资。');
