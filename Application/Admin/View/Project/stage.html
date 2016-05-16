@@ -77,7 +77,7 @@
 					</empty>
 				</if>
 				<if condition="$vo.stage gt 4">
-					| <a class="ajax-get confirm" href="{:U('Project/stagechange?status=4&id=' . $vo['id'])}" data-info="您确定要把该项目的众筹阶段修改为快速合投吗?">返回合投</a>
+					| <a class="ajax-get confirm" href="{:U('Project/stagechange?status=4&id=' . $vo['id'])}" data-info="您确定要把该项目的众筹阶段修改为快速合投吗?">进入合投</a>
 				</if>
 				
 					| <a class="ajax-get confirm" href="{:U('Project/stagechange?status=-1&id=' . $vo['id'])}" data-info="您确定要撤消该项目的众筹吗?">撤消</a>
