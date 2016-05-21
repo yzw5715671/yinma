@@ -306,7 +306,10 @@
         <if condition="($project['stage'] eq 1) AND ($project['vote_leader'] eq 0)">
             <a class="btn btn-find-leader if icon-leader"
                href="{:U('project/leader_info?id='.$project['id'])}">申请成为领投人</a>
-            <else/>
+        <elseif condition="$project['stage'] eq 10"/>
+            <a class="btn btn-follow if icon-coin-stack" id="btn-follow"
+               href="{:U('project/subscription?id='.$project['id'])}">我要认购</a>
+        <else/>
             <a class="btn btn-follow if icon-coin-stack" id="btn-follow"
                href="{:U('project/follow?id='.$project['id'])}">我要跟投</a>
         </if>

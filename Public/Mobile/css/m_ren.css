@@ -1,0 +1,223 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html,body {
+    height: 100%
+}
+html {
+    font-family: "Helvetica Neue",Helvetica,STHeiTi,Arial,sans-serif;
+    -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 14px; line-height: 16px;
+    color: #333; background-color: #f3f3f3
+}
+
+button,html input[type="button"],input[type="reset"],input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+button[disabled],html input[disabled] {
+    cursor: default
+}
+
+button::-moz-focus-inner,input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+html,button,input{
+    font-family: "Helvetica Neue",Helvetica,STHeiTi,Arial,sans-serif
+}
+
+
+.wrapper {
+    margin: 0 auto;
+    background: #fff;
+    color: #333;
+}
+
+
+.clearfix:after{
+	content: '';
+	display: block;
+	height: 0;
+	clear:both;
+}
+.clearfix{
+	*zoom:1;
+}
+
+.ren-count{
+	margin:0.3rem 0.81rem;
+	padding-left:10px;
+}
+
+.ren-count .ren-p1{
+	line-height: 50px;
+	font-size: 0.24rem;
+}
+.ren-p1 a, .ren-p1 span, .ren-p1 b{
+	display: inline-block;
+	float: left;
+	margin-right: 10px;
+	font-weight: normal;
+	line-height: 0.5rem;
+}
+.ren-p1 b{
+	margin-right:0;
+}
+
+.ren-p1 a{
+	width: 0.48rem;
+}
+.ren-p1 a img{
+	width: 0.48rem;
+}
+.ren-p1 span{
+	position: relative;
+}
+.ren-p1 span img{
+	display: block;
+	position:absolute;
+	width: 0.16rem;
+	top:8px;
+	left:6px;
+}
+.ren-p1 input{
+	font-size: 0.26rem;
+	color:#e95549;
+	width: 1.6rem;
+	padding-left:18px;
+    line-height: 0.42rem;
+	display: block;
+	border:1px solid #e8e8e8;
+}
+.ren-p2{
+	text-align: right;
+	line-height: 26px;
+}
+.ren-p2 span, .ren-p2 input{
+	display: inline-block;
+	float: right;
+}
+.ren-p2 input{
+	font-size: 0.26rem;
+	color:#bf1a20;
+	width: 1.4rem;
+	padding-left:4px;
+	line-height:26px;
+	margin-left:10px;
+	text-align: center;
+	border:1px solid #d4666a;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) { 
+.ren-p2 input{
+	margin-right: 10px;
+}
+}
+
+.ren-ma{
+	margin:30px 1rem;
+	border:1px solid #868686;
+	font-size: 0.27rem;
+	padding:20px 0;
+}
+.ren-ma p{
+	color:#444;
+	text-align: center;
+	margin-bottom:10px;
+}
+.ren-ma p.smalltext{
+	    font-size: 0.15rem;
+}
+.ren-ma p.smalltext b{
+	font-weight: normal;
+	font-size: 12px;
+}
+.ren-ma p img{
+	width: 2.54rem
+}
+
+.ren-ma span{
+	display: block;
+	color:#bf1a20;
+	margin:0 auto 10px;
+	text-align: center;
+}
+.ren-ma img{
+	width: 2.68rem;
+}
+
+.ren-rule{
+	margin:20px 0.32rem;
+	color:#444;
+}
+.ren-rule h3{
+	text-align: left;
+	line-height: 24px;
+	font-size: 0.28rem;
+	padding-left:10px;
+}
+.ren-rule p{
+	position: relative;
+	font-size: 0.22rem;
+	line-height: 22px;
+	padding-left: 10px;
+}
+.ren-rule p:before{
+	position: absolute;
+	content: '';
+	top:9px;
+	left:4px;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	background: #c6c6c6;
+}
+.ren-rule h3{
+	text-align: center;
+	margin:10px auto;
+	font-weight: normal;
+}
+.ren-rule h3 img{
+	width: 2.5rem;
+}
+.ren-rule h3 a{
+	color:#5A5A5A;
+}
+.ren-rule h4{
+	text-align: left;
+	line-height: 24px;
+	margin:3px 0 10px;
+	font-size: 0.24rem;
+    font-weight: normal;
+}
+.ren-rule h4 input{
+	vertical-align: middle; 
+	margin-bottom:5px;
+}
+.ren-rule h4 a{
+	color:#bf1a20;
+}
+
+.ren-rule h5 a{
+	display: block;
+	width: 100%;
+	line-height: 0.64rem;
+	background-color:#bf1a20;
+	color:#fff;
+	border-radius: 5px;
+	font-size: 0.26rem;
+	text-align: center;
+	margin-bottom:20px;
+}
+
+

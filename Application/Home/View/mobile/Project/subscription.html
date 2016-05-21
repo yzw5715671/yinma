@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=7">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="创业,投资,理财,众筹,融资">  
+	<meta name="description" content="一塔湖图众筹：生于西子湖畔，长于苏堤之间，骨子里透着岳飞的气概，形而间又有着苏轼的豪放。他，活跃在商道，相信天道酬勤、人道酬善、商道酬信、业道酬精。他，经营的是信念, 汇聚大众之力，助力大众。他，带给你互联网社交驱动下的好玩，让你体会项目方和投资人之间的紧密相连。这是一个因梦而舞，为梦而动的平台；这是一个让梦想者靠近梦想，坚持梦想，实现梦想的平台；这是一个让支持者品味梦想，见证梦想，助力梦想的平台。">
+
+	<link href="__M_CSS__/css.css" rel="stylesheet">
+    <link href="__M_CSS__/m_ren.css" rel="stylesheet">
+    <!-- <script type="text/javascript" src="__M_JS__jquery-2.0.3.min.js"></script> -->
+    <script type="text/javascript" src="__M_JS__/jquery-1.7.2.js"></script>
+	<title>认购金额</title>
+	<script>
+		var _hmt = _hmt || [];
+
+	    // 计算 rem
+	   var designWidth = 640;
+	   var initialRem = designWidth / 100;
+	   var deviceWidth = document.documentElement.clientWidth;
+
+	    if(deviceWidth > designWidth ){
+	    	deviceWidth = designWidth;
+	    }
+
+	    document.documentElement.style.fontSize = deviceWidth / initialRem + 'px';
+	</script>
+
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+	    	<h2>一塔湖图众筹</h2>
+	    	<div class="lft"><a href="/Index/index.html" class="back"></a></div>        
+	    	<div class="rgt"><a href="/MCenter/index.html" class="user"></a></div>
+    	</header>
+		<form action="{:U('project/subscription')}" method="post" id='myFrom'>
+		<div class="ren-count">
+				<input type="hidden" name="id" value="{$project.id}">
+				<p class="ren-p1 clearfix">
+					<a href="javascript:void(0)" onclick="opera('#myfund', false);"><img src="__M_IMG__/ren_jian.png"></a>
+					<span>
+						<input id='myfund' type="text" name='fund' value="{$project.follow_fund|round=0}">
+						<img src="__M_IMG__/ren_icon.png">
+					</span>
+					<a href="javascript:void(0)" onclick="opera('#myfund', true);"><img src="__M_IMG__/ren_add.png"></a>
+					<b>×2%(认购费)</b>
+				</p>
+				<p class="ren-p2">
+					=<input id='subscription_1' type="text" name='subscription_money' value="{$project['follow_fund'] * 2 / 100}元">
+				</p>
+		</div>
+
+		<div class="ren-ma">
+			<p>扫一扫付款（元）</p>
+			<p><img src="__M_IMG__/ren_ma.png"></p>
+			<span><img src="__M_IMG__/ren_jietu.png"></span>
+			<p class="smalltext">支付宝账号：pay@1tht.cn</p>
+			<span>或</span>
+			<p class="smalltext">公司账户：110919074510801</p>
+			<p class="smalltext">北京一塔湖图众筹科技有限公司</p>
+			<p class="smalltext"><b>(招商银行股份有限公司北京海淀支行)</b></p>
+		</div>
+
+		<div class="ren-rule">
+			<h3>详细规则：</h3>
+			<p>投资名额有限时，认购费缴纳顺序在先的优先确定为投资人。</p>
+			<p>认购费支付成功后的72小时为冷静期，冷静期内可申请无息退款，冷静期经过后不予退款。</p>
+			<p>冷静期经过后欲放弃支付剩余款项，认购费不予退还。</p>
+			<p>支付认购费后未能成功获取投资额度的，可以申请无息退款。</p>
+			<p>联系电话：400－806－8787</p>
+			<h3><img src="__M_IMG__/ren_ma2.png"></h3>
+			<h3><a href="javascript:void(0)">请联系客服：确认认购份额及投资流程</a></h3>
+			<h4><input name='agreement' type="checkbox" checked>我同意条款协议 <a href="http://www.1tht.cn/Info/show/key/shenmingshu.html">《风险提示书》</a><a href=" http://www.1tht.cn/Info/show/key/agreement.html">《用户服务协议》</a></h4>
+			<span id='agreement_msg' style='color: red;font-size: 15px;display:none;'>请同意协议</span>
+			<h5><a href="javascript:void(0)" id='submit' >支付宝打款成功</a></h5>
+		</div>
+		</form>
+	</div>
+	
+</body>
+</html>
+<script>
+
+$('#myfund').blur(function () {
+    var rs = new Number($("#myfund").val());
+    if (isNaN(rs)) {
+        rs = 0;
+    }
+    $("#myfund").val(checkFund(rs));
+    $('#subscription_1').val((checkFund(rs) * 0.02));
+});
+$('input[name=agreement]').click(function(){
+	var checkag = $("input[name=agreement]").is(':checked');
+	if(checkag){
+		$('#agreement_msg').hide();
+	}else{
+		$('#agreement_msg').show();
+	}
+});
+$('#submit').click(function(){
+	var checkag = $("input[name=agreement]").is(':checked');
+	if(!checkag){
+		$('#agreement_msg').show();
+		return false;
+	}else{
+		$('#myFrom').submit();
+	}
+});
+
+function opera(x, y) {
+    var rs = new Number($(x).val());
+    if (isNaN(rs)) {
+        rs = 0;
+    }
+    if (y) {
+        rs = rs + 1000;
+    } else {
+        rs = rs - 1000;
+    }
+    $(x).val(checkFund(rs));
+    $('#subscription_1').val((checkFund(rs) * 0.02));
+}
+
+function checkFund(v) {
+    var min_follow = new Number($('#follow_fund').val());
+    var max_follow = new Number($('#need_fund').val());
+    var valuation = new Number($('#valuation').val());
+
+    // 投资金额处理为1000的倍数
+    v = Math.ceil(v / 1000) * 1000;
+    if (v > max_follow) {
+        v = max_follow;
+    } else if (v < min_follow) {
+        v = min_follow;
+    }
+    // 计算股份占比
+    var rate = (Math.round(v * 1000000 / valuation) / 10000);
+    $("#hasrate").html(rate);
+    return v;
+}
+
+</script>
