@@ -1567,7 +1567,7 @@ function recommendFoundings($number = 6) {
  **/
 function recommendMobileFoundings() {
 
-    $recommends['project'] = D('Project')->getFundingProjects(6,array('status' => 9, 'stage'=> array('between',array('1','4'))),'stage desc,is_top desc,create_time desc');
+    $recommends['project'] = D('Project')->getFundingProjects(6,array('status' => 9, 'stage'=> array('in',array('1','2','3','4','10'))),'stage desc,is_top desc,create_time desc');
     D('Project')->addProjectsFundInfo($recommends['project']);
 
     $recommends['product'] = D('Product')->getFundingProducts(null,array('status' => 9, 'stage'=> 2),'stage desc,create_time desc');
