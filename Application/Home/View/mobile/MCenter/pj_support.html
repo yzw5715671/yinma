@@ -166,7 +166,7 @@
                         <div class="phyadd-box">
                             <div class="phyadd-xian"></div>
                             <div class="phyadd-part1 change-red">
-                                第一阶段<span>支付认购费<b>￥500</b>元</span>
+                                第一阶段<span>支付认购费<b>￥{$vo.subscription_money}</b>元</span>
                             </div>
                             <div class="phyadd-part2">
                             <if condition="$vo.status eq 11 or $vo.status eq 8 or $vo.status eq 9">
@@ -178,7 +178,7 @@
                             </if>
                             </div>
                             <div class="phyadd-part1">
-                                第二阶段<span>支付认购费<b>￥5900</b>元</span>
+                                第二阶段<span>支付投资款<b>￥{$vo.fund}</b>元</span>
                             </div>
                             <div class="phyadd-part2 phyadd-delxian">
                             <if condition="$vo.status eq 9">
