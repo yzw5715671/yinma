@@ -73,6 +73,20 @@
             cursor: default;
         }
     </style>
+    <script>
+        var _hmt = _hmt || [];
+
+        // 计算 rem
+       var designWidth = 640;
+       var initialRem = designWidth / 100;
+       var deviceWidth = document.documentElement.clientWidth;
+
+        if(deviceWidth > designWidth ){
+            deviceWidth = designWidth;
+        }
+
+        document.documentElement.style.fontSize = deviceWidth / initialRem + 'px';
+    </script>
 </block>
 <block name="body">
 
