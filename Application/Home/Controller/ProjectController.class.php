@@ -492,7 +492,7 @@ class ProjectController extends HomeController {
 
 		if(IS_POST){
 			$msg = '';
-			if($_POST['key_code'] == 'YTHTZC66'){
+			if(strtoupper($_POST['key_code']) == strtoupper('YTHTZC66')){
 				$_SESSION['key_code'] = $_POST['key_code'];
 				$this->redirect('Project/ckeck_agreement?id='.$_POST['id']);
 			}else{
