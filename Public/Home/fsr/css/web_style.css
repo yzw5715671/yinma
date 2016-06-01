@@ -1,0 +1,196 @@
+/**
+	* title: 一塔湖图 网站验证码;
+	* time : 2016.5.27;
+	* author: yanfeng;
+*/
+
+/* chrome 下 解决保存密码后input输入框变黄色*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    box-shadow:0 0 0 60px #fff inset;
+    -webkit-text-fill-color: #333;
+}
+
+body{
+	position: relative; 
+}
+
+/* header  */
+.login-top{
+	border-bottom: 1px solid #efefef;
+    height: 35px;
+    background: #f8f8f8;
+}
+.login-title{
+	width: 1000px; margin:0 auto;
+	font-size: 14px; padding-top: 6px;
+}
+.login-title ul{
+	float: right;
+}
+.login-title ul li{
+	float: left; display: inline-block; margin-left:5px;
+}
+.login-title ul li span{
+	display: block;  cursor: pointer;
+	background: url(../images/index2.jpg) no-repeat;
+}
+.login-title ul li:nth-child(1) span{
+	background-position: 0 -100px;
+	padding-left:26px;
+	color:#f33;
+}
+.login-title ul li:nth-child(2){
+	position: relative;
+}
+.login-title ul li:nth-child(2) span{
+	background-position: 0 -25px;
+	width: 26px; height: 26px; 
+	margin-right: 20px; margin-left:5px;
+}
+.login-title ul li:nth-child(2) .wxbox{
+	position: absolute;  display: none;
+	top:26px; left:-40px;
+	width: 120px; height: 120px; z-index: 99;
+}
+.login-menu{
+	width: 100%;
+	height: 80px;
+	background-color: rgba(0,0,0,.2);
+}
+.menubox{
+	width: 960px; margin: 0 auto; position: relative;
+}
+.menubox h1{
+	position: absolute; top:8px; left:0;
+	width: 243px; height: 55px; 
+}
+.menubox ul{
+	margin-left:430px;
+}
+.menubox ul li{
+	float:left; display: inline-block; padding: 0 20px; font-size: 16px;
+	line-height: 80px;
+}
+.menubox ul li a{
+	color: #fff;
+}
+.menubox ul li a:hover{
+	color:#f33;
+}
+
+
+/*正文*/
+
+.web-cont{
+	width: 100%; background-color: #7f7f7f;
+}
+.web-cont .web-body{
+	width: 1170px;
+	margin:50px auto 0;
+    padding: 20px 15px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.web-cont .web-body .web-box{
+	width: 610px; 
+	margin:50px auto 30px;
+}
+.web-cont .web-body .web-box .web-boxp1{
+	display: block;
+	position: relative;
+	line-height: 48px;
+	font-size: 18px;
+}
+.web-body .web-box .web-boxp1 .web-inp{
+	border:1px solid #bf1a20;
+	border-radius: 5px;
+	line-height: 48px;
+	margin-right: 32px;
+	font-size: 18px;
+	padding-left: 5px;
+	color:#606060;
+}
+.web-body .web-box .web-boxp1 .web-btn{
+	background-color: #bf1a20;
+	line-height: 48px;
+	text-align: center;
+	width: 98px;
+	border-radius: 5px;
+	border:none;
+	color:#fff;
+	font-size: 18px;
+}
+.web-body .web-box .web-boxp1 .web-error{
+	display: block;
+	position: absolute;
+	top:54px;
+	left:0;
+	font-size: 18px;
+	color:#ff1a22;
+}
+.web-body .web-box .web-boxp1 .web-error img{
+	margin-bottom: -3px;
+    margin-right: 7px;
+}
+.web-body .web-box .web-boxp2{
+	font-size: 16px;
+	margin:64px auto 30px;
+}
+.web-body .web-box .web-boxp3{
+	text-align: center;
+	font-size: 16px;
+	color:#bf1a20;
+}
+.web-body .web-box .web-boxp3 img{
+	margin-bottom:20px;
+}
+
+
+/*协议*/
+.xy-cont{
+	width: 100%;
+}
+.xy-cont .xy-body{
+	width: 1170px;
+	margin:50px auto 30px;
+    padding: 20px 15px;
+    border:3px solid #f4f4f4;
+    border-radius: 5px;
+}
+.xy-cont .xy-body .xy-bodybox{
+ 	width: 960px; 
+ 	margin:10px auto;
+}
+.xy-cont .xy-body h3{
+	font-size: 30px;
+	color:#666;
+	text-decoration: underline;
+	text-align:center;
+	margin:30px auto;
+	font-weight: normal;
+}
+.xy-cont .xy-body p{
+	font-size: 18px; 
+	text-align:left;
+	line-height: 34px;
+}
+.xy-cont .xy-body h4{
+	font-size: 22px;
+	font-weight: bold;
+	color:#ff1a22;
+	margin:30px auto;
+	text-align: center;
+}
+.xy-cont .xy-body a{
+	display: block;
+	width: 256px; 
+	text-align:center;
+	line-height: 52px;
+	color:#fff;
+	background-color: #bf1a20;
+	margin:0 auto 30px;
+	border-radius: 5px;
+	font-size: 20px;
+}

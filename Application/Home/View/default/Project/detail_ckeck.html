@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网站邀请码</title>
+    <link href="__PUBLIC__/Home/fsr/css/common.css" rel="stylesheet">
+    <link href="__PUBLIC__/Home/fsr/css/web_style.css" rel="stylesheet">
+	<script type="text/javascript" src="__PUBLIC__/Home/fsr/js/jquery-2.0.3.min.js"></script>
+</head>
+<body>
+	<!--top start-->
+    <div class="login-top">
+        <div class="login-title">
+            <ul class="clearfix">
+            <li><span>400-806-8787</span></li>
+            <li class="login_wx">
+                <span></span>
+                <div class="wxbox"><img src="__PUBLIC__/Home/fsr/images/weixin.jpg"></di>
+            </li>
+            <if condition="is_login()">
+            <li>欢迎：<a href="{:U('MCenter/index')}">{:get_username()}</a></li>
+            <else/>
+            <li><a href="__APP__/User/login.html">您好，请登录</a></li>
+            <li>|<a href="__APP__/User/register.html">免费注册</a></li>
+            </if>
+        </ul>
+        </div>
+    </div>
+    <!--top end-->
+	<div class="web-cont">
+        <!-- menu start -->
+        <div class="login-menu">
+            <div class="menubox">
+                <h1><a href="/index/index.html"><img src="__PUBLIC__/Home/fsr/images/logo1.png"></a></h1>
+                <ul class="clearfix">
+                    <li><a href="/index/index.html">首页</a></li>
+                    <li><a href="/list/index.html">浏览梦想</a></li>
+                    <li><a href="/porject/create.html">发起项目</a></li>
+                    <li><a href="/list/index/type/2/status/0/p/1.html">实物项目</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- menu end -->
+        <div class="web-body">
+        	<form action="{:U('Project/detail_ckeck')}" method="post" name='my_from'>
+        		<div class="web-box">
+        			<p class="web-boxp1">
+                        <input type="hidden" name='id' value="{$_REQUEST['id']}" />
+        				<input type="text" name='key_code' id='check_key_code' class="web-inp" placeholder="验证码">
+        				<input type="submit" value="确定" class="web-btn">
+                        <if condition="$msg">
+                        <span class="web-error" id='check_key_code_msg' style='display:block;'><img src="__PUBLIC__/Home/fsr/images/web_error.png"><span id='wz_msg'>{$msg}</span></span>
+                        <else/>
+        				<span class="web-error" id='check_key_code_msg' style='display:none;'><img src="__PUBLIC__/Home/fsr/images/web_error.png"><span id='wz_msg'>请输入验证码！</span></span>
+                        </if>
+        			</p>
+        			<p class="web-boxp2">
+        				只有获取验证码的用户才能参与本项目的认投。如有疑问，请联系客服:400-806-8787
+        			</p>
+        			<p class="web-boxp3">
+        				<img src="__PUBLIC__/Home/fsr/images/web_ma.png"><br>
+        				备注：姓名+验证码
+        			</p>
+        		</div>
+        	</form>
+        </div>
+	</div>
+
+	<!-- footer -->
+	<div class="fl w100 foot" style="margin-top:0;">
+    <div class="foot_warp">
+        <div class="foot_top"><img src="__PUBLIC__/Home/fsr/images/foot_smile.png"></div>
+        <!--<h1>假如人生不曾相遇，你不会了解世界还有这样一个我</h1>-->
+        <h1>商学院 &nbsp;·&nbsp; 实业 &nbsp;·&nbsp; 金融 &nbsp;·&nbsp; 社群</h1>
+        <!--<ul class="foot_text">
+            <li><a target="_blank" href="/Info/show/key/about.html">关于我们</a> 丨</li>
+            <li><a target="_blank" href="/Info/show/key/xinshouzhiyin.html">新手指引</a> 丨</li>
+            <li><a target="_blank" href="/Info/show/key/agreement.html">用户协议</a> 丨</li>
+            <li><a target="_blank" href="/Info/show/key/shenmingshu.html">风险提示</a> 丨</li>
+            <li><a target="_blank" href="/Info/show/key/fenpei.html">一塔湖图众筹规则</a> 丨</li>
+            <li><a target="_blank" href="/Info/show/key/crowd.html">了解众筹</a></li>
+        </ul>-->
+        <ul class="foot_text">
+            <li><a target="_blank" href="/Info/show/key/about.html">认识一塔湖图</a> 丨</li>
+            <li><a target="_blank" href="/Info/show/key/joinus.html">加入我们</a> 丨</li>
+            <li><a target="_blank" href="/Info/show/key/fenpei.html">利益分配</a> 丨</li>
+            <li><a target="_blank" href="/Info/show/key/shenmingshu.html">风险提示</a> 丨</li>
+            <li><a target="_blank" href="/Info/show/key/invest.html">认投规则</a> 丨</li>
+            <li><a target="_blank" href="/Info/show/key/crowd.html">了解众筹</a></li>
+        </ul>
+        <div style="clear:both;"></div>
+        <div class="foot_bottom">
+            <ul class="foot_tg">
+                <li class="wx" id="weixin_id">
+                    <a target="_blank" class="footer-weixin">微信</a>
+                    <span class="weixin-qrcode"><img width="240" height="240" src="__PUBLIC__/Home/fsr/images/weixin.jpg" alt=""></span>
+                </li>
+               <li class="wb"><a href="http://weibo.com/5724180766" target="_blank">新浪微博</a></li>
+                <li class="dh">400-806-8787</li>
+            <!--  <li class="yx"><a target="_blank" href="mailto:zamazc@zamazc.com">bp@1tht.cn</a></li>-->
+                <li class="yx">bp@1tht.cn</li>
+            </ul>
+        </div>
+        <div class="foot_tag">Copyright © 2015 北京一塔湖图众筹科技有限公司 京ICP备15053117号-2</div>
+    </div>
+</div>
+	
+<!-- 鼠标放上 移开时的效果-->
+<script>
+$(function(){
+	$('#weixin_id').mouseover(function(){
+		$('.weixin-qrcode').css("display","block");
+	});
+	$('#weixin_id').mouseout(function(){
+		$('.weixin-qrcode').css("display","none");
+	});
+
+    $(".login_wx").mouseover(function(){
+        $(".wxbox").css("display","block");
+    });
+    $(".login_wx").mouseout(function(){
+        $(".wxbox").css("display","none");
+    });
+
+    $('.wx-login').click(function(){
+        $('.tanc-bg').show();
+        $('.wx-box').show();
+    });
+    $('.wx-close').click(function(){
+        $('.tanc-bg').hide();
+        $('.wx-box').hide();
+    });
+
+
+    if($(document.body).height()<$(window).height()){
+        $('.login-content').css('height',$(window).height());
+
+    }else{
+       $('.login-content').css('height',$(document.body).outerHeight(true)+10); 
+    }
+
+    $('#check_key_code').blur(function () {
+        var key_code = $('#check_key_code').val();
+        if(!key_code){
+            $('#check_key_code_msg').show();
+            $('#wz_msg').html('请输入验证码！');
+        }else{
+            $('#check_key_code_msg').hide();
+        }
+    });
+
+});
+    
+</script>
+</body>
+</html>
