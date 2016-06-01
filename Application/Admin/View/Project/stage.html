@@ -47,6 +47,12 @@
                   ?>                   
 		</td>	
                     <td>
+                   	<if condition="$vo.business_type eq 1">
+                   		<a class="ajax-get confirm" href="{:U('Project/business_type_change?type=2&id=' . $vo['id'])}" data-info="您确定要把该项目的变为加key码的状态吗?">加key码</a> | 
+                   	<elseif condition="$vo.business_type eq 2"/>
+                   		<a class="ajax-get confirm" href="{:U('Project/business_type_change?type=1&id=' . $vo['id'])}" data-info="您确定要把该项目的变为加key码的状态吗?">取消key码</a> | 
+                   		<!-- <a href="{:U('Project/xieyi?id=' . $vo['id'])}">生成key码</a> |  -->
+                   	</if>
 				<a href="{:U('Project/xieyi?id=' . $vo['id'])}">选择协议</a>
                                 | <a href="{:U('Project/barcode?id=' . $vo['id'])}">群二维码</a>
 				<if condition="$vo.stage eq 0">

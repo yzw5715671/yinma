@@ -400,12 +400,23 @@ class ProjectController extends HomeController {
 	}
 	
 	public function detail() {
+	    $uid = is_login();
+		if (!$uid) {
+			$this->redirect('User/login');
+		}
 		$id = $_GET['id'];
 	    $model = D('Project');
+    	$project = $model->getProjectInfo($id);
+
+    	if($project['business_type'] == 2){
+    		if(!$_SESSION['key_code']){
+    			$this->redirect('Project/detail_ckeck?id='.$id);
+    		}
+    	}
+
 	   	$userScores = $model->getUserScoresInfo($id);
 		if (isMobile()) {
 
-	      $project = $model->getProjectInfo($id);
 	
 				if ($project == false) {
 		        $this->error($model->getError());
@@ -475,6 +486,30 @@ class ProjectController extends HomeController {
         $viw=$temps[0]['info_key'];
         $this->assign('viw',$viw);
         $this->display('detail');
+	}
+
+	public function detail_ckeck(){
+
+		if(IS_POST){
+			$msg = '';
+			if($_POST['key_code'] == 'YTHTZC66'){
+				$_SESSION['key_code'] = $_POST['key_code'];
+				$this->redirect('Project/ckeck_agreement?id='.$_POST['id']);
+			}else{
+				if($_POST['key_code']){
+					$msg = "key码不正确，请联系客服";
+				}else{
+					$msg = "请输入验证码！";
+				}
+				$this->assign('msg',$msg);
+			}
+		}
+		$this->display();
+	}
+
+	public function ckeck_agreement(){
+		
+		$this->display();
 	}
 
   public function mobiledynamic(){

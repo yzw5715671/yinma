@@ -453,6 +453,31 @@ class ProjectController extends AdminController {
 		}
 	}
 
+	// 业务状态调整
+	public function business_type_change() {
+
+		if (IS_AJAX) {
+			$id = $_GET['id'];
+			$type = $_GET['type'];
+			if (!isset($id)) {
+				$this->error('没有指定项目');
+			}
+
+			$project = M('Project')->find($id);
+			if (!$project) {$this->error('指定项目不存在。');}
+			if($type == 2){
+				$message='【' . $project['project_name'] . '】设置加key码成功';
+			}elseif($type == 1) {
+				$message='【' . $project['project_name'] . '】取消加key码成功';
+			}
+			
+			M('Project')->save(array('business_type'=>$type, 'id'=> $id));
+				
+			$this->changelog('项目阶段调整',$id,$message);
+			$this->success($message,$url);
+		}
+	}
+
 	public function hetou($project) {
 		if ($project['type'] == 1) {
 			return true;
