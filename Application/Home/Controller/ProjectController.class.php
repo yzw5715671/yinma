@@ -409,9 +409,11 @@ class ProjectController extends HomeController {
     	$project = $model->getProjectInfo($id);
 
     	if($project['business_type'] == 2){
+			// $this->redirect('Project/detail_ckeck?id='.$id);
     		if(!$_SESSION['key_code']){
     			$this->redirect('Project/detail_ckeck?id='.$id);
     		}
+    		$_SESSION['key_code'] = '';
     	}
 
 	   	$userScores = $model->getUserScoresInfo($id);

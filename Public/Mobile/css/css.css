@@ -28,6 +28,22 @@ header .brand,header .menu,header .user{height:48px;display:inline-block;*zoom:1
 header .brand{margin-left:10px;background:url(../images/logo.png) center no-repeat;width:100%;*display:inline;*zoom:1;background-size:200px 26px}
 header .menu{background:url(../images/img1.png) center no-repeat;width:40px;position:relative;*display:inline;*zoom:1;background-size:40px 40px}
 header .user{background:url(../images/img2.png) center no-repeat;width:32px;position:relative;*display:inline;*zoom:1;background-size:22px 22px}
+header .lft .btn-left-menu{
+	display: block;
+    width: 50px;
+    height: 48px;
+    background: url(../images/img1.png) center no-repeat;
+    background-size: 32px;
+    position: relative;
+    left: -8px;
+    z-index: 9;
+}
+header .brand {
+    margin-left: 10px;
+    background: url(../images/logo.png) center no-repeat;
+    width: 100%;
+    background-size: 200px 26px;
+}
 .aside{position:absolute;left:-200px;top:0;width:200px;bottom:0;background:#323436}
 .aside .search{padding:10px;background:#2a2c2e}
 .aside .search input{width:120px;height:30px;background:#fff;border-radius:30px;border:none;font-size:18px;color:#a9a9a9;padding:0 20px}
