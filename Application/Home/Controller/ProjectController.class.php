@@ -400,15 +400,15 @@ class ProjectController extends HomeController {
 	}
 	
 	public function detail() {
-	    $uid = is_login();
-		if (!$uid) {
-			$this->redirect('User/login');
-		}
 		$id = $_GET['id'];
 	    $model = D('Project');
     	$project = $model->getProjectInfo($id);
 
     	if($project['business_type'] == 2){
+    		$uid = is_login();
+			if (!$uid) {
+				$this->redirect('User/login');
+			}
 			// $this->redirect('Project/detail_ckeck?id='.$id);
     		if(!$_SESSION['key_code']){
     			$this->redirect('Project/detail_ckeck?id='.$id);
