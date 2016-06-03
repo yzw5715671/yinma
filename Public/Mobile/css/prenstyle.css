@@ -3,6 +3,7 @@
 	* author: yanfeng;
 	* time:2016.5.27;
 */
+input[type="text"],input[type="password"],input[type="submit"]{-webkit-appearance:none;appearance:none;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);border-radius:0;}
 .wrapper {
     margin: 0 auto;
     background: #fff;
@@ -31,7 +32,7 @@
 	line-height: 0.6rem;
 }
 .pren-body .pren-bodyp1 .pren-inp{
-	width: 3.4rem;
+	width: 3.2rem;
 	line-height: 0.7rem;
 	font-size: 0.24rem;
 	border:1px solid #bf1a20;
