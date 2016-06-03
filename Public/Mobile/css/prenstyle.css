@@ -86,8 +86,7 @@
 	margin: 0 0.3rem;
 }
 .pxy-body h3{
-	font-size: 0.4rem;
-	text-decoration: underline;
+	font-size: 0.45rem;
 	margin:0.5rem auto;
 	color:#666;
 	text-align: center;
@@ -111,7 +110,7 @@
 }
 .pxy-body a{
 	display: block;
-	margin:0 auto;
+	margin:0.5rem auto;
 	text-align: center;
 	width: 3rem;
 	line-height: 0.8rem;

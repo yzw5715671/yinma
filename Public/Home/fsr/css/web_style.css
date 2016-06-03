@@ -63,8 +63,8 @@ body{
 	width: 960px; margin: 0 auto; position: relative;
 }
 .menubox h1{
-	position: absolute; top:8px; left:0;
-	width: 243px; height: 55px; 
+	position: absolute; top:0px; left:0;
+	width: 189px; height: 0px; 
 }
 .menubox ul{
 	margin-left:430px;
@@ -102,6 +102,7 @@ body{
 	position: relative;
 	line-height: 48px;
 	font-size: 18px;
+	text-align: center;
 }
 .web-body .web-box .web-boxp1 .web-inp{
 	border:1px solid #bf1a20;
@@ -126,7 +127,7 @@ body{
 	display: block;
 	position: absolute;
 	top:54px;
-	left:0;
+	left:117px;
 	font-size: 18px;
 	color:#ff1a22;
 }
@@ -164,12 +165,11 @@ body{
  	margin:10px auto;
 }
 .xy-cont .xy-body h3{
-	font-size: 30px;
+	font-size: 34px;
 	color:#666;
-	text-decoration: underline;
 	text-align:center;
-	margin:30px auto;
-	font-weight: normal;
+	margin:30px auto 40px;
+	font-weight: bold;
 }
 .xy-cont .xy-body p{
 	font-size: 18px; 
