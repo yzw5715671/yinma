@@ -293,10 +293,10 @@ function idcard_checksum18($idcard){
 function get_sum_info(){
 		//所有股权项目
 		//项目数
-		$pj_count = M('Project')->where(array('status'=>array('egt',9), 'stage'=> array('in',array('1','4','9'))))->count();
+		$pj_count = M('Project')->where(array('status'=>array('egt',9), 'stage'=> array('in',array('1','4','9','10'))))->count();
 		
 		//投资额
-		$pj_fund = M('ProjectInvestor')->where(array('status'=>array('egt',4)))->sum('fund');
+		$pj_fund = M('ProjectInvestor')->where(array('status'=>array('in',array('1','4','9','10'))))->sum('fund');
 		
 		//所有事物项目
 		//项目数

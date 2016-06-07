@@ -261,7 +261,7 @@ class ManageController extends AdminController {
 				// 退款处理失败。
 				if (!$ret) {$this->error(D('AccStream')->getError());}
 			}
-			if ($status < 8 && $data['status'] > 4) {
+			if ($status < 8 && $data['status'] > 4 && $data['status'] < 10) {
 				$data = M('AgreementInvest')->where(array('pid'=>$investor['project_id'],
 					'uid'=>$investor['investor_id'], 'status'=>1))->find();
 
