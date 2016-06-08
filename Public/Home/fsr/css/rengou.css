@@ -16,6 +16,9 @@ input:focus{
     border:1px solid rgba(255,255,255,0);
     outline: none;
 }
+h1,h2,h3,h4,h5,h6{
+	margin:0; padding: 0; font-weight: normal;
+}
 
 
 .ren-body{
@@ -75,7 +78,6 @@ input:focus{
 	position: relative;
 	padding-left:15px;
 	font-size: 24px;
-	font-weight: normal;
 	margin-bottom:20px;
 }
 .ren-box h4:before{
@@ -136,32 +138,77 @@ input:focus{
     display: block;
 }
 
+/*修改的样式*/
 .ren-sao{
-	margin:20px auto 5px;
-	width: 100%;
+	margin:10px 0 5px;
+	width: 720px;
 	height: auto;
 	overflow: hidden;
 }
-.ren-sao p{
-	padding-left:48px;
-	width: 226px; text-align: center;
-	font-size: 14px;
-	margin-bottom:10px;
+.ren-sao-left ,.ren-sao-right{
+	float:left;
+	display: inline-block;
+	width: 360px;
+	text-align: center;
 }
-.ren-sao p:nth-child(2){
+.ren-sao h5{
+	font-size: 22px;
+	color:#444;
+    line-height: 60px;
+    text-align: left;
+    margin-left: 56px;
+} 
+.ren-sao .ren-saobox{
+	margin:5px auto;
+	width: 250px;
+	border:1px solid #868686;
+	border-radius: 4px;
+	text-align: center;
+
+}
+.ren-sao .ren-saobox p{
+	font-size: 14px;
+	margin:10px 0;
+}
+.ren-sao .ren-saobox p:nth-child(2){
 	color:#bf1a20;
 	font-size: 22px;
 }
-.ren-checkbox {
-	margin-bottom:20px;
+
+.ren-san{
+    margin: 10px 0 5px 56px;
+	width: 730px;
+	height: auto;
+	overflow: hidden;
+}
+.ren-san h5{
+	font-size: 22px;
+	color:#444;
+    line-height: 44px;
+    margin-top:12px;
+}
+.ren-san h6{
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.ren-san p{
+	font-size: 14px;
+	margin-left:16px;
+	margin-bottom:10px;
+}
+.ren-san p a{
+	color:#e95549;
+}
+
+.ren-san p.ren-checkbox {
+	margin:20px 0 5px;
+
 }
 .ren-checkbox input{
 	    vertical-align: middle;
 }
-.ren-checkbox a{
-		color:#e95549;
-}
-.ren-btn{
+.ren-san p .ren-btn{
 	display: block;
 	background: #bf1a20;
 	width: 255px;
