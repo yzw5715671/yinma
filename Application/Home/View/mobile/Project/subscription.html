@@ -55,33 +55,28 @@
 		</div>
 
 		<div class="ren-ma">
-			<h4>方式一：微信</h4>
 			<p>扫一扫付款（元）</p>
-			<span id='subscription_2'>500元</span>
-			<p><img src="__M_IMG__/ren_weifu.png"></p>
-			<p><img src="__M_IMG__/ren_weicon.png"></p>
-			<h4>方式二：对公账户</h4>
-			<p class="smalltext">公司账户：110919074510801</p>
-			<p class="smalltext">北京一塔湖图众筹科技有限公司</p>
-			<p class="smalltext"><b>(招商银行股份有限公司北京海淀支行)</b></p>
-			<h4>方式三：支付宝</h4>
-			<p>扫一扫付款（元）</p>
-			<span id='subscription_3'>500元</span>
 			<p><img src="__M_IMG__/ren_ma.png"></p>
 			<span><img src="__M_IMG__/ren_jietu.png"></span>
 			<p class="smalltext">支付宝账号：pay@1tht.cn</p>
-			<p><b>打款请备注：姓名+项目名称</b></p>
-			<h4><input name='agreement' type="checkbox" checked>我同意条款协议 <a href="http://www.1tht.cn/Info/show/key/shenmingshu.html">《风险提示书》</a><a href=" http://www.1tht.cn/Info/show/key/agreement.html">《用户服务协议》</a></h4>
-			<h5><a href="javascript:void(0)" id='submit' >支付宝打款成功</a></h5>
-			<div class="ren-rule">
+			<span>或</span>
+			<p class="smalltext">公司账户：110919074510801</p>
+			<p class="smalltext">北京一塔湖图众筹科技有限公司</p>
+			<p class="smalltext"><b>(招商银行股份有限公司北京海淀支行)</b></p>
+		</div>
+
+		<div class="ren-rule">
 			<h3>详细规则：</h3>
 			<p>投资名额有限时，认购费缴纳顺序在先的优先确定为投资人。</p>
-			<p>认购费支付成功后的72小时为冷静期，冷静期内可申请无息退款，冷静期经过后不予退款。</p>
+			<p>认购费支付成功后的24小时为冷静期，冷静期内可申请无息退款，冷静期经过后不予退款。</p>
 			<p>冷静期经过后欲放弃支付剩余款项，认购费不予退还。</p>
 			<p>支付认购费后未能成功获取投资额度的，可以申请无息退款。</p>
 			<p>联系电话：400－806－8787</p>
 			<h3><img src="__M_IMG__/ren_ma2.png"></h3>
-			<h3><a href="javascript:void(0)">请联系客服：<span>确认认购份额及投资流程</span></a></h3>
+			<h3><a href="javascript:void(0)">请联系客服：确认认购份额及投资流程</a></h3>
+			<h4><input name='agreement' type="checkbox" checked>我同意条款协议 <a href="http://www.1tht.cn/Info/show/key/shenmingshu.html">《风险提示书》</a><a href=" http://www.1tht.cn/Info/show/key/agreement.html">《用户服务协议》</a></h4>
+			<span id='agreement_msg' style='color: red;font-size: 15px;display:none;'>请同意协议</span>
+			<h5><a href="javascript:void(0)" id='submit' >支付宝打款成功</a></h5>
 		</div>
 		</form>
 	</div>
@@ -96,9 +91,7 @@ $('#myfund').blur(function () {
         rs = 0;
     }
     $("#myfund").val(checkFund(rs));
-    $('#subscription_1').val((checkFund(rs) * 0.02) + "元");
-    $('#subscription_2').html((checkFund(rs) * 0.02) + "元");
-    $('#subscription_3').html((checkFund(rs) * 0.02) + "元");
+    $('#subscription_1').val((checkFund(rs) * 0.02));
 });
 $('input[name=agreement]').click(function(){
 	var checkag = $("input[name=agreement]").is(':checked');
@@ -129,9 +122,7 @@ function opera(x, y) {
         rs = rs - 1000;
     }
     $(x).val(checkFund(rs));
-    $('#subscription_1').val((checkFund(rs) * 0.02) + "元");
-    $('#subscription_2').html((checkFund(rs) * 0.02) + "元");
-    $('#subscription_3').html((checkFund(rs) * 0.02) + "元");
+    $('#subscription_1').val((checkFund(rs) * 0.02));
 }
 
 function checkFund(v) {

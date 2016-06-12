@@ -125,46 +125,18 @@ html,button,input{
 }
 
 .ren-ma{
-	margin:30px 16px;
+	margin:30px 1rem;
 	border:1px solid #868686;
 	font-size: 0.27rem;
-	padding-bottom:20px;
-}
-.ren-ma h4{
-	margin-top:0.3rem;
-	font-size: 0.32rem;
-	color:#444;
-	margin-left:10px;
-	line-height: 0.6rem;
-	font-weight: normal;
-}
-.ren-ma h4 a{
-	color:#bf1a20;
-}
-.ren-ma h5{
-	margin:10px 10px 5px;
-}
-.ren-ma h5 a{
-	display: block;
-	width: 100%;
-	line-height: 0.64rem;
-	background-color:#bf1a20;
-	color:#fff;
-	border-radius: 5px;
-	font-size: 0.26rem;
-	text-align: center;
-	margin-bottom:20px;
+	padding:20px 0;
 }
 .ren-ma p{
 	color:#444;
 	text-align: center;
-	margin:10px 0;
-	font-size: 0.28rem;
+	margin-bottom:10px;
 }
 .ren-ma p.smalltext{
-	font-size: 0.26rem;
-	line-height: 0.36rem;
-	margin-top:5px;
+	    font-size: 0.15rem;
 }
 .ren-ma p.smalltext b{
 	font-weight: normal;
@@ -173,40 +145,32 @@ html,button,input{
 .ren-ma p img{
 	width: 2.54rem
 }
-.ren-ma p b{
-	color:#bf1a20;
-	font-size: 0.3rem;
-	margin-top:12px;
-	display: block;
-}
 
 .ren-ma span{
 	display: block;
 	color:#bf1a20;
-	margin:15px auto;
+	margin:0 auto 10px;
 	text-align: center;
 }
 .ren-ma img{
 	width: 2.68rem;
 }
 
-.ren-ma .ren-rule{
-	margin:20px 10px;
+.ren-rule{
+	margin:20px 0.32rem;
 	color:#444;
-	text-align: left;
 }
-.ren-ma .ren-rule h3{
+.ren-rule h3{
 	text-align: left;
 	line-height: 24px;
 	font-size: 0.28rem;
 	padding-left:10px;
 }
-.ren-ma .ren-rule p{
+.ren-rule p{
 	position: relative;
 	font-size: 0.22rem;
-    line-height: 0.32rem;
+	line-height: 22px;
 	padding-left: 10px;
-	text-align: left;
 }
 .ren-rule p:before{
 	position: absolute;
@@ -218,32 +182,42 @@ html,button,input{
 	border-radius: 50%;
 	background: #c6c6c6;
 }
-.ren-ma .ren-rule h3{
-	text-align: left;
+.ren-rule h3{
+	text-align: center;
 	margin:10px auto;
 	font-weight: normal;
 }
-.ren-ma .ren-rule h3 img{
+.ren-rule h3 img{
 	width: 2.5rem;
-	margin:10px auto;
-	display: block;
 }
-.ren-ma .ren-rule h3 a{
+.ren-rule h3 a{
 	color:#5A5A5A;
-	display: block;
-	margin:16px auto;
-	text-align: center;
-	font-size: 0.3rem;
 }
-.ren-ma .ren-rule h3 a span{
-	display: block;
+.ren-rule h4{
+	text-align: left;
+	line-height: 24px;
+	margin:3px 0 10px;
+	font-size: 0.24rem;
+    font-weight: normal;
+}
+.ren-rule h4 input{
+	vertical-align: middle; 
+	margin-bottom:5px;
+}
+.ren-rule h4 a{
 	color:#bf1a20;
-    margin-top: 10px;
 }
 
-
-
-
-
+.ren-rule h5 a{
+	display: block;
+	width: 100%;
+	line-height: 0.64rem;
+	background-color:#bf1a20;
+	color:#fff;
+	border-radius: 5px;
+	font-size: 0.26rem;
+	text-align: center;
+	margin-bottom:20px;
+}
 
 

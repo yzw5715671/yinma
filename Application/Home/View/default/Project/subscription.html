@@ -93,35 +93,14 @@
                         <b>×2%（认购费）=</b>
                         <span id='subscription_1'>{$project['follow_fund'] * 2 / 100}元</span>
                     </div>
-                    <!-- 下面的是新的样式 start  -->
-                    <div class="ren-sao clearfix">
-                        <div class="ren-sao-left">
-                            <h5>方式一：微信</h5>
-                            <div class="ren-saobox">
-                                <p>扫一扫付款（元）</p>
-                                <p id='subscription_2'>{$project['follow_fund'] * 2 / 100}元</p>
-                                <p><img src="__PUBLIC__/Home/fsr/images/ren_weifu.png"></p>
-                            </div>
-                        </div>
-                        <div class="ren-sao-right">
-                            <h5>方式二：支付宝</h5>
-                            <div class="ren-saobox">
-                                <p>扫一扫付款（元）</p>
-                                <p id='subscription_3'>{$project['follow_fund'] * 2 / 100}元</p>
-                                <p><img src="__PUBLIC__/Home/fsr/images/ren_zhifu.png"></p>
-                            </div>
-                        </div>
+                    <div class="ren-sao">
+                        <p>扫一扫付款（元）</p>
+                        <p id='subscription_2'>{$project['follow_fund'] * 2 / 100}元</p>
+                        <p><img src="__PUBLIC__/Home/fsr/images/ren_ma.png"></p>
                     </div>
-                    <div class="ren-san">
-                        <h5>方式三：对公账户</h5>
-                        <h6>公司账户：110919074510801    北京一塔湖图众筹科技有限公司    (招商银行股份有限公司北京海淀支行)</h6>
-                        <p class="ren-checkbox"><input type="checkbox" name='agreement' checked>我同意条款协议<a href="{:U('Info/show?key=shenmingshu')}">《风险提示书》</a><a href="{:U('Info/show?key=agreement')}">《用户服务协议》</a></p>
-                        <p>支付完成后点击<a href="javascript:void(0)">下一步</a>查看项目认购情况。</p>
-                        <span id='agreement_msg' style='color: red;font-size: 15px;display:none;'>请同意协议</span>
-                        <p><input id='submit' type="submit" class="ren-btn" value="支付完成"></p>
-                    </div>
-
-                    <!-- 下面的是新的样式 end   -->
+                    <p class="ren-checkbox"><input type="checkbox" name='agreement' checked>我同意条款协议<a href="{:U('Info/show?key=shenmingshu')}">《风险提示书》</a><a href="{:U('Info/show?key=agreement')}">《用户服务协议》</a></p>
+                    <span id='agreement_msg' style='color: red;font-size: 15px;display:none;'>请同意协议</span>
+                    <p><input id='submit' type="submit" class="ren-btn" value="支付完成"></p>
                 </form>
                 <div class="ren-tiao">
                     <h5>详细规则</h5>
@@ -207,7 +186,6 @@ $('#myfund').blur(function () {
     $("#myfund").val(checkFund(rs));
     $('#subscription_1').html((checkFund(rs) * 0.02)+'元');
     $('#subscription_2').html((checkFund(rs) * 0.02)+'元');
-    $('#subscription_3').html((checkFund(rs) * 0.02)+'元');
 });
 $('input[name=agreement]').click(function(){
 	var checkag = $("input[name=agreement]").is(':checked');
@@ -238,7 +216,6 @@ function opera(x, y) {
     $(x).val(checkFund(rs));
     $('#subscription_1').html((checkFund(rs) * 0.02)+'元');
     $('#subscription_2').html((checkFund(rs) * 0.02)+'元');
-    $('#subscription_3').html((checkFund(rs) * 0.02)+'元');
 }
 
 function checkFund(v) {
