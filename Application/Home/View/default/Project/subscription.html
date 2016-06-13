@@ -80,7 +80,7 @@
                     </tr>
                 </tbody>
             </table>
-            <p class="ren-p">特殊回报：{$project.extra}</p>
+            <p class="ren-p">特殊回报：{$project.extra}<br />投资30万以上收取1%认购费；<br />投资10万~30万收取2%认购费；<br />投资10万以下收取3%认购费。</p>
             <div class="ren-box">
                 <h4>您的认购金额</h4>
                 <form action="{:U('project/subscription')}" method="post">
@@ -90,12 +90,12 @@
                         <input id='myfund' type='text' name='fund' class="text" class="ren-inp" value="{$project.follow_fund|round=0}">
                         <img src="__PUBLIC__/Home/fsr/images/ren_money.png" class="ren-img">
                         <a href="javascript:void(0)" onclick="opera('#myfund', true);"><img src="__PUBLIC__/Home/fsr/images/ren_jia.png"></a>
-                        <b>×2%（认购费）=</b>
-                        <span id='subscription_1'>{$project['follow_fund'] * 2 / 100}元</span>
+                        <b>×3%（认购费）=</b>
+                        <span id='subscription_1'>{$project['follow_fund'] * 3 / 100}元</span>
                     </div>
                     <div class="ren-sao">
                         <p>扫一扫付款（元）</p>
-                        <p id='subscription_2'>{$project['follow_fund'] * 2 / 100}元</p>
+                        <p id='subscription_2'>{$project['follow_fund'] * 3 / 100}元</p>
                         <p><img src="__PUBLIC__/Home/fsr/images/ren_ma.png"></p>
                     </div>
                     <p class="ren-checkbox"><input type="checkbox" name='agreement' checked>我同意条款协议<a href="{:U('Info/show?key=shenmingshu')}">《风险提示书》</a><a href="{:U('Info/show?key=agreement')}">《用户服务协议》</a></p>
@@ -184,8 +184,8 @@ $('#myfund').blur(function () {
         rs = 0;
     }
     $("#myfund").val(checkFund(rs));
-    $('#subscription_1').html((checkFund(rs) * 0.02)+'元');
-    $('#subscription_2').html((checkFund(rs) * 0.02)+'元');
+    $('#subscription_1').html((checkFund(rs) * 0.03)+'元');
+    $('#subscription_2').html((checkFund(rs) * 0.03)+'元');
 });
 $('input[name=agreement]').click(function(){
 	var checkag = $("input[name=agreement]").is(':checked');
@@ -214,8 +214,8 @@ function opera(x, y) {
         rs = rs - 1000;
     }
     $(x).val(checkFund(rs));
-    $('#subscription_1').html((checkFund(rs) * 0.02)+'元');
-    $('#subscription_2').html((checkFund(rs) * 0.02)+'元');
+    $('#subscription_1').html((checkFund(rs) * 0.03)+'元');
+    $('#subscription_2').html((checkFund(rs) * 0.03)+'元');
 }
 
 function checkFund(v) {
