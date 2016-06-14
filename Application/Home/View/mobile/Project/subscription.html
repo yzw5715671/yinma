@@ -47,10 +47,10 @@
 						<img src="__M_IMG__/ren_icon.png">
 					</span>
 					<a href="javascript:void(0)" onclick="opera('#myfund', true);"><img src="__M_IMG__/ren_add.png"></a>
-					<b>×2%(认购费)</b>
+					<b>×3%(认购费)</b>
 				</p>
 				<p class="ren-p2">
-					=<input id='subscription_1' type="text" name='subscription_money' value="{$project['follow_fund'] * 2 / 100}元">
+					=<input id='subscription_1' type="text" name='subscription_money' value="{$project['follow_fund'] * 3 / 100}元">
 				</p>
 		</div>
 
@@ -91,7 +91,7 @@ $('#myfund').blur(function () {
         rs = 0;
     }
     $("#myfund").val(checkFund(rs));
-    $('#subscription_1').val((checkFund(rs) * 0.02));
+    $('#subscription_1').val((checkFund(rs) * 0.03));
 });
 $('input[name=agreement]').click(function(){
 	var checkag = $("input[name=agreement]").is(':checked');
@@ -122,7 +122,7 @@ function opera(x, y) {
         rs = rs - 1000;
     }
     $(x).val(checkFund(rs));
-    $('#subscription_1').val((checkFund(rs) * 0.02));
+    $('#subscription_1').val((checkFund(rs) * 0.03));
 }
 
 function checkFund(v) {
