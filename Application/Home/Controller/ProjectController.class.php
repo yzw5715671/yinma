@@ -793,6 +793,13 @@ class ProjectController extends HomeController {
 			$this->error('不允许项目发起人，对自己的项目进行投资。');
 		}
 
+		if($id == 356){
+			$sprate = 3;
+		}else{
+			$sprate = 2;
+		}
+		$this->assign("sprate",$sprate);
+
 		if (IS_POST) {
 			
 			$inve = M('ProjectInvestor')->where(array('project_id'=>$id, 'investor_id'=>$uid))->select();
