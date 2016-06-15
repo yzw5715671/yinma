@@ -47,7 +47,7 @@
 						<img src="__M_IMG__/ren_icon.png">
 					</span>
 					<a href="javascript:void(0)" onclick="opera('#myfund', true);"><img src="__M_IMG__/ren_add.png"></a>
-					<b>×{$sprate}%(认购费)</b>
+					<b id='sprate_msg'>×{$sprate}%(认购费)</b>
 				</p>
 				<p class="ren-p2">
 					=<input id='subscription_1' type="text" name='subscription_money' value="{$project['follow_fund'] * $sprate / 100}元">
@@ -85,13 +85,26 @@
 </html>
 <script>
 
+var sprate_status = {$sprate};
 $('#myfund').blur(function () {
     var rs = new Number($("#myfund").val());
     if (isNaN(rs)) {
         rs = 0;
     }
-    $("#myfund").val(checkFund(rs));
-    $('#subscription_1').val((checkFund(rs) * 0.0{$sprate}));
+
+    var rsval = checkFund(rs);
+    var sprate = 0.0{$sprate};
+    if(sprate_status == 3){
+        if(rsval >= 100000 && rsval < 300000){
+            sprate = 0.02;
+        }else if(rsval >= 300000){
+            sprate = 0.01;
+        }
+    }
+
+    $("#myfund").val(rsval);
+    $('#subscription_1').val(rsval * sprate);
+    $('#sprate_msg').html('×'+(sprate * 100)+'%(认购费)');
 });
 $('input[name=agreement]').click(function(){
 	var checkag = $("input[name=agreement]").is(':checked');
@@ -121,8 +134,20 @@ function opera(x, y) {
     } else {
         rs = rs - 1000;
     }
-    $(x).val(checkFund(rs));
-    $('#subscription_1').val((checkFund(rs) * 0.0{$sprate}));
+
+    var rsval = checkFund(rs);
+    var sprate = 0.0{$sprate};
+    if(sprate_status == 3){
+        if(rsval >= 100000 && rsval < 300000){
+            sprate = 0.02;
+        }else if(rsval >= 300000){
+            sprate = 0.01;
+        }
+    }
+    
+    $("#myfund").val(rsval);
+    $('#subscription_1').val(rsval * sprate);
+    $('#sprate_msg').html('×'+(sprate * 100)+'%(认购费)');
 }
 
 function checkFund(v) {

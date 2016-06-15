@@ -90,7 +90,7 @@
                         <input id='myfund' type='text' name='fund' class="text" class="ren-inp" value="{$project.follow_fund|round=0}">
                         <img src="__PUBLIC__/Home/fsr/images/ren_money.png" class="ren-img">
                         <a href="javascript:void(0)" onclick="opera('#myfund', true);"><img src="__PUBLIC__/Home/fsr/images/ren_jia.png"></a>
-                        <b>×{$sprate}%（认购费）=</b>
+                        <b id='sprate_msg'>×{$sprate}%（认购费）=</b>
                         <span id='subscription_1'>{$project['follow_fund'] * $sprate / 100}元</span>
                     </div>
                     <div class="ren-sao">
@@ -178,14 +178,26 @@ $(function(){
 
 });
 
+var sprate_status = {$sprate};
 $('#myfund').blur(function () {
     var rs = new Number($("#myfund").val());
     if (isNaN(rs)) {
         rs = 0;
     }
-    $("#myfund").val(checkFund(rs));
-    $('#subscription_1').html((checkFund(rs) * 0.0{$sprate})+'元');
-    $('#subscription_2').html((checkFund(rs) * 0.0{$sprate})+'元');
+    var rsval = checkFund(rs);
+    var sprate = 0.0{$sprate};
+    if(sprate_status == 3){
+        if(rsval >= 100000 && rsval < 300000){
+            sprate = 0.02;
+        }else if(rsval >= 300000){
+            sprate = 0.01;
+        }
+    }
+
+    $("#myfund").val(rsval);
+    $('#subscription_1').html((rsval * sprate)+'元');
+    $('#subscription_2').html((rsval * sprate)+'元');
+    $('#sprate_msg').html('×'+(sprate * 100)+'%（认购费）=');
 });
 $('input[name=agreement]').click(function(){
 	var checkag = $("input[name=agreement]").is(':checked');
@@ -213,9 +225,21 @@ function opera(x, y) {
     } else {
         rs = rs - 1000;
     }
-    $(x).val(checkFund(rs));
-    $('#subscription_1').html((checkFund(rs) * 0.0{$sprate})+'元');
-    $('#subscription_2').html((checkFund(rs) * 0.0{$sprate})+'元');
+
+    var rsval = checkFund(rs);
+    var sprate = 0.0{$sprate};
+    if(sprate_status == 3){
+        if(rsval >= 100000 && rsval < 300000){
+            sprate = 0.02;
+        }else if(rsval >= 300000){
+            sprate = 0.01;
+        }
+    }
+
+    $(x).val(rsval);
+    $('#subscription_1').html((rsval * sprate)+'元');
+    $('#subscription_2').html((rsval * sprate)+'元');
+    $('#sprate_msg').html('×'+(sprate * 100)+'%（认购费）=');
 }
 
 function checkFund(v) {
