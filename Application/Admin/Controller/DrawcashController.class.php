@@ -201,6 +201,14 @@ class DrawcashController extends AdminController {
 			$this->error($para['statusMsg']);
 		}
 	}
+
+	//测试
+	public function bytest(){
+		$this->config = C('DRAW_CASH');
+		$this->config['MERCHANTID'] = '7449b82245d2339d30c19552564acb22';
+	}
+
+
 	/**
 	 * get请求
 	 * @param     $url   提交的地址
