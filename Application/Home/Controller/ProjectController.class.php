@@ -944,10 +944,10 @@ class ProjectController extends HomeController {
 				$this->error('没有实名认证');
 			};
 
-			// $checkUserInfo = $thisProject->checkUserInfo();
-			// if(!$checkUserInfo['success']){
-			// 	$this->error('请认证合格投资人');
-			// };
+			$checkUserInfo = $thisProject->checkUserInfo();
+			if(!$checkUserInfo['success']){
+				$this->error('请认证合格投资人');
+			};
 			
 			$investor =  array('project_id'=>$id, 'fund'=>$_POST['fund'],
 				'others' => $_POST['others'], 'lead_type'=>3);
