@@ -18,14 +18,10 @@ class PropayController extends HomeController {
 
 	// 服务器对服务器 通知
 	public function informurl(){
-		Log::write(print_r($post_data, true), 'notice params', '', LOG_PATH.'/Admin/pay_'.date('y_m_d').'.log');
+		$params = $_POST;
+		Log::write(print_r($params, true), 'notice params', '', LOG_PATH.'/Admin/pay_'.date('y_m_d').'.log');
 
-		// $xml = $_POST['xml'];
-
-		$message = array('head'=>$head, 'body'=>$body);
-		$xml = to_xmlstring($message);
-
-		$info = xml2arr($xml);
+		$info = xml2arr($params['xml']);
 		$body = $info['body'];
 
 		if($head['tranRespCode'] == 'C000000000'){
