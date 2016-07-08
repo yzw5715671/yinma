@@ -1,0 +1,75 @@
+<extend name="Public/base"/>
+
+<block name="body">
+	<div id="main-content">
+		
+
+        <div id="main" class="main">                   
+			<!-- 标题栏 -->
+			<div class="main-title">
+				<h2>项目打款</h2>
+			</div>
+			<!-- <div class="cf">
+                <div class="fl">
+                    <a class="btn btn-new cboxElement" href='{:U("Propay/paymoney")}'>打款</a>
+                </div>
+            </div> -->
+    	<!-- 数据列表 -->
+	    	<div class="data-table table-striped">
+				<table class="">
+			    	<thead>
+				        <tr>
+					        <th class="">编号</th>
+							<th class="">项目名称</th>
+							<th class="">操作</th>
+							<!-- <th class="" colspan="2">项目名称</th> -->
+						</tr>
+			    	</thead>
+			    	<tbody>
+			    	<volist name="_list" id="vo">
+						<tr>
+							<td>{$vo.id} </td>
+							<td><a href="{:U('Project/preview?id=' . $vo['id'].'&step=1')}">{$vo.project_name}</a></td>
+							<td><a href="{:U('Propay/paymoney?id=' . $vo['id'])}">打款</a></td>
+						</tr>
+					</volist>
+					</tbody>
+		    	</table>
+			</div>
+		    <div class="page">
+		        </div>
+
+		        </div>
+		        <div class="cont-ft">
+		            <div class="copyright">
+		                <div class="fl">感谢使用<a href="http://www.onethink.cn" target="_blank">OneThink</a>管理平台</div>
+		                <div class="fr">V1.1.140817</div>
+		            </div>
+		        </div>
+		    </div>
+	</div>
+
+</block>
+
+<block name="script">
+    <link rel="stylesheet" href="__CSS__/colorbox.css" />
+	<script src="__JS__/jquery.colorbox-min.js"></script>
+    <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+    <script type="text/javascript">
+    $(".setmanager").colorbox({width:'500px', height:'300px'});
+    $(function(){
+    	$("#search").click(function(){
+    		var url = $(this).attr('url');
+    		var status = $('select[name=status]').val();
+    		var search = $('input[name=search]').val();
+    		if(status != ''){
+    			url += '/status/' + status;
+    		}
+    		if(search != ''){
+    			url += '/search/' + search;
+    		}
+    		window.location.href = url;
+    	});
+})
+</script>
+</block>

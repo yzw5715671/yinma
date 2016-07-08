@@ -111,4 +111,31 @@ return array(
     'TMPL_ACTION_SUCCESS'   =>  MODULE_PATH.'View/Public/success.html', // 默认成功跳转对应的模板文件
     'TMPL_EXCEPTION_FILE'   =>  MODULE_PATH.'View/Public/exception.html',// 异常页面的模板文件
 
+    /*
+    * 银行支付 
+    * MERKEY      商户秘钥
+    * MERCHANTID  商户号
+    * ALIAS       不知道干嘛的
+    */
+    //查询
+    'SELECT_PAY' =>array(
+            'MERKEY' => '449826cf05ca03cb9cbaa0eaf2f7b9ce',
+            'MERCHANTNO'=>'CF3000037046',
+            'URL' =>'http://cp.umbpay.com.cn:8086/agentCollPayPlatPre/msgProcess/acceptXmlReq.do',
+    ),
+
+    //代付
+    'PAID_PAY' =>array(
+            'MERKEY' => '7449b82245d2339d30c19552564acb22',
+            'MERCHANTNO'=>'CF3000037046',
+            'URL' =>'http://cp.umbpay.com.cn:8086/agentCollPayPlatPre/msgProcess/acceptXmlReq.do',
+    ),
+
+    //代收
+    'COLLECT_PAY' =>array(
+            'MERKEY' => '99299a89cf2b81804b62c3e066b1d2d2',
+            'MERCHANTNO'=>'CF3000037046',
+            'URL' =>'http://cp.umbpay.com.cn:8086/agentCollPayPlatPre/msgProcess/acceptXmlReq.do',
+    ),
+
 );

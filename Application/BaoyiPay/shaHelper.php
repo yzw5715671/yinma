@@ -381,4 +381,88 @@ function vpost($url,$data){ // 模拟提交数据函数
     return $tmpInfo; // 返回数据
 }
 
-?>
+    /**
+    * xml转arr
+    * @param    $xml    需要转换的xml字符串
+    **/
+    function xml2arr($xml) {
+        $res = simplexml_load_string($xml);
+        $arr = json_decode(json_encode($res),true);
+        return $arr;
+    }
+
+    /**
+    * array 转xml字符串
+    * @param     array    $arr   需要转换的array
+    * @return    string   返回转换后的字符转
+    **/
+    function to_xmlstring($arr) {
+        $xml = simplexml_load_string('<?xml version="1.0" encoding="UTF-8" ?><message />');
+        arr2xml($arr,$xml);
+        $xml = $xml->saveXML();
+
+        // 出去生成xml中的换行
+        $xml = str_replace("\n", '', $xml);
+        $xml = str_replace("\r", '', $xml);
+
+        return $xml;
+    }
+
+    /**
+    * 建立请求，以表单HTML形式构造（默认）
+    * @param $arr 要转换的数组
+    * @param $xml xml对象
+    */
+    function arr2xml($arr, $xml) {
+        foreach($arr as $k=>$v) {
+            if($v){
+                if(is_array($v)) {
+                    $x = $xml->addChild($k);
+                    arr2xml($v, $x);
+                }else {
+                    $xml->addChild($k, $v);
+                }
+            }
+        }
+    }
+
+    /**
+     * array 转xml字符串 for快捷支付接口调用
+     * @param     array    $arr   需要转换的array
+     * @return    string   返回转换后的字符转
+     **/
+    function to_xmlstring1($arr) {
+        $xml = simplexml_load_string('<?xml version="1.0" encoding="UTF-8" ?><message xmlns="http://www.w3school.com.cn"/>');
+        arr2xml($arr,$xml);
+        $xml = $xml->saveXML();
+
+        // 出去生成xml中的换行
+        $xml = str_replace("\n", '', $xml);
+        $xml = str_replace("\r", '', $xml);
+
+        return $xml;
+    }
+
+    function sha256Response($text, $key) {
+        $para_split = explode('&',$text);
+        //把切割后的字符串数组变成变量与数值组合的数组
+        foreach ($para_split as $item) {
+            //获得第一个=字符的位置
+            $nPos = strpos($item,'=');
+            //获得字符串长度
+            $nLen = strlen($item);
+            //获得变量名
+            $k = substr($item,0,$nPos);
+            //获得数值
+            $value = substr($item,$nPos+1,$nLen-$nPos-1);
+            //放入数组中
+            $para_text[$k] = $value;
+        }
+
+        if (!empty($para_text['xml'])) {
+            $mac = sha256($para_text['xml'].$key);
+            if ($mac !== $para_text['mac']) return false;
+        }
+
+        return $para_text;
+    }

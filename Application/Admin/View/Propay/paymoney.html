@@ -1,0 +1,210 @@
+<extend name="Public/base"/>
+
+<block name="style">
+    <style type="text/css" media="screen">
+        .form-horizontal .item-label {
+            display: inline-block; float: left;
+            width: 180px;
+            text-align: right; font-weight: normal;
+         }   
+         .form-horizontal .controls{
+            padding:0;
+            margin-bottom:10px;
+         }
+         .form-horizontal .form-item{
+            position: relative;
+         }
+         .form-horizontal .form-item .tips-red{
+            position: absolute;
+            left:470px;
+            top:5px;
+            font-size: 12px;
+            color:#bc1117;
+         }
+         .controls select.input-5x{
+            width: 258px;
+         }
+         .form-horizontal .form-item button.btn{
+            margin-left:64px;
+            margin-top:10px;
+         }
+    </style>
+</block>
+
+<block name="body">
+    <div id="main-content">
+        <div id="main" class="main">                   
+            <!-- 标题栏 -->
+            <div class="main-title">
+                <h2>项目打款</h2>
+            </div>
+            <div class="cf">
+                <div class="fl">
+                    <a class="btn btn-new cboxElement" href='{:U("Propay/paymoneylist")}'>打款信息</a>
+            </div>
+        </div>
+        <!-- 数据列表 -->
+            <div class="data-table table-striped">
+                 <form action="" method="post" class="form-horizontal">
+                    <div class="form-item">
+                        <label class="item-label">商户平台收款账户<span class="check-tips">（别名）</span></label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="" value="">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">协议号</label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="" value="">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">银行名称</label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="" value="">
+                        </div>
+                        <span class="tips-red">*必填</span>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">银行账号</label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="mobile" value="">
+                        </div>
+                        <span class="tips-red">*必填</span>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">银行账户名称</label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="" value="">
+                        </div>
+                        <span class="tips-red">*必填</span>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">账户类型</label>
+                        <div class="controls">
+                            <select name="type" class="input-5x">
+                                <option value="1" selected="selected">系统</option>
+                                <option value="2">用户</option>              
+                            </select>
+                        </div>
+                        <span class="tips-red">*必填</span>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">开户行所在省</label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="" value="">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">开户行所在市</label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="" value="">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">开户行名称</label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="" value="">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">交易金额</label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="" value="">
+                        </div>
+                        <span class="tips-red">*必填</span>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">币种</label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="" value="">
+                        </div>
+                        <span class="tips-red">*必填</span>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">业务类型</label>
+                        <div class="controls">
+                            <select name="type" class="input-5x">
+                                <option value="1" selected="selected">系统</option>
+                                <option value="2">用户</option>              
+                            </select>
+                        </div>
+                        <span class="tips-red">*必填</span>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">开户证件类型</label>
+                        <div class="controls">
+                            <select name="type" class="input-5x">
+                                <option value="1" selected="selected">系统</option>
+                                <option value="2">用户</option>              
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">证件号</label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="" value="">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">手机号</label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="" value="">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">商品信息</label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="" value="">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label">附加信息</label>
+                        <div class="controls">
+                            <input type="text" class="text input-5x" name="" value="">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="item-label"></label>
+                        <button class="btn submit-btn" id="submit" type="submit">提 交</button>
+                    </div>
+                </form>
+                
+            </div>
+            <div class="page">
+                </div>
+
+                </div>
+                <div class="cont-ft">
+                    <div class="copyright">
+                        <div class="fl">感谢使用<a href="http://www.onethink.cn" target="_blank">OneThink</a>管理平台</div>
+                        <div class="fr">V1.1.140817</div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</block>
+
+<block name="script">
+    <link rel="stylesheet" href="__CSS__/colorbox.css" />
+	<script src="__JS__/jquery.colorbox-min.js"></script>
+    <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+    <script type="text/javascript">
+    $(".setmanager").colorbox({width:'500px', height:'300px'});
+    $(function(){
+    	$("#search").click(function(){
+    		var url = $(this).attr('url');
+    		var status = $('select[name=status]').val();
+    		var search = $('input[name=search]').val();
+    		if(status != ''){
+    			url += '/status/' + status;
+    		}
+    		if(search != ''){
+    			url += '/search/' + search;
+    		}
+    		window.location.href = url;
+    	});
+})
+</script>
+</block>
