@@ -4,12 +4,6 @@ use Think\Log;
 
 class BaoyiPayApiController extends HomeController {
 
-	public function __construct(){
-		parent::__construct();
-
-		require_once(APP_PATH.'BaoyiPay/shaHelper.php');
-	}
-
 	public function send($amount,$orderId,$detailURL,$priceContent, $bankname=null) {
 
 		require_once(APP_PATH.'BaoyiPay/BaoyiPay.php');

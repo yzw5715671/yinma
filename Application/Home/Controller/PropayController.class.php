@@ -39,8 +39,7 @@ class PropayController extends HomeController {
 				M('ProjectPayLog')->where(array('bussflowno'=>$body['orgTranFlow']))->save($add_data);
   			}
   		}else{
-			$add_data['tranState'] = '-1';
-			M('ProjectPayLog')->add($add_data);
+  			Log::write(print_r($params, true), 'notice bad', '', LOG_PATH.'/Admin/Pay/pay_informurl_'.date('y_m_d').'.log');
   		}
 	}
 
