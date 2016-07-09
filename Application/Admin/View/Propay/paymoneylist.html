@@ -9,6 +9,9 @@
 			<div class="main-title">
 				<h2>项目打款</h2>
 			</div>
+			<div class="cf">
+				<h4>注：提交给民生的打款订单如果没有及时返回结果，我们也算在了打款成功次数里了，等民生发送通知告诉我们结果（如果失败了，程序会将成功次数和已打款金额减去。更保险的措施需要操作人员跟民生进行对账）。</h4>
+			</div>
 			<!-- <div class="cf">
                 <div class="fl">
                     <a class="btn btn-new cboxElement" href='{:U("Propay/paymoney")}'>打款</a>
@@ -21,6 +24,8 @@
 				        <tr>
 					        <th class="">编号</th>
 							<th class="">项目名称</th>
+							<th class="">打款成功次数</th>
+							<th class="">已打款金额</th>
 							<th class="">操作</th>
 							<!-- <th class="" colspan="2">项目名称</th> -->
 						</tr>
@@ -30,7 +35,9 @@
 						<tr>
 							<td>{$vo.id} </td>
 							<td><a href="{:U('Project/preview?id=' . $vo['id'].'&step=1')}">{$vo.project_name}</a></td>
-							<td><a href="{:U('Propay/paymoney?id=' . $vo['id'])}">打款</a></td>
+							<td>{$vo.pay_succ_count} </td>
+							<td>{$vo.pay_money} </td>
+							<td><a href="{:U('Propay/paymoney?id=' . $vo['id'].'&project_name=' . $vo['project_name'])}">打款</a></td>
 						</tr>
 					</volist>
 					</tbody>

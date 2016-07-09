@@ -45,23 +45,23 @@ class PropayController extends AdminController {
 		//获取代付配置
 		$this->config = C('PAID_PAY');
 
-		$params = $_POST;
-		$params = array(
-			'pro_id'=>'351',
-			'bankName'=>'中国建设银行',
-			'accountNo'=>'6217000010002065409',
-			'accountName'=>'闫志伟',
-			'accountType'=>'02',
-			'tranAmt'=>1.01,
-			'curType'=>'CNY',
-			'bsnType'=>'09400',
-			// 'openProvince'=>'北京',
-			// 'openCity'=>'昌平',
-			// 'openName'=>'',
-			// 'certType'=>'01',
-			// 'certNo'=>'142431199206170313',
-			// 'mobilePhone'=>'18612334831',
-		);
+		if(!IS_POST){
+			$this->error('不要非法请求', 'Index/index', 1);
+		}
+
+		// $params = I('post.');
+		$params['pro_id'] = I('post.pro_id');
+		$params['bankName'] = I('post.bankName');
+		$params['accountNo'] = I('post.accountNo');
+		$params['accountName'] = I('post.accountName');
+		$params['tranAmt'] = sprintf("%.2f",I('post.tranAmt'));
+		$params['curType'] = I('post.curType', 'CNY');
+		$params['bsnType'] = I('post.bsnType', '09400');
+		$params['accountType'] = $params['accountType'] == 1 ? '01' : '02';
+
+		if(!$params['pro_id']){
+			$this->error('项目id不能为空，请到列表页重新点击打款', '', 1);
+		}
 
 		//拼装传参
 		$time = NOW_TIME;
@@ -86,8 +86,8 @@ class PropayController extends AdminController {
 				'accountName'=>$params['accountName'],//银行卡或存折上的所有人姓名。
 				'accountType'=>$params['accountType'],//账户属性01：对公  02：对私
 				'tranAmt'=>$params['tranAmt'],//银行卡被扣费的金额,保留小数2位。整数位最大为14位。
-				'curType'=>$params['curType'] ? $params['curType'] : 'CNY',//人民币：CNY, 港元：HKD，美元：USD。不填时，默认为人民币。
-				'bsnType'=>$params['bsnType'] ? $params['bsnType'] : '09400',//代付的业务类型
+				'curType'=>$params['curType'],//人民币：CNY, 港元：HKD，美元：USD。不填时，默认为人民币。
+				'bsnType'=>$params['bsnType'],//代付的业务类型
 
 				'openProvince'=>$params['openProvince'] ? $params['openProvince'] : '',//填写时，不带"省"或"自治区"CHAR(20)
 				'openCity'=>$params['openCity'] ? $params['openCity'] : '',//不带“市”，如长沙，武汉等
@@ -110,10 +110,10 @@ class PropayController extends AdminController {
 		$url = $this->config['URL'];
 
 		//记录传过去日志
-		Log::write(print_r($post_data, true), 'params', '', LOG_PATH.'/Admin/pay_'.date('y_m_d').'.log');
+		Log::write(print_r($post_data, true), 'params', '', LOG_PATH.'/Admin/Pay/pay_'.date('y_m_d').'.log');
 		$result = request_by_curl($url,$post_data);
 		//记录返回日志
-		Log::write(print_r($result, true), 'return', '', LOG_PATH.'/Admin/pay_'.date('y_m_d').'.log');
+		Log::write(print_r($result, true), 'return', '', LOG_PATH.'/Admin/Pay/pay_'.date('y_m_d').'.log');
 		$result = sha256Response($result, $this->config['MERKEY']);
 
 		$info = xml2arr($result['xml']);
@@ -130,7 +130,7 @@ class PropayController extends AdminController {
   			if($body['tranState'] == '00'){
   				M('Project')->where(array('id'=>$params['pro_id']))->save(array(
   					'pay_money'=>array('exp','pay_money+'.$params['tranAmt']),
-  					'pay_status'=>2,
+  					'pay_succ_count'=>array('exp','pay_succ_count+1'),
 				));
 
 				$add_data['tranState'] = $body['tranState'];
@@ -140,7 +140,7 @@ class PropayController extends AdminController {
   			}else if($body['tranState'] == '02'){
   				M('Project')->where(array('id'=>$params['pro_id']))->save(array(
   					'pay_money'=>array('exp','pay_money+'.$params['tranAmt']),
-  					'pay_status'=>3,
+  					'pay_succ_count'=>array('exp','pay_succ_count+1'),
 				));
 
 				$add_data['tranState'] = $body['tranState'];
@@ -151,13 +151,13 @@ class PropayController extends AdminController {
 				$add_data['tranState'] = $body['tranState'];
 				M('ProjectPayLog')->add($add_data);
 
-  				$this->error('打款申请提交失败');
+  				$this->error('打款申请提交失败', '', 1);
   			}
   		}else{
 			$add_data['tranState'] = '-1';
 			M('ProjectPayLog')->add($add_data);
 
-			$this->error('打款申请提交，三方未响应');
+			$this->error($head['respmsg'] ? $head['respmsg'] : '提交失败', '', 1);
   		}
 	}
 }

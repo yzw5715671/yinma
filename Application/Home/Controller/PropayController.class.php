@@ -18,24 +18,21 @@ class PropayController extends HomeController {
 
 	// 服务器对服务器 通知
 	public function informurl(){
-		$params = $_POST;
-		Log::write(print_r($params, true), 'notice params', '', LOG_PATH.'/Admin/pay_'.date('y_m_d').'.log');
+		$params = I();
+		Log::write(print_r($params, true), 'notice params', '', LOG_PATH.'/Admin/Pay/pay_informurl_'.date('y_m_d').'.log');
 
 		$info = xml2arr($params['xml']);
 		$body = $info['body'];
 
 		if($head['tranRespCode'] == 'C000000000'){
   			if($body['tranState'] == '01'){
-  				M('Project')->where(array('id'=>$params['pro_id']))->save(array(
-  					'pay_status'=>2,
-				));
-
 				$add_data['tranState'] = '00';
 				M('ProjectPayLog')->where(array('bussflowno'=>$body['orgTranFlow']))->save($add_data);
   			}else{
-  				M('Project')->where(array('id'=>$params['pro_id']))->save(array(
-  					'pay_money'=>array('exp','pay_money-'.$params['tranAmt']),
-  					'pay_status'=>4,
+  				$result = M('ProjectPayLog')->field('pro_id')->where(array('bussflowno'=>$body['orgTranFlow']))->find();
+  				M('Project')->where(array('id'=>$result['pro_id']))->save(array(
+  					'pay_money'=>array('exp','pay_money-'.$body['tranAmt']),
+  					'pay_succ_count'=>array('exp','pay_succ_count-1'),
 				));
 
 				$add_data['tranState'] = $body['tranState'];
@@ -45,6 +42,12 @@ class PropayController extends HomeController {
 			$add_data['tranState'] = '-1';
 			M('ProjectPayLog')->add($add_data);
   		}
+	}
 
+	// 服务器对服务器 通知(test)
+	public function informurl_test(){
+		Log::write(print_r($_REQUEST, true), 'request notice params', '', LOG_PATH.'/Admin/Pay/pay_informurl_'.date('y_m_d').'.log');
+		$params = I();
+		Log::write(print_r($params, true), 'notice params', '', LOG_PATH.'/Admin/Pay/pay_informurl_'.date('y_m_d').'.log');
 	}
 }
