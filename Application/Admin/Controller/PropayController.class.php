@@ -15,6 +15,9 @@ class PropayController extends AdminController {
 		parent::__construct();
 
 		require_once(APP_PATH.'BaoyiPay/shaHelper.php');
+		//获取代付配置
+		$this->config = C('PAID_PAY');
+		$this->ms_pay_status = C('MS_PAY_STATUS');//1 测试  2 生产
 	}
 
 	//获取已打款的项目记录
@@ -42,9 +45,6 @@ class PropayController extends AdminController {
 
 	//打款操作
 	public function dopaymoney(){
-		//获取代付配置
-		$this->config = C('PAID_PAY');
-
 		if(!IS_POST){
 			$this->error('不要非法请求', 'Index/index', 1);
 		}
@@ -111,7 +111,11 @@ class PropayController extends AdminController {
 
 		//记录传过去日志
 		Log::write(print_r($post_data, true), 'params', '', LOG_PATH.'/Admin/Pay/pay_'.date('y_m_d').'.log');
-		$result = request_by_curl($url,$post_data);
+		if($this->ms_pay_status == '1'){
+			$result = request_by_curl($url,$post_data);
+		}else{
+			$result = vpost($url,$post_data);
+		}
 		//记录返回日志
 		Log::write(print_r($result, true), 'return', '', LOG_PATH.'/Admin/Pay/pay_'.date('y_m_d').'.log');
 		$result = sha256Response($result, $this->config['MERKEY']);

@@ -444,19 +444,23 @@ function vpost($url,$data){ // 模拟提交数据函数
     }
 
     function sha256Response($text, $key) {
-        $para_split = explode('&',$text);
-        //把切割后的字符串数组变成变量与数值组合的数组
-        foreach ($para_split as $item) {
-            //获得第一个=字符的位置
-            $nPos = strpos($item,'=');
-            //获得字符串长度
-            $nLen = strlen($item);
-            //获得变量名
-            $k = substr($item,0,$nPos);
-            //获得数值
-            $value = substr($item,$nPos+1,$nLen-$nPos-1);
-            //放入数组中
-            $para_text[$k] = $value;
+        if(is_array($text)){
+            $para_text = $text;
+        }else{
+            $para_split = explode('&',$text);
+            //把切割后的字符串数组变成变量与数值组合的数组
+            foreach ($para_split as $item) {
+                //获得第一个=字符的位置
+                $nPos = strpos($item,'=');
+                //获得字符串长度
+                $nLen = strlen($item);
+                //获得变量名
+                $k = substr($item,0,$nPos);
+                //获得数值
+                $value = substr($item,$nPos+1,$nLen-$nPos-1);
+                //放入数组中
+                $para_text[$k] = $value;
+            }
         }
 
         if (!empty($para_text['xml'])) {

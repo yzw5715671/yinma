@@ -48,4 +48,61 @@ return array(
 
     /* 文档模型配置 (文档模型核心配置，请勿更改) */
     'DOCUMENT_MODEL_TYPE' => array(2 => '主题', 1 => '目录', 3 => '段落'),
+
+    /*
+    * 民生代付 （测试）
+    * MERKEY      商户秘钥
+    * MERCHANTID  商户号
+    * URL       代付URL
+    */
+    //民生支付状态（1 测试  2 生产）
+    'MS_PAY_STATUS' => 1,
+    //查询
+    'SELECT_PAY' =>array(
+            'MERKEY' => '449826cf05ca03cb9cbaa0eaf2f7b9ce',
+            'MERCHANTNO'=>'CF3000037046',
+            'URL' =>'http://cp.umbpay.com.cn:8086/agentCollPayPlatPre/msgProcess/acceptXmlReq.do',
+    ),
+
+    //代付
+    'PAID_PAY' =>array(
+            'MERKEY' => '7449b82245d2339d30c19552564acb22',
+            'MERCHANTNO'=>'CF3000037046',
+            'URL' =>'http://cp.umbpay.com.cn:8086/agentCollPayPlatPre/msgProcess/acceptXmlReq.do',
+    ),
+
+    //代收
+    'COLLECT_PAY' =>array(
+            'MERKEY' => '99299a89cf2b81804b62c3e066b1d2d2',
+            'MERCHANTNO'=>'CF3000037046',
+            'URL' =>'http://cp.umbpay.com.cn:8086/agentCollPayPlatPre/msgProcess/acceptXmlReq.do',
+    ),
+
+    // /*
+    // * 民生代付 （生产）
+    // * MERKEY      商户秘钥
+    // * MERCHANTID  商户号
+    // * URL       代付URL
+    // */
+    // //查询
+    // 'SELECT_PAY' =>array(
+    //         'MERKEY' => '449826cf05ca03cb9cbaa0eaf2f7b9ce',
+    //         'MERCHANTNO'=>'CF3000037046',
+    //         'URL' =>'https://www.umbpay.cn:9380/ agentCollPayPlatPre/msgProcess/ acceptXmlReq.do',
+    // ),
+
+    // //代付
+    // 'PAID_PAY' =>array(
+    //         'MERKEY' => '7449b82245d2339d30c19552564acb22',
+    //         'MERCHANTNO'=>'CF3000037046',
+    //         'URL' =>'https://www.umbpay.cn:9380/ agentCollPayPlatPre/msgProcess/ acceptXmlReq.do',
+    // ),
+
+    // //代收
+    // 'COLLECT_PAY' =>array(
+    //         'MERKEY' => '99299a89cf2b81804b62c3e066b1d2d2',
+    //         'MERCHANTNO'=>'CF3000037046',
+    //         'URL' =>'https://www.umbpay.cn:9380/ agentCollPayPlatPre/msgProcess/ acceptXmlReq.do',
+    // ),
+
 );
