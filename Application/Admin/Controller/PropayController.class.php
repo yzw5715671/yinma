@@ -25,7 +25,8 @@ class PropayController extends AdminController {
 		// $uid = is_login();
 
 		//众筹成功的项目
-		$where = array('status' => array('eq', '9'),'stage'=>array('eq',9));
+		// $where = array('status' => array('eq', '9'),'stage'=>array('eq',9));
+		$where = array('status' => array('eq', 9),'stage'=>array('egt',0));
 		$order = array('update_time desc');
 		$p_stage ='众筹成功的项目';
 
