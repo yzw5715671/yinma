@@ -8,7 +8,6 @@ class ProjectController extends AdminController {
 		$uid = is_login();
 		//添加机构ID
 		$oid = session('user_auth.oid');
-		$oid = 0;
 		//项目列表
 		if($status==0){
 			$where=array('p.status' => array('gt', 0),'p.oid'=>$oid);
