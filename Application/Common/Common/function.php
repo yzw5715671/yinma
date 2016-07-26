@@ -1144,7 +1144,7 @@ function get_manager($id=0) {
 		$name = $list[$key];
 	} else { //调用接口获取用户信息
 		$where = array('uid'=>$id);
-		$user = M('Member')->where($where)->field('real_name, nickname')->find();
+		$user = M('Member')->where($where)->field('realname, nickname')->find();
 		if($user){
 			$name = $list[$key] = $user;
 			/* 缓存用户 */
@@ -1159,7 +1159,7 @@ function get_manager($id=0) {
 		}
 	}
 	
-	return $name['real_name'];
+	return $name['realname'];
 
 	 
 }
