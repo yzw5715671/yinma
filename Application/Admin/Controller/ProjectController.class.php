@@ -8,6 +8,7 @@ class ProjectController extends AdminController {
 		$uid = is_login();
 		//添加机构ID
 		$oid = session('user_auth.oid');
+		$oid = 0;
 		//项目列表
 		if($status==0){
 			$where=array('p.status' => array('gt', 0),'p.oid'=>$oid);
@@ -46,6 +47,7 @@ class ProjectController extends AdminController {
 		}
 
 		$list = D('ProjectView')->where($where)->order($order)->select();
+
 		int_to_string($list, 
 			array('status'=>array(-1=>'已删除',0=>'未提交',1=>'未审核',2=>'未通过',9=>'审核通过')));
 
@@ -118,12 +120,12 @@ class ProjectController extends AdminController {
 			$pid = I('pid');
 	
 			//获取员工列表
-			$list = M('Member')->where(array('oid'=>$pid,'status'=>1,'real_name'=>array('neq','')))->select();
+			$list = M('Member')->where(array('oid'=>$pid,'status'=>1,'realname'=>array('neq','')))->select();
 
 			$data = "<option value =''>请选择项目经理</option>";
 			foreach ($list as $k => $vo) {
 				$data .= "<option ";
-				$data .= " value ='" . $vo['uid'] . "'>" . $vo['real_name'] . "</option>";
+				$data .= " value ='" . $vo['uid'] . "'>" . $vo['realname'] . "</option>";
 			}
 			$this->ajaxReturn($data);
 		}
