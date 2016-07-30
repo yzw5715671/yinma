@@ -254,7 +254,7 @@ class InfoController extends HomeController {
   					'update_time' => NOW_TIME,
   					'update_id' => $user_id,
   					'dynamicid'=>I('dynamicid'),);
-  			$id = M('InfoComment')->add($comment);
+  			// $id = M('InfoComment')->add($comment);
   
 /*   			$proj=M('Product')->where('id ='.$project_id)->field('name, uid')->find();
   
@@ -268,7 +268,7 @@ class InfoController extends HomeController {
   			} */
   
   			if ($reply_id) {
-  				$rep = M('InfoComment')->where('id='.$reply_id)->getField('comment_user');
+  				// $rep = M('InfoComment')->where('id='.$reply_id)->getField('comment_user');
 /*   				if ($rep != $user_id && $rep != $proj['uid'] && !$rep) {
   					$content = $ulink . '回复了您对'. $plink . '项目的评论';
   					D('Message')->send(0,$rep,'', $content, 3);
@@ -300,7 +300,7 @@ class InfoController extends HomeController {
   				'update_time' => NOW_TIME,
   				'update_id' => $user_id,
   				'dynamicid'=>I('dynamicid'),);
-  		$id = M('InfoComment')->add($comment);
+  		// $id = M('InfoComment')->add($comment);
   
 /*   		$proj=M('Product')->where('id ='.$project_id)->field('name, uid')->find();
   
@@ -314,7 +314,7 @@ class InfoController extends HomeController {
   		} */
   
   		if ($reply_id) {
-  			$rep = M('InfoComment')->where('id='.$reply_id)->getField('comment_user');
+  			// $rep = M('InfoComment')->where('id='.$reply_id)->getField('comment_user');
   			/* if ($rep != $user_id && $rep != $proj['uid'] && !$rep) {
   				$content = $ulink . '回复了您对'. $plink . '项目的评论';
   				D('Message')->send(0,$rep,'', $content, 3);
