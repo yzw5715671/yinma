@@ -584,7 +584,7 @@ class ProjectController extends HomeController {
                     'update_time' => NOW_TIME,
                     'update_id' => $user_id,
                     'dynamicid'=>I('dynamicid'),);
-                $id = M('ProjectComment')->add($comment);
+                // $id = M('ProjectComment')->add($comment);
 
                 $proj=M('Project')->where('id ='.$project_id)->field('project_name, uid')->find();
 
@@ -592,18 +592,18 @@ class ProjectController extends HomeController {
                     get_membername($user_id).'</a>';
                 $plink = '<a href="'.U('Project/detail?id='.$project_id).'">《'.
                     $proj['project_name'].'》</a>';
-                if ($user_id != $proj['uid']) {
-                    $content = $ulink . '评论了您的'. $plink . '项目';
-                    D('Message')->send(0,$proj['uid'],'', $content, 3);
-                }
+                // if ($user_id != $proj['uid']) {
+                //     $content = $ulink . '评论了您的'. $plink . '项目';
+                //     D('Message')->send(0,$proj['uid'],'', $content, 3);
+                // }
 
-                if ($reply_id) {
-                    $rep = M('ProjectComment')->where('id='.$reply_id)->getField('comment_user');
-                    if ($rep != $user_id && $rep != $proj['uid'] && !$rep) {
-                        $content = $ulink . '回复了您对'. $plink . '项目的评论';
-                        D('Message')->send(0,$rep,'', $content, 3);
-                    }
-                }
+                // if ($reply_id) {
+                //     $rep = M('ProjectComment')->where('id='.$reply_id)->getField('comment_user');
+                //     if ($rep != $user_id && $rep != $proj['uid'] && !$rep) {
+                //         $content = $ulink . '回复了您对'. $plink . '项目的评论';
+                //         D('Message')->send(0,$rep,'', $content, 3);
+                //     }
+                // }
 
                 $comment['id'] = $id;
                 $comment['comment_user'] = $user_id;
@@ -620,46 +620,46 @@ class ProjectController extends HomeController {
         }else{
 			$project_id = $_POST['project_id'];
             $user_id = is_login();
-                            $reply_id = $_POST['reply_id'];
-                            $comment = array('project_id' => $project_id,
-                                'comment_user' => $user_id,
-                                'content' => $_POST['content'],
-                                'reply_id' =>$reply_id,
-                                'create_time' => NOW_TIME,
-                                'create_id' => $user_id,
-                                'update_time' => NOW_TIME,
-                                'update_id' => $user_id,
-                                'dynamicid'=>I('dynamicid'),);
-                            $id = M('ProjectComment')->add($comment);
+            $reply_id = $_POST['reply_id'];
+            $comment = array('project_id' => $project_id,
+                'comment_user' => $user_id,
+                'content' => $_POST['content'],
+                'reply_id' =>$reply_id,
+                'create_time' => NOW_TIME,
+                'create_id' => $user_id,
+                'update_time' => NOW_TIME,
+                'update_id' => $user_id,
+                'dynamicid'=>I('dynamicid'),);
+            // $id = M('ProjectComment')->add($comment);
 
-                            $proj=M('Project')->where('id ='.$project_id)->field('project_name, uid')->find();
+            $proj=M('Project')->where('id ='.$project_id)->field('project_name, uid')->find();
 
-                            $ulink = '<a href="'.U('MCenter/profile?id='.$user_id).'">'.
-                                get_membername($user_id).'</a>';
-                            $plink = '<a href="'.U('Project/detail?id='.$project_id).'">《'.
-                                $proj['project_name'].'》</a>';
-                            if ($user_id != $proj['uid']) {
-                                $content = $ulink . '评论了您的'. $plink . '项目';
-                                D('Message')->send(0,$proj['uid'],'', $content, 3);
-                            }
+            $ulink = '<a href="'.U('MCenter/profile?id='.$user_id).'">'.
+                get_membername($user_id).'</a>';
+            $plink = '<a href="'.U('Project/detail?id='.$project_id).'">《'.
+                $proj['project_name'].'》</a>';
+            // if ($user_id != $proj['uid']) {
+            //     $content = $ulink . '评论了您的'. $plink . '项目';
+            //     D('Message')->send(0,$proj['uid'],'', $content, 3);
+            // }
 
-                            if ($reply_id) {
-                                $rep = M('ProjectComment')->where('id='.$reply_id)->getField('comment_user');
-                                if ($rep != $user_id && $rep != $proj['uid'] && !$rep) {
-                                    $content = $ulink . '回复了您对'. $plink . '项目的评论';
-                                    D('Message')->send(0,$rep,'', $content, 3);
-                                }
-                            }
-                            $comment['id'] = $id;
-                                            $comment['comment_user'] = $user_id;
-                                            $comment['user_face'] = get_memberface($user_id);
-                                            $comment['date'] = change_date($comment['create_time']);
-                                            $comment['status'] = 1;
-                                            $comment['user_name'] = get_membername($user_id);
-                                            $comment['old_user'] = $_POST['old_user'];
-                                            $comment['old_content'] = $_POST['old_content'];
+            // if ($reply_id) {
+            //     $rep = M('ProjectComment')->where('id='.$reply_id)->getField('comment_user');
+            //     if ($rep != $user_id && $rep != $proj['uid'] && !$rep) {
+            //         $content = $ulink . '回复了您对'. $plink . '项目的评论';
+            //         D('Message')->send(0,$rep,'', $content, 3);
+            //     }
+            // }
+            $comment['id'] = $id;
+            $comment['comment_user'] = $user_id;
+            $comment['user_face'] = get_memberface($user_id);
+            $comment['date'] = change_date($comment['create_time']);
+            $comment['status'] = 1;
+            $comment['user_name'] = get_membername($user_id);
+            $comment['old_user'] = $_POST['old_user'];
+            $comment['old_content'] = $_POST['old_content'];
 
-                                            $this->ajaxReturn($comment);
+            $this->ajaxReturn($comment);
 
         }
 
